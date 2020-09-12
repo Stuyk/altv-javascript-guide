@@ -22,7 +22,7 @@ jobs:
         run: npm run build
 
       - name: Copy Files
-        run: cp ./postBuild/index.html ./src/.vuepress/dist/index.html
+        run: cp ./src/postBuild/index.html ./src/.vuepress/dist/index.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3

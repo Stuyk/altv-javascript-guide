@@ -22,6 +22,11 @@ const sidebar = {
                     title: 'Events',
                     collapsable: false,
                     children: ['/docs/events/', '/docs/events/using_events']
+                },
+                {
+                    title: 'Cookbook',
+                    collapsable: false,
+                    children: ['/docs/cookbook/']
                 }
             ]
         }
@@ -49,7 +54,7 @@ module.exports = {
                 link: '/docs/introduction/'
             }
         ],
-        sidebarDepth: 1,
+        sidebarDepth: 2,
         sidebar: {
             collapsable: false,
             '/docs/': sidebar.docs

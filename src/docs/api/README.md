@@ -158,7 +158,7 @@ alt.on('hello', msg => {
 });
 ```
 
-### Client to WebView and WebView to Client
+### Client to WebView and Back
 
 **Note:** Resource in the HTTP address refers to the resource that you are currently writing code for.
 
@@ -196,4 +196,28 @@ alt.setTimeout(() => {
         </script>
     </body>
 </html>
+```
+
+## Special Arrays
+
+There are two special arrays that exist on server-side that help you with determine all players or vehicles.
+
+-   alt.Player.all
+-   alt.Vehicle.all
+
+They can be used in various ways.
+
+```js
+const currentPlayers = [...alt.Player.all]; // Make a copy of the players array.
+
+for (let i = 0; i < currentPlayers.length; i++) {
+    const pName = currentPlayers[i].name;
+    alt.log(pName);
+}
+
+const currentVehicles = [...alt.Vehicle.all];
+for (let i = 0; i < currentVehicles.length; i++) {
+    const model = currentVehicles[i].model;
+    alt.log(model);
+}
 ```

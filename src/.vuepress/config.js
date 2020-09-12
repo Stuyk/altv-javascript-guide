@@ -29,7 +29,7 @@ const sidebar = {
 };
 
 module.exports = {
-    base: '/',
+    base: '/altv-javascript-guide/',
     title: 'alt:V JavaScript Tutorials',
     description: description,
     head: [
@@ -55,5 +55,13 @@ module.exports = {
             '/docs/': sidebar.docs
         }
     },
-    plugins: ['@vuepress/plugin-back-to-top', '@vuepress/plugin-medium-zoom']
+    plugins: ['@vuepress/plugin-back-to-top', '@vuepress/plugin-medium-zoom'],
+    configureWebpack: {
+        resolve: {
+            alias: {
+                '@gif': '/gifs/',
+                '@img': '/img/'
+            }
+        }
+    }
 };

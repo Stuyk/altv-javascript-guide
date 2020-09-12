@@ -65,10 +65,7 @@ Follow the on-screen instructions.
 -   **N** for Voice
 -   **Y** for Example Resource
 
-<br />
-<p align="center">
- <img src="/gifs/0/cmd_altvpkg.gif" />
-</p>
+![](./img/cmd_altvpkg.gif);
 
 ## Understanding the Files Downloaded
 
@@ -238,9 +235,7 @@ Open up the folder where you setup your alt:V server in VS:Code.
 
 Should look something like the image below.
 
-<p align="center">
- <img src="/img/1/vscode_entry.png" />
-</p>
+![](./img/vscode_entry.png);
 
 You can start writing your code inside of `resources/example/startup.js`.
 
@@ -254,9 +249,7 @@ resources: [
 
 Run your server from command line to ensure everything has loaded properly.
 
-<p align="center">
- <img src="/img/0/cmd_loaded.png" />
-</p>
+![](./img/cmd_loaded.png)
 
 ## Connecting
 
@@ -304,6 +297,4 @@ alt.log(`You connected! Nice!`);
 
 Your client side should now have auto-completion.
 
-<p align="center">
- <img src="/img/0/vscode_client_test.png" />
-</p>
+![](./img/vscode_client_test.png)

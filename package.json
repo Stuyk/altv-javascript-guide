@@ -1,0 +1,25 @@
+{
+    "name": "altv-javascript-guide",
+    "version": "0.0.1",
+    "description": "Tutorials for the alt:V Framework in JavaScript",
+    "main": "index.js",
+    "authors": {
+        "email": "stuykgaming@gmail.com"
+    },
+    "scripts": {
+        "dev": "vuepress dev src",
+        "build": "vuepress build src"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "vuepress": "^1.5.3"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "semi": true,
+        "printWidth": 120,
+        "singleQuote": true
+    },
+    "dependencies": {},
+    "author": ""
+}

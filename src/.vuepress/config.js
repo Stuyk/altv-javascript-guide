@@ -29,7 +29,7 @@ const sidebar = {
 };
 
 module.exports = {
-    base: '/altv-javascript-guide/',
+    base: '/',
     title: 'alt:V JavaScript Tutorials',
     description: description,
     head: [

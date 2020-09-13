@@ -1,12 +1,24 @@
-# alt:V JavaScript Tutorials Built in VuePress
+## alt:V JavaScript Guide
 
-A set of documentation that will help you understand alt:V and writing JavaScript code for it.
+[Click to Open Documents](https://stuyk.github.io/altv-javascript-guide/)
 
-It is not an API reference.
+---
 
-Accessible at: [https://stuyk.github.io/altv-javascript-guide/](https://stuyk.github.io/altv-javascript-guide/)
+## Sponsor
 
-## Testing
+[❤️ Become a Sponsor of my Open Source Work](https://github.com/sponsors/Stuyk/)
+
+[⌨️ Learn how to script for alt:V](https://stuyk.github.io/altv-javascript-guide/)
+
+⭐ This repository if you found it useful!
+
+---
+
+A set of documentation that will help you understand alt:V and writing JavaScript code for it. It is not an API reference and is meant to teach some of the lingo and details about alt:V.
+
+---
+
+## Development / Testing
 
 ```sh
 $ npm install

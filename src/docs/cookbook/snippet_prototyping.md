@@ -55,7 +55,6 @@ alt.Player.prototype.subCash = function subCash(value) {
     return true;
 };
 
-// Add cash to the this.
 alt.Player.prototype.addCash = function addCash(value) {
     if (isNaN(value)) {
         throw new Error(`Value is not a number. addCash.prototype`);

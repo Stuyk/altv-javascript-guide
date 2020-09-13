@@ -42,7 +42,7 @@ const sidebar = {
                 {
                     title: '💡 Events',
                     collapsable: false,
-                    children: ['/docs/events/', '/docs/events/using_events']
+                    children: ['/docs/events/', '/docs/events/using_events', '/docs/events/good_practice']
                 },
                 {
                     title: '📚 Cookbook',

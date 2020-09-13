@@ -58,6 +58,11 @@ const sidebar = {
                     children: ['/docs/events/', '/docs/events/using_events', '/docs/events/good_practice']
                 },
                 {
+                    title: '🧍 Player',
+                    collapsable: false,
+                    children: ['/docs/player/', '/docs/player/scriptid']
+                },
+                {
                     title: '📚 Cookbook',
                     collapsable: false,
                     children: [

@@ -93,11 +93,16 @@ const shape = new alt.ColshapeCylinder(pos.x, pos.y, pos.z, 5, 10);
 
 A property will usually exist inside of a class. They're accessible **without** parenthesis.
 
+They are also readable, so you don't always have to set them.
+
 Here's an example using a car.
 
 ```js
 const vehicle = new alt.Vehicle('infernus', 0, 0, 0, 0, 0, 0);
-vehicle.engineOn = true;
+
+if (vehicle.engineOn === false) {
+    vehicle.engineOn = true;
+}
 ```
 
 ### Methods

@@ -95,7 +95,7 @@ const sidebar = {
 };
 
 module.exports = {
-    base: '/altv-javascript-guide/',
+    base: '/',
     title: title,
     description: desc,
     head: [

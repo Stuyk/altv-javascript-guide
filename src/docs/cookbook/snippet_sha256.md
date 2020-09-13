@@ -15,21 +15,11 @@ export function sha256(ascii) {
     var lengthProperty = 'length';
     var i, j; // Used as a counter across the whole file
     var result = '';
-
     var words = [];
     var asciiBitLength = ascii[lengthProperty] * 8;
-
-    //* caching results is optional - remove/add slash from front of this line to toggle
-    // Initial hash value: first 32 bits of the fractional parts of the square roots of the first 8 primes
-    // (we actually calculate the first 64, but extra values are just ignored)
     var hash = (sha256.h = sha256.h || []);
-    // Round constants: first 32 bits of the fractional parts of the cube roots of the first 64 primes
     var k = (sha256.k = sha256.k || []);
     var primeCounter = k[lengthProperty];
-    /*/
-	var hash = [], k = [];
-	var primeCounter = 0;
-	//*/
 
     var isComposite = {};
     for (var candidate = 2; primeCounter < 64; candidate++) {
@@ -52,7 +42,6 @@ export function sha256(ascii) {
     words[words[lengthProperty]] = (asciiBitLength / maxWord) | 0;
     words[words[lengthProperty]] = asciiBitLength;
 
-    // process each chunk
     for (j = 0; j < words[lengthProperty]; ) {
         var w = words.slice(j, (j += 16)); // The message is expanded into 64 words as part of the iteration
         var oldHash = hash;

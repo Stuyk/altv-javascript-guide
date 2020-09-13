@@ -1,6 +1,6 @@
 ## alt:V JavaScript Guide
 
-[Click to Open Documents](https://stuyk.github.io/altv-javascript-guide/)
+[Click to Open Documents](https://altv.stuyk.com/)
 
 ---
 

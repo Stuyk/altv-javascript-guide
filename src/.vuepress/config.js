@@ -11,12 +11,17 @@ const sidebar = {
                 {
                     title: 'Introduction',
                     collapsable: false,
-                    children: ['/docs/introduction/', '/docs/introduction/installing_altv']
+                    children: [
+                        '/docs/introduction/',
+                        '/docs/introduction/installing_altv',
+                        '/docs/introduction/debugging',
+                        '/docs/introduction/javascript_primer'
+                    ]
                 },
                 {
                     title: 'API',
                     collapsable: false,
-                    children: ['/docs/api/']
+                    children: ['/docs/api/', '/docs/api/classes', '/docs/api/arrays', '/docs/api/events']
                 },
                 {
                     title: 'Events',
@@ -54,7 +59,7 @@ module.exports = {
                 link: '/docs/introduction/'
             }
         ],
-        sidebarDepth: 2,
+        sidebarDepth: 3,
         sidebar: {
             collapsable: false,
             '/docs/': sidebar.docs

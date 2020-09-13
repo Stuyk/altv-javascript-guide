@@ -1,18 +1,24 @@
 # What is a scriptID?
 
-A ScriptID is unique to only the client side.
+This is a way for us to identify another player or ourselves on client-side.
 
-ScriptID's provide us a way to modify the native behavior of a player.
+A General Overview
 
-They are most often used in tandem with natives.
+-   A scriptID is unique to only the client side.
+-   scriptID will provide us a way to modify the native behavior of a player.
+-   They are most often used in tandem with natives.
+-   They are unique per client per player.
+    -   Do not try to share scriptID with another player. It will not work.
 
-## How to get a scriptID?
+## How to obtain it.
 
 Your scriptID for your player can be retrieved in this way.
 
 ```js
 alt.Player.local.scriptID;
 ```
+
+This is the equivalent of `local playerPed = PlayerPedId()` from FiveM.
 
 However, for individual players it depends on how you recieve their player instance.
 

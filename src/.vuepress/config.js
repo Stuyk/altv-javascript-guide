@@ -48,6 +48,11 @@ const sidebar = {
                     ]
                 },
                 {
+                    title: '♻️ Conversion',
+                    collapsable: false,
+                    children: ['/docs/conversion/']
+                },
+                {
                     title: '📄 API Guide',
                     collapsable: false,
                     children: ['/docs/api/', '/docs/api/classes', '/docs/api/arrays', '/docs/api/events']

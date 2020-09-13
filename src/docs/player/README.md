@@ -4,14 +4,9 @@ The player is you. You are the player. Your friend is the player. Everyone is th
 
 Player's also come with plenty of properties and functions.
 
-[alt:V Player Server Typings](https://altmp.github.io/altv-typings/classes/_alt_server_.player.html)
-[alt:V Player Client Typings](https://altmp.github.io/altv-typings/classes/_alt_client_.player.html)
-
 ## Player Properties
 
 Here are some very commonly used properties.
-
-Refer to the links above for the most up-to-date information.
 
 **Server Side**
 
@@ -35,6 +30,8 @@ Player is most often accessed through a series of events, commands, etc.
 | socialId      | A non-unique spoofable social club id. Don't use this for identification. |
 | valid         | A way to determine if the entity still exists.                            |
 
+[alt:V Player Server Typings](https://altmp.github.io/altv-typings/classes/_alt_server_.player.html)
+
 **Client Side**
 
 Use `alt.Player.local` to access yourself on client-side.
@@ -48,3 +45,5 @@ Example: `alt.Player.local.pos`
 | pos           | The player's position. If exiting stream range, position is frozen. |
 | vehicle       | The player's vehicle if they're in one. Null if otherwise.          |
 | scriptID      | The ped handle of the player. Used for working with natives.        |
+
+[alt:V Player Client Typings](https://altmp.github.io/altv-typings/classes/_alt_client_.player.html)

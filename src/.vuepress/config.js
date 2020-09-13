@@ -9,7 +9,7 @@ const meta = [
     ['meta', { property: 'og:url', content: 'https://stuyk.github.io/altv-javascript-guide/' }],
     ['meta', { property: 'og:description', content: 'An end-to-end guide for using alt:V' }],
     ['meta', { property: 'og:article:author', content: 'stuyk' }],
-    ['meta', { property: 'google-site-verification', content: googleSearchConsole }],
+    ['meta', { name: 'google-site-verification', content: googleSearchConsole }],
     [
         'script',
         {

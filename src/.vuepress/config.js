@@ -55,7 +55,13 @@ const sidebar = {
                 {
                     title: '📄 API Guide',
                     collapsable: false,
-                    children: ['/docs/api/', '/docs/api/classes', '/docs/api/arrays', '/docs/api/events']
+                    children: [
+                        '/docs/api/',
+                        '/docs/api/classes',
+                        '/docs/api/arrays',
+                        '/docs/api/events',
+                        '/docs/api/what_is_synced'
+                    ]
                 },
                 {
                     title: '💡 Events',

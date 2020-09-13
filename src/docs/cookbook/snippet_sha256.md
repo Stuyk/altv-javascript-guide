@@ -1,6 +1,6 @@
 # Pure JS SHA256
 
-If you need a hashing algorithm that works on client and server side this is it.
+If you need a hashing algorithm that works on client-side and server-side this is it.
 
 This was created by [https://username1565.github.io/sha256/](https://username1565.github.io/sha256/)
 

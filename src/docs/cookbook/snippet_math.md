@@ -1,5 +1,9 @@
 # Math & Distance
 
+alt:V by default does not come with default functions for getting distance.
+
+Use these functions on server-side or client-side.
+
 ```js
 /**
  * Get all players in a certain range of a position.

@@ -4,6 +4,8 @@ This requires a library called `sjcl`.
 
 You can install it in your package.json by doing: `npm install sjcl`
 
+**Server Side**
+
 ```js
 import sjcl from 'sjcl';
 
@@ -58,6 +60,8 @@ export function persistentHash(data) {
 ```
 
 ## Example Usage
+
+**Server Side**
 
 ```js
 const hash = encryptPassword('test');

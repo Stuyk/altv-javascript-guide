@@ -4,6 +4,8 @@ This is also known as prototyping.
 
 They do **NOT** work in multiple resources. Single resource only.
 
+**Server Side**
+
 ```js
 alt.Player.prototype.emitMeta = function emitMeta(key, value) {
     if (typeof value === 'function') {
@@ -77,6 +79,8 @@ alt.Player.prototype.addCash = function addCash(value) {
 ```
 
 ## Example Usage
+
+**Server Side**
 
 ```js
 player.init();

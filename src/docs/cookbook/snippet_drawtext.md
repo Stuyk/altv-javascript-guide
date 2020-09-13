@@ -1,5 +1,11 @@
 # Drawing Text 3D & 2D
 
+Used to draw text on your screen or in a 3D space. This only works on **client-side**.
+
+![](./img/drawtext.jpg)
+
+**Client Side**
+
 ```js
 export function drawText2d(
     msg,
@@ -92,6 +98,8 @@ export function drawText3d(
 ```
 
 ## Example Usage
+
+**Client Side**
 
 ```js
 alt.everyTick(() => {

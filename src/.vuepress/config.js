@@ -58,7 +58,9 @@ const sidebar = {
                         '/docs/cookbook/snippet_prototyping',
                         '/docs/cookbook/snippet_encryption',
                         '/docs/cookbook/snippet_sha256',
-                        '/docs/cookbook/snippet_shuffle'
+                        '/docs/cookbook/snippet_shuffle',
+                        '/docs/cookbook/snippet_marker',
+                        '/docs/cookbook/snippet_notifications'
                     ]
                 }
             ]

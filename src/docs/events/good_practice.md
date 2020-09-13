@@ -39,11 +39,9 @@ function handleDoSomething(player) {
 
 ❓ WHY ❓
 
-The reason why we don't do it in the first way is because each time a player is connecting to the server you are initializing multiple instances of that same events.
+The reason why we don't do it in the first way is because each time a player is connecting to the server you are initializing multiple instances of that same events. Think of it like every time a player enters the server the event is being created an additional time.
 
-Think of it like every time a player enters the server you are incrementing that specific event's amount by 1.
-
-If we want a single event to only once. We initialize it once.
+If we want a single event to trigger once per user. We initialize it once outside of the event.
 
 ## Turning Off Unused Events
 

@@ -122,7 +122,6 @@ module.exports = {
                 sitemap: '/sitemap.xml'
             }
         ],
-        ['flowchart'],
         ['seo']
     ],
     configureWebpack: {

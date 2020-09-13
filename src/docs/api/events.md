@@ -16,24 +16,6 @@ A client **CANNOT** talk to another client.
 | alt.onClient   | Recieves an event emitted from the client on server-side. Triggered with `alt.emitServer`. |
 | alt.emitClient | Emit an event to the server that is recieved with `alt.onClient`.                          |
 
-## Communication Diagrams
-
-Here is how to communicate from the server to the client.
-Then from the client back up to the server.
-
-**Pill** Server
-
-**Rectangle** Client
-
-@flowstart ant
-ec=>start: alt.emitClient()
-os=>operation: alt.onServer()
-es=>operation: alt.emitServer()
-oc=>end: alt.onClient()
-
-ec->os->es->oc
-@flowend
-
 ## Server to Client
 
 The server may only emit data to the client-side with emitClient which requires a Player.

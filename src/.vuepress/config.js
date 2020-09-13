@@ -103,8 +103,10 @@ module.exports = {
         }
     },
     plugins: [
-        '@vuepress/plugin-back-to-top',
-        '@vuepress/plugin-medium-zoom',
+        '@vuepress/last-updated',
+        '@vuepress/back-to-top',
+        '@vuepress/medium-zoom',
+        '@vuepress/active-header-links',
         ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }],
         [
             'sitemap',
@@ -119,7 +121,9 @@ module.exports = {
                 allowAll: true,
                 sitemap: '/sitemap.xml'
             }
-        ]
+        ],
+        ['flowchart'],
+        ['seo']
     ],
     configureWebpack: {
         resolve: {

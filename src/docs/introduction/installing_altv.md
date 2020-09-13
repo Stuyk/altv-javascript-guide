@@ -53,7 +53,7 @@ After installing we'll be downloading the server files.
 Create a directory for your server. Then open a Command Prompt in that directory.
 
 ```sh
-altv-pkg d release
+$ altv-pkg d release
 ```
 
 This will prompt you for information regarding the gamemode you are creating.

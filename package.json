@@ -12,8 +12,11 @@
     },
     "license": "MIT",
     "devDependencies": {
+        "@vuepress/plugin-active-header-links": "^1.5.4",
         "@vuepress/plugin-google-analytics": "^1.5.4",
-        "vuepress": "^1.5.3"
+        "@vuepress/plugin-medium-zoom": "^1.5.4",
+        "vuepress": "^1.5.3",
+        "vuepress-plugin-seo": "^0.1.4"
     },
     "prettier": {
         "tabWidth": 4,
@@ -22,8 +25,12 @@
         "singleQuote": true
     },
     "dependencies": {
+        "@vuepress/plugin-back-to-top": "^1.5.4",
+        "@vuepress/plugin-last-updated": "^1.5.4",
+        "vuepress-plugin-flowchart": "^1.4.3",
         "vuepress-plugin-robots": "^1.0.1",
-        "vuepress-plugin-sitemap": "^2.3.1"
+        "vuepress-plugin-sitemap": "^2.3.1",
+        "vuepress-theme-yuu": "^2.3.0"
     },
     "author": ""
 }

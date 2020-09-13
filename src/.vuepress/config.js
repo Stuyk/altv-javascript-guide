@@ -111,6 +111,14 @@ module.exports = {
             {
                 hostname: 'https://stuyk.github.io/altv-javascript-guide/'
             }
+        ],
+        [
+            'robots',
+            {
+                host: 'https://stuyk.github.io/altv-javascript-guide/',
+                allowAll: true,
+                sitemap: '/sitemap.xml'
+            }
         ]
     ],
     configureWebpack: {

@@ -1,5 +1,3 @@
-const { description } = require('../../package');
-
 const googleSearchConsole = 'bRc7ZyO5gVfceHGhFLN1AvtcptSSPl_6SaLIMHde7bQ';
 const googleAdsenseCode = `ca-pub-3314445478682546`;
 const title = 'alt:V Tutorials by Stuyk';
@@ -81,8 +79,8 @@ const sidebar = {
 
 module.exports = {
     base: '/altv-javascript-guide/',
-    title: 'alt:V JavaScript Tutorials',
-    description: description,
+    title: title,
+    description: desc,
     head: [
         ['meta', { name: 'theme-color', content: '#3eaf7c' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],

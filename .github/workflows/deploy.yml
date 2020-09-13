@@ -21,9 +21,6 @@ jobs:
             - name: Build VUE Files
               run: npm run build
 
-            - name: Copy Google Search Console pages
-              run: cp ./postBuild/googlef4715c5711af1d5e.html ./src/.vuepress/dist/googlef4715c5711af1d5e.html
-
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@releases/v3
               with:

@@ -1,15 +1,19 @@
 const { description } = require('../../package');
 
+const googleSearchConsole = 'bRc7ZyO5gVfceHGhFLN1AvtcptSSPl_6SaLIMHde7bQ';
+const googleAdsenseCode = `ca-pub-3314445478682546`;
+
 const meta = [
     ['meta', { property: 'og:title', content: `Stuyk's alt:V Guide` }],
     ['meta', { property: 'og:type', content: 'article' }],
     ['meta', { property: 'og:url', content: 'https://stuyk.github.io/altv-javascript-guide/' }],
     ['meta', { property: 'og:description', content: 'An end-to-end guide for using alt:V' }],
     ['meta', { property: 'og:article:author', content: 'stuyk' }],
+    ['meta', { property: 'google-site-verification', content: googleSearchConsole }],
     [
         'script',
         {
-            'data-ad-client': 'ca-pub-3314445478682546',
+            'data-ad-client': googleAdsenseCode,
             async: true,
             src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
         }

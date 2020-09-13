@@ -5,7 +5,15 @@ const meta = [
     ['meta', { property: 'og:type', content: 'article' }],
     ['meta', { property: 'og:url', content: 'https://stuyk.github.io/altv-javascript-guide/' }],
     ['meta', { property: 'og:description', content: 'An end-to-end guide for using alt:V' }],
-    ['meta', { property: 'og:article:author', content: 'stuyk' }]
+    ['meta', { property: 'og:article:author', content: 'stuyk' }],
+    [
+        'script',
+        {
+            'data-ad-client': 'ca-pub-3314445478682546',
+            async: true,
+            src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+        }
+    ]
 ];
 
 const sidebar = {

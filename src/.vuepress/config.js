@@ -47,7 +47,12 @@ const sidebar = {
                 {
                     title: '📚 Cookbook',
                     collapsable: false,
-                    children: ['/docs/cookbook/']
+                    children: [
+                        '/docs/cookbook/',
+                        '/docs/cookbook/snippet_drawtext',
+                        '/docs/cookbook/snippet_math',
+                        '/docs/cookbook/snippet_prototyping'
+                    ]
                 }
             ]
         }

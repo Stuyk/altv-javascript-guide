@@ -52,7 +52,9 @@ const sidebar = {
                         '/docs/cookbook/snippet_drawtext',
                         '/docs/cookbook/snippet_math',
                         '/docs/cookbook/snippet_prototyping',
-                        '/docs/cookbook/snippet_encryption'
+                        '/docs/cookbook/snippet_encryption',
+                        '/docs/cookbook/snippet_sha256',
+                        '/docs/cookbook/snippet_shuffle'
                     ]
                 }
             ]

@@ -60,7 +60,7 @@ const sidebar = {
                         '/docs/api/classes',
                         '/docs/api/arrays',
                         '/docs/api/events',
-                        '/docs/api/what_is_synced'
+                        '/docs/api/synced'
                     ]
                 },
                 {

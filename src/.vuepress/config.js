@@ -105,7 +105,13 @@ module.exports = {
     plugins: [
         '@vuepress/plugin-back-to-top',
         '@vuepress/plugin-medium-zoom',
-        ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }]
+        ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }],
+        [
+            'sitemap',
+            {
+                hostname: 'https://stuyk.github.io/altv-javascript-guide/'
+            }
+        ]
     ],
     configureWebpack: {
         resolve: {

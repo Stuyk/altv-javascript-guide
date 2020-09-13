@@ -85,7 +85,7 @@ module.exports = {
     plugins: [
         '@vuepress/plugin-back-to-top',
         '@vuepress/plugin-medium-zoom',
-        ['@vuepress/google-analytics', { ga: 'UA-832296585-4' }]
+        ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }]
     ],
     configureWebpack: {
         resolve: {

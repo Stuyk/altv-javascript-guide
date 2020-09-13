@@ -9,7 +9,7 @@ const meta = [
     ['meta', { itemprop: 'name', content: title }],
     ['meta', { itemprop: 'description', content: desc }],
     ['meta', { itemprop: 'image', content: card }],
-    ['meta', { property: 'og:url', content: 'https://stuyk.github.io/altv-javascript-guide' }],
+    ['meta', { property: 'og:url', content: 'https://altv.stuyk.com/' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: desc }],
@@ -139,13 +139,13 @@ module.exports = {
         [
             'sitemap',
             {
-                hostname: 'https://stuyk.github.io/altv-javascript-guide/'
+                hostname: 'https://altv.stuyk.com/'
             }
         ],
         [
             'robots',
             {
-                host: 'https://stuyk.github.io/altv-javascript-guide/',
+                host: 'https://altv.stuyk.com/',
                 allowAll: true,
                 sitemap: '/sitemap.xml'
             }

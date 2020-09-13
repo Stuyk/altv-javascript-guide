@@ -2,13 +2,24 @@ const { description } = require('../../package');
 
 const googleSearchConsole = 'bRc7ZyO5gVfceHGhFLN1AvtcptSSPl_6SaLIMHde7bQ';
 const googleAdsenseCode = `ca-pub-3314445478682546`;
+const title = 'alt:V Tutorials by Stuyk';
+const desc = 'Tutorials for the alt:V Framework in JavaScript created by Stuyk. Not for FiveM or RAGE:MP.';
+const card = 'https://i.imgur.com/4yB3BJd.png';
 
 const meta = [
-    ['meta', { property: 'og:title', content: `Stuyk's alt:V Guide` }],
-    ['meta', { property: 'og:type', content: 'article' }],
-    ['meta', { property: 'og:url', content: 'https://stuyk.github.io/altv-javascript-guide/' }],
-    ['meta', { property: 'og:description', content: 'An end-to-end guide for using alt:V' }],
-    ['meta', { property: 'og:article:author', content: 'stuyk' }],
+    ['meta', { name: 'description', content: desc }],
+    ['meta', { itemprop: 'name', content: title }],
+    ['meta', { itemprop: 'description', content: desc }],
+    ['meta', { itemprop: 'image', content: card }],
+    ['meta', { property: 'og:url', content: 'https://stuyk.github.io/altv-javascript-guide' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: title }],
+    ['meta', { property: 'og:description', content: desc }],
+    ['meta', { property: 'og:image', content: card }],
+    ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { property: 'twitter:title', content: title }],
+    ['meta', { property: 'twitter:description', content: desc }],
+    ['meta', { property: 'twitter:image', content: card }],
     ['meta', { name: 'google-site-verification', content: googleSearchConsole }],
     [
         'script',

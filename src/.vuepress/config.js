@@ -31,9 +31,12 @@ const meta = [
 
 const sidebar = {
     docs: [
-        //
         {
-            //
+            title: 'Request',
+            collapsable: false,
+            children: ['/docs/contact/']
+        },
+        {
             title: 'Guide',
             collapsable: false,
             children: [

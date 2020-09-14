@@ -4,6 +4,28 @@ alt:V is an alternative multiplayer framework for GTA:V and allows developers an
 
 This specific website will teach you how to work with alt:V in JavaScript by holding your hand and teach you how to properly setup a project and build out your very own gamemode.
 
+✔️ Free To Use
+
+✔️ Slot limit based on Hardware
+
+✔️ Play with Friends
+
+✔️ Server Browser
+
+✔️ No ScriptHookV or .asi Injections
+
+✔️ Server and Clientside Boundary
+
+✔️ Encrypted Clientside Code
+
+✔️ Built in Voice Service Up to 400+ Users
+
+✔️ Mod Support
+
+✔️ Map Support
+
+✔️ MLO Support
+
 Before you start scripting keep these points in mind.
 
 -   Development should be done entirely in **ENGLISH**.

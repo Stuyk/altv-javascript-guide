@@ -13,19 +13,27 @@ Those are the only major things to consider about alt:V.
 
 Otherwise here's some other important aspects.
 
--   Yes alt:V supports clothing addons.
--   Yes alt:V supports most modifications.
--   Yes alt:V supports MLOs.
--   Yes alt:V supports custom maps.
+✔️ Yes alt:V supports clothing addons.
+
+✔️ Yes alt:V supports most modifications.
+
+✔️ Yes alt:V supports MLOs.
+
+✔️ Yes alt:V supports custom maps.
 
 Here are some things alt:V does not have.
 
--   No LUA on client-side
--   No ESX
--   No ELS (Dex++ is working on this)
--   No censorship if you poke the wrong person.
--   No we do not support .asi, .dll, or ENB files.
--   No we do not support ScriptHookV.
+❌ No LUA on client-side
+
+❌ No ESX
+
+❌ No ELS (Dex++ is working on this)
+
+❌ No censorship if you poke the wrong person
+
+❌ No we do not support .asi, .dll, or ENB files.
+
+❌ No we do not support ScriptHookV.
 
 <br />
 

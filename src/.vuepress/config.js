@@ -74,6 +74,11 @@ const sidebar = {
                     children: ['/docs/player/', '/docs/player/scriptid']
                 },
                 {
+                    title: '📊 Databases',
+                    collapsable: false,
+                    children: ['/docs/databases/', '/docs/databases/mongodb', '/docs/databases/mysql']
+                },
+                {
                     title: '📚 Cookbook',
                     collapsable: false,
                     children: [

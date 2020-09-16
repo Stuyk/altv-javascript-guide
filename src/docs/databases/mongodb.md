@@ -1,24 +1,22 @@
 # MongoDB
 
-If you have never used a NoSQL database before. You should definitely check out MongoDB.
+MongoDB is a NoSQL database that is incredibly simple to use. It is highly recommended for JavaScript based environments as working with MongoDB is a seamless experience in Typescript, and JavaScript. It's easy to get started with and there are a few good ORM's that will assist you with managing your database.
 
-It's pretty much SQL without an ORM and the whole SQL language.
-
-Yet it can scale just as large as an SQL server without issue.
+MongoDB can compete with the likes of MySQL, MariaDB, PostgreSQL, etc.
 
 ## Simply Mongo
 
 This is a small repository that I have created that lets you utilize a very simple database handler that is more than enough for the average developer. It was solely created to help new developers who want to just store data without overthinking it.
 
-Read up on what it offers here: [https://www.npmjs.com/package/simplymongo](https://www.npmjs.com/package/simplymongo)
+ [Read More on Simply Mongo's NPM Package](https://www.npmjs.com/package/simplymongo)
 
-Install By Command
+### Install by Command
 
 ```js
 $ npm install simplymongo
 ```
 
-### How to Initialize Your Database
+### How to Initialize your Database
 
 You'll likely want to use this pattern in your `startup.js` file on your server-side.
 
@@ -64,89 +62,161 @@ const db = sm.getDatabase();
 
 ### How to Use Your Database
 
-Using your database is quite simple.
+After [initializing your database and loading your next file](#How to Initialize your Database) you should start using `sm.getDatabase()` to fetch your database instance.
 
-The above example on database instance fetching should be enough to get you started.
+This is how we begin speaking with our database and sending it instructions.
 
-If you wish to insert data into your database. You need to create an object.
+#### Fetching your Existing Database Connection
 
 ```js
 import alt from 'alt-server';
 import * as sm from 'simplymongo';
 
 const db = sm.getDatabase();
+```
 
-alt.on('playerConnect', playerConnect);
+#### Understand what Await Means
 
-// This must be async to use await.
-async function playerConnect(player) {
-    // Let's use the player's social club id to handle some things.
-    // It is HIGHLY recommended to NOT do this.
-    // Just use this as an example.
+Real quick it's important you have a basic understanding of Asynchronization Events
 
-    const socialclub = player.socialId;
+```js
+alt.on('playerConnect', handleAsyncEvent);
 
-    // Fetch all accounts that match the social club id.
-    const accounts = await db.fetchAllByField('socialclub', socialclub, 'accounts');
-    let account;
-
-    // Check if no accounts exist with this social club.
-    if (accounts.length <= 0) {
-        // Construct a document for the player.
-        const newDocument = {
-            username: player.name,
-            socialclub,
-            lastip: player.ip,
-            bank: 0,
-            logins: 0
-        };
-
-        // This will insert a new document object. Then return the new document with its _id
-        account = await db.insertData(newDocument, 'accounts', true);
-    } else {
-        account = accounts[0];
+// <----- We use this identifier to tell the function it is meant to use 'await'.
+async function handleAsyncEvent(player) {
+	// This function will spin up a seperate event where it waits to return this event.
+    // This will not block this function from being called multiple times.
+    // In fact you can call this function as much as you want and it'll never hold up any other code.
+	const accounts = await db.fetchAllByField('socialclub', player.socialId, 'accounts');
+    
+    if (accounts.length >= 1) {
+        console.log(`You found a document!`)
+        console.log(accounts[0]); // Arrays start at 0. Not 1. Fuck lua.
     }
-
-    // Update the IP on each login.
-    await db.updatePartialData(account._id, { lastip: player.ip }, 'accounts');
-
-    // Check the ID of the player. This is unique based on the social club lookup.
-    // You can definitely replace social club with username.
-    // Lets go ahead and fetch the data down based on the id.
-    account = await db.fetchData('_id', account._id, 'accounts');
-
-    /*
-        This should return a structure similar to the following.
-        {
-            _id,
-            username,
-            socialclub,
-            lastip,
-            logins,
-            bank
-        }
-    */
-
-    // Now that we have account with some data in it. Let's talk about accessing and updating data.
-    // If you use a single resource. Use this pattern.
-    player.data = account;
-
-    // Now you update player properties for data from anywhere in your single resource.
-    player.data.logins += 1;
-    player.data.bank += 25;
-
-    // Then you can save this data in two ways.
-    await db.updatePartialData(account._id, { logins: player.data.logins, bank: player.data.bank }, 'accounts');
-
-    // You can also save all player data at once.
-    await db.updatePartialData(account._id, { ...player.data }, 'accounts');
-
-    // You should NOT be pulling data from the database often.
-    // You should be updating the local data property on the player. Then saving that change to the database.
-
-    // If you ever need to delete an entry in the databse.
-    await db.deleteById(account._id, 'accounts');
 }
 ```
 
-It's relatively easy to update the database with this small addon.
+#### Inserting New Data and Fetching Existing Data
+
+```js
+// Let's use the player's social club id to handle some things.
+// It is HIGHLY recommended to NOT do this.
+// Just use this as an example.
+const socialclub = player.socialId;
+
+// Fetch all accounts that match the social club id.
+const accounts = await db.fetchAllByField('socialclub', socialclub, 'accounts');
+let account;
+
+// Check if no accounts exist with this social club.
+if (accounts.length <= 0) {
+    // Construct a document for the player.
+    const newDocument = {
+        username: player.name,
+        socialclub,
+        lastip: player.ip,
+        bank: 9000,
+        cash: 9000,
+        logins: 0
+    };
+
+    // This will insert a new document object. Then return the new document with its _id
+    // (DocumentObject, CollectionName, returnDocument?)
+    account = await db.insertData(newDocument, 'accounts', true);
+} else {
+    // This will assign the only document we found if it exists. To the account variable.
+    account = accounts[0];
+}
+```
+
+#### Updating Data for a Player
+
+```js
+// Update the IP on each login.
+// Yes player max health is 200.
+await db.updatePartialData(account._id, { health: 200 }, 'accounts');
+
+// You can also update multiple sets of data for a player at once.
+await db.updatePartialData(account._id, { health: player.health, armour: player.armour  }, 'accounts');
+
+// You can also update a player.data object by spreading it into the parent object.
+// This is known as `Save All`.
+await db.updatePartialData(account._id, { ...player.data  }, 'accounts');
+```
+
+#### Setting up a `player.data` Object
+
+I only recommend this because it's very easy to manage data on a player this way.
+
+Just keep in mind that data assigned to a player cannot be shared across server resources.
+
+```js
+// Check the ID of the player. This is unique based on the social club lookup.
+// You can definitely replace social club with username.
+// Lets go ahead and fetch the data down based on the id.
+const account = await db.fetchData('_id', account._id, 'accounts');
+
+// If you don't know an id lookup through other data types.
+// Like usernames, emails, etc.
+/*
+    This should return a structure similar to the following.
+    {
+       _id,
+       username,
+       socialclub,
+       lastip,
+       logins,
+        bank
+    }
+*/
+
+// Now that we have account with some data in it. Let's talk about accessing and updating data.
+// If you use a single resource. Use this pattern.
+player.data = account;
+```
+
+### The player.data Update Pattern
+
+This is a really simple pattern for keeping your database efficient.
+
+You should only be reading from your database once in a while and not all of the time.
+
+```js
+// Assume we're continuing with the code created in the above snippet.
+player.data.money += 500;
+player.data.bank -= 500;
+
+player.setSyncedMeta('money', player.data.money);
+player.setSyncedMeta('bnak', player.data.bank);
+
+// Update the money and bank data.
+await db.updatePartialData(player.data._id, { money: player.data.money, bank: player.data.bank  }, 'accounts');
+```
+
+Pretty easy to update and manage!
+
+You can improve this by using Prototyping on a Player to extend their functionality.
+
+```js
+alt.Player.local.prototype.saveField = async function(fieldName, fieldValue, sync = false) {
+	if (sync) {
+        this.setSyncedMeta(fieldName, this.data[fieldName]);
+    }
+
+    await db.updatePartialData(this.data._id, { [fieldName]: fieldValue }, 'accounts');
+}
+```
+
+Then you can simply call from anywhere inside of a single resource. Pretty nice.
+
+```js
+player.saveField('money', player.data.money, true);
+```
+
+#### Deleting a Document
+
+You can delete documents by supplying an `_id`.
+
+```js
+await db.deleteById(player.data._id, 'accounts');
+```

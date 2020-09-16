@@ -227,14 +227,6 @@ function handleEvent(keycode) {
 }
 ```
 
-
-
-
-
-
-
-
-
 ## removeEntity
 
 This event is when a entity is destroyed; such as a player, vehicle, blip, and colshape.

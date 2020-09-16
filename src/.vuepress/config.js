@@ -66,12 +66,6 @@ module.exports = {
         '@vuepress/active-header-links',
         ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }],
         [
-            'sitemap',
-            {
-                hostname: 'https://altv.stuyk.com/'
-            }
-        ],
-        [
             'robots',
             {
                 host: 'https://altv.stuyk.com/',

@@ -13,11 +13,9 @@ function buildSidebar(targetDirectory) {
 
     for (let i = 0; i < files.length; i++) {
         let fileName = files[i];
-        fileName = fileName.replace(/\//gi, '\\');
-        fileName = fileName.replace(workingPath, '\\');
+        fileName = fileName.replace(/.*src/gi, '');
         fileName = fileName.replace('README.md', '');
         fileName = fileName.replace('.md', '');
-        fileName = fileName.replace(/\\/gi, '/');
         files[i] = fileName;
     }
 

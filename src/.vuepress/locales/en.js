@@ -63,7 +63,8 @@ const enMenus = {
         sidebar: {
             collapsable: false,
             [`/${language}/`]: sidebar
-        }
+        },
+        sidebarDepth: 3
     }
 };
 

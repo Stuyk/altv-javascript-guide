@@ -8,8 +8,8 @@ const defaultNavbar = [
         ]
     },
     {
-        text: 'Request',
-        link: '/request/'
+        text: 'Unofficial Docs Discord',
+        link: 'https://discord.gg/UubceKy'
     },
     {
         text: 'Support',

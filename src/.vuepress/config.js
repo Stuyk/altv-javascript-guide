@@ -69,7 +69,12 @@ const sidebar = {
                 {
                     title: '💡 Events',
                     collapsable: false,
-                    children: ['/docs/events/', '/docs/events/using_events', '/docs/events/good_practice']
+                    children: [
+                        '/docs/events/',
+                        '/docs/events/using_events',
+                        '/docs/events/good_practice',
+                        '/docs/events/server_events'
+                    ]
                 },
                 {
                     title: '🧍 Player',

@@ -1,5 +1,6 @@
 # Classes
 
+
 Most classes in JavaScript require `new` before constructing them.
 
 Here's the constructor for the `alt.Vehicle` class.
@@ -10,15 +11,14 @@ new Vehicle(model: string | number, x: number, y: number, z: number, rx: number,
 
 As you can see based on what we've read above it takes multiple parameters.
 
-It also returns a Vehicle type.
-
 We can use that knowledge to spawn a vehicle.
 
 ```js
 // Create the vehicle.
+// The 'vehicle' variable is an instance of our Vehicle.
 const vehicle = new alt.Vehicle('infernus', 0, 0, 0, 0, 0, 0);
 
-// Set the vehicle's engine on.
+// Set the vehicle's engine on. 
 vehicle.engineOn = true;
 
 // Adjust the primary color of the vehicle to red.

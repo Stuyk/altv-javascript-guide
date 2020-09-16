@@ -24,14 +24,11 @@ const meta = [
     ['meta', { property: 'twitter:description', content: desc }],
     ['meta', { property: 'twitter:image', content: card }],
     ['meta', { name: 'google-site-verification', content: googleSearchConsole }],
+    ['script', { src: 'https://contextual.media.net/dmedianet.js?cid=8CU1P49EP', async: 'async' }],
     [
         'script',
         {},
-        `
-        window._mNHandle = window._mNHandle || {};
-        window._mNHandle.queue = window._mNHandle.queue || [];
-        medianet_versionId = "3121199";
-    `
+        `window._mNHandle = window._mNHandle || {}; window._mNHandle.queue = window._mNHandle.queue || []; medianet_versionId = "3121199";`
     ]
 ];
 

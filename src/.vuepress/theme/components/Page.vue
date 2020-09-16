@@ -6,7 +6,7 @@
         <PageEdit />
 
         <PageNav v-bind="{ sidebarItems }" />
-        <div id="447954467"></div>
+        <div id="447954467" style="margin-top: 100px"></div>
         <slot name="bottom" />
     </main>
 </template>

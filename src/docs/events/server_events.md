@@ -1,4 +1,4 @@
-# Server Event Examples
+# Server Event Usage & Examples
 
 This is a document that will provide an example for every server event. This is necessary to really ensure you get a firm grasp on how an event is triggered and handled.
 
@@ -73,7 +73,7 @@ function handleEvent(args) {
 }
 ```
 
-Assume we typed the following:
+Assume we typed the following in the server console.
 
 ```
 kickall
@@ -249,7 +249,13 @@ function handleEvent(player, vehicle, oldSeat, newSeat) {
 
 ## playerConnect
 
-This is the event that occurs when a player has connected to the server. The player can have their connection cancelled by running `player.kick()` command.
+This is the event that occurs when a player has connected to the server. 
+
+The player can have their connection cancelled by running `player.kick()` command.
+
+### Nothing Happens On Player Connect
+
+It's important to understand that **NOTHING HAPPENS** after a player connects. You must use `player.spawn` and `player.model` to see the player.
 
 -   player is the player who joined the server.
 
@@ -259,6 +265,9 @@ alt.on('playerConnect', handleEvent);
 function handleEvent(player) {
     console.log(`${player.name} has joined the server.`);
     console.log(`${player.name} has will now see himself out.`);
+
+    player.spawn(0, 0, 0);
+    player.model = `mp_m_freemode_01`; // mp_f_freemode_01
 
     alt.setTimeout(() => {
         if (!player || !player.valid) {

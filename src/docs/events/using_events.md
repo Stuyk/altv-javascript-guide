@@ -1,4 +1,4 @@
-# Using Events
+# Event Usage Guide
 
 Now that we've given a brief overview of events. Let's talk about how to read the API.
 
@@ -9,7 +9,9 @@ _If these links are ever out of date. Notify Stuyk._
 
 Below is some common use cases for events. Just some general code regarding how to use them.
 
-### (Server) playerConnect
+[Refer to Server Event Examples for Syntax and Parameters](./server_events)
+
+## playerConnect  Server Side Sample Events
 
 This event is the entry point for any player who is joining your server. You should be using this event once in your entire resource. It listens for player connections. You can even kick a player before they fully connect.
 
@@ -46,18 +48,16 @@ const spawn = {
 alt.on('playerConnect', handlePlayerConnect);
 
 function handlePlayerConnect(player) {
-    player.model = `mp_m_freemode_01`;
     player.spawn(spawn.x, spawn.y, spawn.z, 0);
+    player.model = `mp_m_freemode_01`;
 }
 ```
 
-### (Client) connectionComplete
+## connectionComplete Client Side Sample
 
 The alternative to the `playerConnect` event is the `connectionComplete` event from client-side. This is when a player is fully connected to the server.
 
-This event is client-side and we already know who the player is.
-
-This is only happening on their computer and is instance based.
+This event is client-side and we already know who the player is. This is only happening on their computer and is instance based.
 
 Which means this function is ran for every player but only for the player that connected.
 
@@ -85,13 +85,13 @@ function handleHelloFromClient(player, msg) {
 }
 ```
 
-### (Server) playerDeath
+## playerDeath Server Side & Client Side Sample
 
-Player Death is a pretty common event.
+Player Death is a pretty common event. If a player dies you will want to use `player.spawn` to restore their functionality.
 
-If a player dies you will want to use `player.spawn` to restore their functionality.
+You will have to ragdoll them manually after they die if you wish for them to stay there for a long time. Keep in mind you must run `player.spawn` before marking them to be rag dolled.
 
-**Server Side**
+### Server Side
 
 ```js
 alt.on('playerDeath', handlePlayerDeath);
@@ -113,15 +113,15 @@ function handlePlayerDeath(victim, killer, weaponHash) {
 
         victim.spawn(0, 0, 0);
         victim.health = 200;
-    }, 5000);
+    }, 60000 * 3); // Will respawn the victim in 3 Minutes.
 }
 ```
 
-#### Common Use Case
+### Common Use Case
 
-Let's say we want to ragdoll a player when they die and keep them ragdolled until they respawn there is a simple way we can do that.
+Let's say we want to ragdoll a player when they die and keep them ragdoll until they respawn there is a simple way we can do that.
 
-**Server Side**
+#### Server Side
 
 ```js
 alt.on('playerDeath', handlePlayerDeath);
@@ -160,7 +160,7 @@ function handlePlayerDeath(victim, killer, weaponHash) {
 }
 ```
 
-**Client Side**
+#### Client Side
 
 ```js
 let interval;
@@ -192,15 +192,11 @@ function handleDeathTicks() {
 }
 ```
 
-### (Server) playerLeftVehicle & playerEnteredVehicle
+## playerLeftVehicle & playerEnteredVehicle Server Side Sample
 
 These events are triggered when a player enters or leaves a vehicle.
 
 Here's an example of deleting the vehicle the player entered after they exit it.
-
-Only if they are the driver.
-
-**Server Side**
 
 ```js
 alt.on('playerEnteredVehicle', handlePlayerEnteredVehicle);

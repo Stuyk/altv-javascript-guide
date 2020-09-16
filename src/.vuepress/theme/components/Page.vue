@@ -6,7 +6,7 @@
         <PageEdit />
 
         <PageNav v-bind="{ sidebarItems }" />
-        <div id="421256859"></div>
+        <div id="447954467"></div>
         <slot name="bottom" />
     </main>
 </template>
@@ -20,8 +20,7 @@ export default {
     props: ['sidebarItems'],
     mounted() {
         window._mNHandle.queue.push(function () {
-            console.log('media.net');
-            window._mNDetails.loadTag('421256859', '160x600', '421256859');
+            window._mNDetails.loadTag('447954467', '728x90', '447954467');
         });
     },
 };

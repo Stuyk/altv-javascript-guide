@@ -14,7 +14,9 @@
 
 ---
 
-A set of documentation that will help you understand alt:V and writing JavaScript code for it. It is not an API reference and is meant to teach some of the lingo and details about alt:V.
+A set of documentation that will help you understand alt:V and writing JavaScript code for it.
+
+It is not an API reference and is meant to teach some of the lingo and details about alt:V.
 
 ---
 

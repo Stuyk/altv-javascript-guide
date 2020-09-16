@@ -14,12 +14,14 @@ function buildSidebar(targetDirectory) {
     for (let i = 0; i < files.length; i++) {
         let fileName = files[i];
         fileName = fileName.replace(/.*src/gi, '');
-        fileName = fileName.replace('README.md', '');
         fileName = fileName.replace('.md', '');
         files[i] = fileName;
     }
 
-    files.reverse();
+    // Make ReadMe First
+    const index = files.findIndex(file => file.includes('README'));
+    files.splice(index, 1);
+    files.unshift(targetDirectory);
     return files;
 }
 

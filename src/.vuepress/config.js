@@ -78,8 +78,7 @@ module.exports = {
                 allowAll: true,
                 sitemap: '/sitemap.xml'
             }
-        ],
-        ['seo']
+        ]
     ],
     configureWebpack: {
         resolve: {

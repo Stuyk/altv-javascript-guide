@@ -73,7 +73,8 @@ const sidebar = {
                         '/docs/events/',
                         '/docs/events/using_events',
                         '/docs/events/good_practice',
-                        '/docs/events/server_events'
+                        '/docs/events/server_events',
+                        '/docs/events/client_events'
                     ]
                 },
                 {

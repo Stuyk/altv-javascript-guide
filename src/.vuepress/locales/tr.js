@@ -60,18 +60,7 @@ const sidebar = [
 const trMenus = {
     [`/${language}/`]: {
         label: languageName,
-        // Translate from Here
-        selectText: 'Select Language',
-        ariaLabel: 'Languages',
-        editLinkText: 'Edit this page on GitHub',
-        serviceWorker: {
-            updatePopup: {
-                message: 'New content is available.',
-                buttonText: 'Refresh'
-            }
-        },
         nav: [...defaultNavbar],
-        // To Here
         sidebar: {
             collapsable: false,
             [`/${language}/`]: sidebar

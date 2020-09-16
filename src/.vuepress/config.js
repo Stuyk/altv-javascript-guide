@@ -45,7 +45,7 @@ module.exports = {
     head: meta,
     themeConfig: {
         repo: 'stuyk/altv-javascript-guide',
-        editLinks: true,
+        editLinks: false,
         docsDir: '',
         editLinkText: '',
         lastUpdated: true,

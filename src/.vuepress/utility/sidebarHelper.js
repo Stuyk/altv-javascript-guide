@@ -18,10 +18,13 @@ function buildSidebar(targetDirectory) {
         files[i] = fileName;
     }
 
-    // Make ReadMe First
-    const index = files.findIndex(file => file.includes('README'));
-    files.splice(index, 1);
-    files.unshift(targetDirectory);
+    // Make Readme First
+    if (files.length >= 1) {
+        const index = files.findIndex(file => file.includes('README'));
+        files.splice(index, 1);
+        files.unshift(targetDirectory);
+    }
+
     return files;
 }
 

@@ -6,7 +6,8 @@ const languageName = 'English'; // Turkish
 
 const enLocale = {
     [`/${language}/`]: {
-        lang: `${language}-${languageUpper}`
+        lang: `${language}-${languageUpper}`,
+        title: `Documentation | ${languageName}`
     }
 };
 

@@ -8,7 +8,7 @@ const desc = 'Unoffical Documentation and Tutorials for the GTA:V Client alt:V.'
 const card = 'https://i.imgur.com/G09dNXt.png';
 
 const meta = [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#008736' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['meta', { name: 'description', content: desc }],

@@ -1,11 +1,13 @@
 <template>
     <aside class="sidebar">
-        <NavLinks />
+        <div class="flip-sidebar">
+            <NavLinks />
 
-        <slot name="top" />
+            <slot name="top" />
 
-        <SidebarLinks :depth="0" :items="items" />
-        <slot name="bottom" />
+            <SidebarLinks :depth="0" :items="items" />
+            <slot name="bottom" />
+        </div>
     </aside>
 </template>
 
@@ -24,6 +26,12 @@ export default {
 
 <style lang="stylus">
 .sidebar
+  direction rtl
+
+  .flip-sidebar {
+    direction ltr
+  }
+
   ul
     padding 0
     margin 0

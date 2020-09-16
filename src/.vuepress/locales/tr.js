@@ -6,7 +6,8 @@ const languageName = 'Turkish';
 
 const trLocale = {
     [`/${language}/`]: {
-        lang: `${language}-${languageUpper}`
+        lang: `${language}-${languageUpper}`,
+        title: `Documentation | ${languageName}`
     }
 };
 

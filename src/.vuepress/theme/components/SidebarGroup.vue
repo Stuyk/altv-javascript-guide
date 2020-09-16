@@ -65,12 +65,18 @@ export default {
 
 <style lang="stylus">
 .sidebar-group
+  .sidebar-links
+    background: rgba(0, 0, 0, 0.1);
+    padding-bottom: 1rem;
   .sidebar-group
     padding-left 0.5em
   &:not(.collapsable)
     .sidebar-heading:not(.clickable)
       cursor auto
-      color inherit
+      color white
+      font-weight bolder
+      letter-spacing 0.05em
+      font-size: 16px
   // refine styles of nested sidebar groups
   &.is-sub-group
     padding-left 0
@@ -80,7 +86,10 @@ export default {
       font-weight normal
       padding-left 2rem
       &:not(.clickable)
-        opacity 0.5
+        color rgba(255, 255, 255, 0.8)
+        margin-bottom 0.3rem
+        background: rgba(0, 0, 0, 0.3);
+        box-sizing border-box
     & > .sidebar-group-items
       padding-left 1rem
       & > li > .sidebar-link
@@ -102,6 +111,7 @@ export default {
   box-sizing border-box
   margin 0
   border-left 0.25rem solid transparent
+
   &.open, &:hover
     color inherit
   .arrow

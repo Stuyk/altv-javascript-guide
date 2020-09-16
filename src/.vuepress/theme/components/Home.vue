@@ -75,7 +75,8 @@ export default {
             max-width: 35rem;
             font-size: 1.6rem;
             line-height: 1.3;
-            color: lighten($textColor, 40%);
+            color: lighten($textColor, 20%);
+
             text-align center;
         }
 
@@ -83,15 +84,15 @@ export default {
             display: inline-block;
             font-size: 1.2rem;
             color: #fff;
-            background-color: $accentColor;
+            background-color: $altvColor;
             padding: 0.8rem 1.6rem;
             border-radius: 4px;
             transition: background-color 0.1s ease;
             box-sizing: border-box;
-            border-bottom: 1px solid darken($accentColor, 10%);
+            border-bottom: 1px solid darken($altvColor, 10%);
 
             &:hover {
-                background-color: lighten($accentColor, 10%);
+                background-color: lighten($altvColor, 10%);
             }
         }
 

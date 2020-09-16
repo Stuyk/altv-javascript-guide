@@ -1,3 +1,6 @@
+const { enLocale, enMenus } = require('./locales/en');
+const { trLocale, trMenus } = require('./locales/tr');
+
 const googleSearchConsole = 'bRc7ZyO5gVfceHGhFLN1AvtcptSSPl_6SaLIMHde7bQ';
 const googleAdsenseCode = `ca-pub-3314445478682546`;
 const title = 'alt:V Tutorials by Stuyk';
@@ -29,89 +32,15 @@ const meta = [
     ]
 ];
 
-const sidebar = {
-    docs: [
-        {
-            title: 'Request',
-            collapsable: false,
-            children: ['/docs/contact/']
-        },
-        {
-            title: 'Guide',
-            collapsable: false,
-            children: [
-                {
-                    title: '🚀 Introduction',
-                    collapsable: false,
-                    children: [
-                        '/docs/introduction/',
-                        '/docs/introduction/installing_altv',
-                        '/docs/introduction/debugging',
-                        '/docs/introduction/javascript_primer'
-                    ]
-                },
-                {
-                    title: '♻️ Conversion',
-                    collapsable: false,
-                    children: ['/docs/conversion/']
-                },
-                {
-                    title: '📄 API Guide',
-                    collapsable: false,
-                    children: [
-                        '/docs/api/',
-                        '/docs/api/classes',
-                        '/docs/api/arrays',
-                        '/docs/api/events',
-                        '/docs/api/synced'
-                    ]
-                },
-                {
-                    title: '💡 Events',
-                    collapsable: false,
-                    children: [
-                        '/docs/events/',
-                        '/docs/events/using_events',
-                        '/docs/events/good_practice',
-                        '/docs/events/server_events',
-                        '/docs/events/client_events'
-                    ]
-                },
-                {
-                    title: '🧍 Player',
-                    collapsable: false,
-                    children: ['/docs/player/', '/docs/player/scriptid']
-                },
-                {
-                    title: '📊 Databases',
-                    collapsable: false,
-                    children: ['/docs/databases/', '/docs/databases/mongodb', '/docs/databases/mysql']
-                },
-                {
-                    title: '📚 Cookbook',
-                    collapsable: false,
-                    children: [
-                        '/docs/cookbook/',
-                        '/docs/cookbook/snippet_math',
-                        '/docs/cookbook/snippet_prototyping',
-                        '/docs/cookbook/snippet_encryption',
-                        '/docs/cookbook/snippet_sha256',
-                        '/docs/cookbook/snippet_shuffle',
-                        '/docs/cookbook/snippet_marker',
-                        '/docs/cookbook/snippet_notifications',
-                        '/docs/cookbook/snippet_drawtext',
-                        '/docs/cookbook/snippet_helptext'
-                    ]
-                }
-            ]
-        }
-    ]
-};
-
 module.exports = {
     base: '/',
     title: title,
     description: desc,
+    locales: {
+        ...enLocale,
+        // Import all normal locales here.
+        ...trLocale
+    },
     head: [
         ['meta', { name: 'theme-color', content: '#3eaf7c' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -124,27 +53,14 @@ module.exports = {
         docsDir: '',
         editLinkText: '',
         lastUpdated: false,
-        nav: [
-            {
-                text: 'Start Learning',
-                link: '/docs/introduction/'
-            },
-            {
-                text: 'alt:V Website',
-                link: 'https://altv.mp'
-            },
-            {
-                text: 'Support Stuyk',
-                link: 'https://patreon.com/stuyk'
-            }
-        ],
-        sidebarDepth: 3,
-        sidebar: {
-            collapsable: false,
-            '/docs/': sidebar.docs
+        locales: {
+            ...enMenus,
+            // Import  all locales for menus here.
+            ...trMenus
         }
     },
     plugins: [
+        ['authors'],
         '@vuepress/last-updated',
         '@vuepress/back-to-top',
         '@vuepress/medium-zoom',
@@ -175,3 +91,5 @@ module.exports = {
         }
     }
 };
+
+console.log(JSON.stringify(module.exports.locales, null, '\t'));

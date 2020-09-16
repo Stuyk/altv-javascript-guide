@@ -1,9 +1,9 @@
 ---
 home: true
-heroImage: logo.png
+heroImage: ../logo.png
 tagline: Tutorials for the alt:V Framework in JavaScript
 actionText: Start Learning →
-actionLink: /en/introduction/
+actionLink: /tr/introduction/
 footer: Made with ❤️ by Stuyk
 ---
 

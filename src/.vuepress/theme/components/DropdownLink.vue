@@ -34,7 +34,7 @@
       >
         <li
           v-for="(subItem, index) in item.items"
-          :key="subItem.link || index"
+          :key="index"
           class="dropdown-item"
         >
           <h4 v-if="subItem.type === 'links'">
@@ -46,8 +46,8 @@
             class="dropdown-subitem-wrapper"
           >
             <li
-              v-for="childSubItem in subItem.items"
-              :key="childSubItem.link"
+              v-for="(childSubItem, index) in subItem.items"
+              :key="index"
               class="dropdown-subitem"
             >
               <NavLink

@@ -7,8 +7,6 @@
                 :alt="data.heroAlt || 'hero'"
             />
 
-            <p>test</p>
-
             <h1
                 v-if="data.heroText !== null"
                 id="main-title"

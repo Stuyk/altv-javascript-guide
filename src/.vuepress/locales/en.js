@@ -1,3 +1,4 @@
+const { defaultNavbar } = require('../defaults/navbar');
 const { buildSidebar } = require('../utility/sidebarHelper');
 const language = 'en'; // ie. /tr/
 const languageUpper = 'US';
@@ -12,11 +13,6 @@ const enLocale = {
 };
 
 const sidebar = [
-    {
-        title: 'Request',
-        collapsable: true,
-        children: buildSidebar(`/${language}/contact/`)
-    },
     {
         title: 'Guide',
         collapsable: false,
@@ -74,20 +70,7 @@ const enMenus = {
                 buttonText: 'Refresh'
             }
         },
-        nav: [
-            {
-                text: 'Start Learning',
-                link: `/${language}/introduction/`
-            },
-            {
-                text: 'alt:V Website',
-                link: 'https://altv.mp'
-            },
-            {
-                text: 'Support Stuyk',
-                link: 'https://patreon.com/stuyk'
-            }
-        ],
+        nav: [...defaultNavbar],
         // To Here
         sidebar: {
             collapsable: false,

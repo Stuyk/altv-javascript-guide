@@ -1,3 +1,4 @@
+const { defaultNavbar } = require('./defaults/navbar');
 const { enLocale, enMenus } = require('./locales/en');
 const { trLocale, trMenus } = require('./locales/tr');
 
@@ -44,15 +45,17 @@ module.exports = {
     head: meta,
     themeConfig: {
         repo: 'stuyk/altv-javascript-guide',
-        editLinks: false,
+        editLinks: true,
         docsDir: '',
         editLinkText: '',
-        lastUpdated: false,
+        lastUpdated: true,
+        logo: '/logo.png',
         locales: {
             ...enMenus,
             // Import  all locales for menus here.
             ...trMenus
-        }
+        },
+        nav: [...defaultNavbar]
     },
     plugins: [
         '@vuepress/last-updated',

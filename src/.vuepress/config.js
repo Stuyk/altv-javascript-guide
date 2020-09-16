@@ -60,7 +60,6 @@ module.exports = {
         }
     },
     plugins: [
-        ['authors'],
         '@vuepress/last-updated',
         '@vuepress/back-to-top',
         '@vuepress/medium-zoom',
@@ -91,5 +90,3 @@ module.exports = {
         }
     }
 };
-
-console.log(JSON.stringify(module.exports.locales, null, '\t'));

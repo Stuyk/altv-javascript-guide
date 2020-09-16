@@ -7,13 +7,7 @@
         </div>
 
         <!-- repo link -->
-        <a
-            v-if="repoLink"
-            :href="repoLink"
-            class="repo-link"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
+        <a v-if="repoLink" :href="repoLink" class="repo-link" target="_blank" rel="noopener noreferrer">
             {{ repoLabel }}
             <OutboundLink />
         </a>
@@ -30,7 +24,7 @@ export default {
 
     components: {
         NavLink,
-        DropdownLink,
+        DropdownLink
     },
 
     computed: {
@@ -44,9 +38,9 @@ export default {
         },
 
         userLinks() {
-            return (this.nav || []).map((link) => {
+            return (this.nav || []).map(link => {
                 return Object.assign(resolveNavLinkItem(link), {
-                    items: (link.items || []).map(resolveNavLinkItem),
+                    items: (link.items || []).map(resolveNavLinkItem)
                 });
             });
         },
@@ -75,8 +69,8 @@ export default {
             }
 
             return 'Source';
-        },
-    },
+        }
+    }
 };
 </script>
 

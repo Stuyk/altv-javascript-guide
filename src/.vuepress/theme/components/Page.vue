@@ -19,10 +19,10 @@ export default {
     components: { PageEdit, PageNav },
     props: ['sidebarItems'],
     mounted() {
-        window._mNHandle.queue.push(function () {
+        window._mNHandle.queue.push(function() {
             window._mNDetails.loadTag('447954467', '728x90', '447954467');
         });
-    },
+    }
 };
 </script>
 

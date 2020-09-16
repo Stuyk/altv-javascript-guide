@@ -9,24 +9,14 @@
                 :src="$withBase($site.themeConfig.logo)"
                 :alt="$siteTitle"
             />
-            <span
-                v-if="$siteTitle"
-                ref="siteName"
-                class="site-name"
-                :class="{ 'can-hide': $site.themeConfig.logo }"
-            >{{ $siteTitle }}</span>
+            <span v-if="$siteTitle" ref="siteName" class="site-name" :class="{ 'can-hide': $site.themeConfig.logo }">{{
+                $siteTitle
+            }}</span>
         </RouterLink>
 
-        <div
-            class="links"
-            :style="linksWrapMaxWidth ? {
-        'max-width': linksWrapMaxWidth + 'px'
-      } : {}"
-        >
+        <div class="links" :style="linksWrapMaxWidth ? { 'max-width': linksWrapMaxWidth + 'px' } : {}">
             <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
-            <SearchBox
-                v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"
-            />
+            <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
             <NavLinks class="can-hide" />
         </div>
     </header>
@@ -45,12 +35,12 @@ export default {
         SidebarButton,
         NavLinks,
         SearchBox,
-        AlgoliaSearchBox,
+        AlgoliaSearchBox
     },
 
     data() {
         return {
-            linksWrapMaxWidth: null,
+            linksWrapMaxWidth: null
         };
     },
 
@@ -61,7 +51,7 @@ export default {
 
         isAlgoliaSearch() {
             return this.algolia && this.algolia.apiKey && this.algolia.indexName;
-        },
+        }
     },
 
     mounted() {
@@ -80,7 +70,7 @@ export default {
         };
         handleLinksWrapWidth();
         window.addEventListener('resize', handleLinksWrapWidth, false);
-    },
+    }
 };
 
 function css(el, property) {

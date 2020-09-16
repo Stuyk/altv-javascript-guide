@@ -6,9 +6,7 @@ const languageName = 'Turkish';
 
 const trLocale = {
     [`/${language}/`]: {
-        lang: `${language}-${languageUpper}`,
-        title: 'alt:V Tutorials',
-        description: 'Tutorials for the alt:V Framework in JavaScript'
+        lang: `${language}-${languageUpper}`
     }
 };
 

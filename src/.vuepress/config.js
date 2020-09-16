@@ -3,15 +3,22 @@ const { enLocale, enMenus } = require('./locales/en');
 const { trLocale, trMenus } = require('./locales/tr');
 
 const googleSearchConsole = 'bRc7ZyO5gVfceHGhFLN1AvtcptSSPl_6SaLIMHde7bQ';
-const title = 'alt:V Tutorials by Stuyk';
-const desc = 'Tutorials for the alt:V Framework in JavaScript created by Stuyk. Not for FiveM or RAGE:MP.';
-const card = 'https://i.imgur.com/4yB3BJd.png';
+const title = 'Unofficial alt:V Documentation';
+const desc = 'Unoffical Documentation and Tutorials for the GTA:V Client alt:V.';
+const card = 'https://i.imgur.com/G09dNXt.png';
 
 const meta = [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['meta', { name: 'description', content: desc }],
+    // Favicons
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    // SEO
     ['meta', { itemprop: 'name', content: title }],
     ['meta', { itemprop: 'description', content: desc }],
     ['meta', { itemprop: 'image', content: card }],
@@ -49,7 +56,7 @@ module.exports = {
         docsDir: '',
         editLinkText: '',
         lastUpdated: true,
-        logo: '/logo.png',
+        logo: '/logo_large.png',
         locales: {
             ...enMenus,
             // Import  all locales for menus here.

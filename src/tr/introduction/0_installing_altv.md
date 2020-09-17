@@ -1,75 +1,77 @@
-# Installing Server Files
+# Sunucu Kurulumu
 
-## Prerequisites
+## Gerekli Programlar
 
-Before you begin please install these programs and utilities.
+Aşağıdaki programları indirerek başlayabiliriz.
 
 -   [NodeJS 13+](https://nodejs.org/en/download/current/)
 -   [Visual Studio Code](https://code.visualstudio.com/download)
 -   [GIT](https://git-scm.com/downloads)
 -   [alt:V Client](https://altv.mp/#/downloads)
 
-## General Assumptions
+## Genel Olarak Bilmeniz Gerekenler
 
-This guide will be assuming you will be working in a Windows development environment.
+Windows çalışma ortamında geliştirme yaptığınızı varsayarsak;
 
--   You should know how to use a Command Prompt or Powershell
--   You should know how to open Command Prompt or Powershell
--   You should know that you can run .exe files inside of Command Prompt or Powershell
--   You should know very basic JavaScript.
+-   Windows Komut Satırı (CMD) veya PowerShell kullanmayı bilmelisiniz.
+-   Windows Komut Satırı (CMD) veya PowerShell nasıl açılır bilmelisiniz.
+-   Windows Komut Satırı (CMD) veya PowerShell üzerinde .exe uzantılı dosyaları çalıştırmayı bilmelisiniz.
+-   Basit düzelyde JavaScript bilgisine sahip olmalısınız.
 
-**Important**
+**Önemli**
 
-All code blocks prefixed with `$` are meant to be ran in Command Prompt or Powershell.
+`$` işareti ile başlayan kod satırları Windows Komut Satırı (CMD) veya PowerShell üezrinde çalıştırıldığı anlamına gelmektedir.
 
-**DO NOT** copy the `$` itself when copying commands.
+**SAKIN YAPMA:** komutları kopyalarken `$` işaretini dahil etmeyin.
 
-## Installing altv-pkg
+## altv-pkg Kurulumu
 
-[altv-pkg](https://github.com/stuyk/altv-pkg) is a utility that will quickly allow you to spin up the server binaries on Windows or Linux. This will also give you a base resource for you to work with.
+[altv-pkg](https://github.com/stuyk/altv-pkg), hızlı bir şekilde Windows veya Linux üzerinde sunucu için gerekli dosyaları indirerek hazır hale getiren Stuyk tarafından oluşturulmuş bir yardımcı programdır. Üzerinde çalışmanız için size bir ***resource*** (script) tabanı hazırlar.
 
-You can install it from a command prompt.
+Windows Komut Satırı (CMD) veya PowerShell ile birlikte kurabilirsiniz.
 
 ```sh
 $ npm install -g altv-pkg
 ```
 
-If you run into trouble with install global files. Open a **Powershell** with **Administrative** permissions and run the following command.
+Eğer kurulum sırasında bir problem yaşarsanız **Powershell**'i **Yönetici Olarak** çalıştırıp aşağıda ki rehberi izleyebilirsiniz;
 
 ```sh
 $ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force;
 ```
 
-Verify installion by checking the version.
+Versiyon komutuyla kurulumun doğruluğunu test edebiliriz.
 
 ```sh
 $ altv-pkg --version
 ```
 
-## Using altv-pkg
+## altv-pkg Kullanımı
 
-After installing we'll be downloading the server files.
+Kurulumun ardından sunucu dosyalarını indirmeye başlayacağız.
 
-Create a directory for your server. Then open a Command Prompt in that directory.
+Sunucunuz için bir klasör oluşturun. Windows Komut Satırını (CMD) bu klasörün içinde çalıştırın. Aşağıdaki komutu, komut satırı üzerinde çalıştırın.
 
 ```sh
 $ altv-pkg d release
 ```
 
-This will prompt you for information regarding the gamemode you are creating.
+Kurulum sırasında oluşturduğunuz sunucu ve oyun madı için bazı sorular soracak.
 
-By default the server files and resource files will automatically generate in your current directory.
+Standart olarak sunucu dosyaları otomatik olarak bulunduğunuz dizinde oluşturulacaktır.
 
-Follow the on-screen instructions.
+Ekran üzerinde ki yönergeleri izleyiniz.
 
--   **N** for Voice
--   **Y** for Example Resource
+-   Sesli Sohbet seçeneği için **N** 
+-   Örnek resource için **Y**
 
 ![](./img/cmd_altvpkg.gif)
 
-## Understanding the Files Downloaded
+## İndirilen Dosyaları Anlamak
 
-It is important to discuss a few of the files and the general structure created after downloading the server binaries. Here are the files or some general files that should have been downloaded after you run `altv-pkg d release`.
+
+
+İndirdiğimiz sunucu dosyalarının ne işe yaradığını, nasıl bir klasör yapısında bulunduğunu anlamak ve algılamak çok önemli. Aşağıda `altv-pkg d release` komutu ile kurulumunu sağladığımız sunucu dosyalarımızın genel dosyalarını ve dosya-klasör yapısın görebiliriz.
 
 ```
 |   altv-server.exe
@@ -100,17 +102,17 @@ It is important to discuss a few of the files and the general structure created 
 
 ### altv-server.exe
 
-This is your main binary file for running your server. You can run this from command prompt.
+Bu dosya sunucumuzu çalıştırmamız için gerekli olan ana dosya. Komut satırı üzerinden de çalıştırılabilir.
 
 ```
 $ altv-server.exe
 ```
 
-Use `Ctrl + C` to kill the server.
+`Ctrl + C` kombinasyonu ile sunucunuzu kapatabilir, işlemleri sonlandırabilirsiniz.
 
 ### package.json
 
-This is where your `node_modules` that you are using will be defined. This is where you install packages that may be used by the server-side. Keep in mind that you cannot use `node_modules` on client-side.
+`node_modules` klasörü, hangi klasörün içerisinde yer alıyorsa `package.json` dosyası da o klasör içerisinde yer almalı. NPM paketlerinin (node_modules) tanımlandığı dosyadır. **Not:**NPM Modülleri (node_modules) sadece sunucu (server-side) taraflı çalışır, istemci (client-side) üzerinde hiçbir etkisi olmaz ve kullanılamaz.
 
 ```json
 {
@@ -138,17 +140,17 @@ This is where your `node_modules` that you are using will be defined. This is wh
 }
 ```
 
-Important takeaways from what is defined in this structure.
+Bu dosya üzerinden görebileceğimiz tanımlamalar;
 
--   We are using the [Prettier extension for VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
--   We are using `"type": "module"` to support [ES6 Syntax](https://www.w3schools.com/js/js_es6.asp).
--   We can update our server files by running `$ npm run update` from the base directory.
+-   [Prettier extension for VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) eklentisini kullanıyoruz ve ayarlarını bu dosya üzerinde belirledik. 
+-   `"type": "module"` satırını ES6 desteği için kullanıyoruz. [ES6 Syntax](https://www.w3schools.com/js/js_es6.asp).
+-   Server dosyalarımız `$ npm run update` komutunu çalıştırarak tek seferde güncelleyebiliriz
 
-That's mainly the structure of the package.json and mostly functions like a normal NodeJS project.
+`package.json` dosyamızın genel olarak yapısı bu şekilde. Bir NodeJS projesi ile aynı işlevi görüyor.
 
 ### server.cfg
 
-This uses a custom parser for your server's configuration.
+Sunucunuzun özel yapılandırmasını yapacağınız dosyadır.
 
 ```sh
 name: "TestServer",
@@ -179,21 +181,21 @@ tags: [
 
 #### password
 
-Password is an optional parameter. Commented out with `#`.
+`Password` isteğe bağlı bir parametredir. Eğer sunucunuza bir şifre koymak istiyorsanız "#" işaretini silerek şifrenizi belirleyebilir ve aktif edebilirsiniz.
 
 #### token
 
-Token is an optional parameter. Commented out with `#`. You may get a token from the alt:V Discord by messaging one of the bots in the member list.
+`Token` isteğe bağlı bir parametredir. Bu özelliği kullanmak için "#" işaretini silmeniz gerekiyor. Token sahibi olmak için resmi alt:V Discord'unda sağ tarafta buluna üye listesinde `Helpers` başlığı altındaki "alt:V Master-Bot" adlı bota "token" yazmanız gerekiyor.
 
 #### debug
 
-It is recommended to set this `true` in order to work with your server in development mode. This will allow reconnecting to your server if you setup `debug` in your [client configuration](https://wiki.altv.mp/Altv.cfg) as well.
+Eğer sunucunuz geliştirme sürecindeyse, geliştirmenize yardımcı olması açısından bu özelliği aktif hale getirmenizi (false yazan yerin true olarak değiştirmeniz gerekiyor.) öneriyoruz. Bu özellik sayesinde "reconnect" komutunu F8 Konsol üzerinden kullanabileceksiniz. Sunucunuzu geliştirme sürecinden ayırıp oyuncuların giriş yapabileceği bir hale getireceğiniz zamanda ise tekrardan "true" olarak değiştirdiğimiz değeri "false" yapmanızı önemle ve şiddetle öneriyoruz. Bu ayar için [istemci konfigürasyonu](https://wiki.altv.mp/Altv.cfg) üzerinde de yapmanız gereken değişiklikler mevcut.
 
 #### resources
 
-This is where you list the folders inside of the `/resources` folder that you want to use. All resources must have a `resource.cfg` inside of their respective folder in order to be loaded as a resource.
+`/resource` klasörü altında bulunan, sunucunuz için hazırladığınız her bir eklenti klasörünü bu parametre içerisinde tanımlayarak çalışmasını sağlayabilirsiniz. Her eklenti klasöründe `resource.cfg` bulunmalı. Aksi takdirde sunucuyu açtığımızda içinde `resource.cfg` olmayan eklentileri tanımayacaktır.
 
-Here is the `resource.cfg` from the `/resources/example` folder.
+Aşağıda `/resources/example` eklentisi için örnek bir `resource.cfg` örneği bulunuyor.
 
 ```sh
 type: js,
@@ -205,21 +207,21 @@ client-files: [
 deps: []
 ```
 
-The main entry point for server-side is the `example` resource is `/resources/example/server/startup.js`
+Eklentimizin sunucu tarafında (server-side) çalışacak kısmı `/resources/example/server/startup.js` yolunda bulunuyor.
 
-The same for client-side except it uses `client` instead of `server`.
+İstemci tarafı için yazdığımız kodun yolu da aynı şekilde. Sadece `server` yerine `client` yazıyoruz.
 
 ### /data
 
-This folder is where we have data files that help us define what vehicle names correspond with what values. These should be downloaded and used automatically.
+Bu klasör içerisinde bulunan data dosyaları araçları tanımlamamız için yardımcı oluyor. Eğer bu dosyalar olmazsa araçları oluştururken araçların tanımlanmadığı ile ilgili hatalar alabiliriz. Bu dosyalar otomatik olarak indirilir ve kullanılır. Ekstra bir işlem yapmamıza gerek yok.
 
 ### /modules
 
-This is where you load special `.dll` or `.so` files for modules that use different languages. ie. C#, Lua, etc. These are usually generated by users who are developing for alt:V. Community made.
+Bu klasör ise kullandığınız farklı dil destekleri için kullandığınız `.dll` veya `.so` dosyaları barındırır. Örnek; C# Modülü, Lua Modülü vb. Bu modüller, alt:V Developerları veya topluluk içinde ki bazı kullanıcıların alt:V için geliştirdiği modüllerdir.
 
 ### /node_modules
 
-This is where packages you download from NPM are installed. Here is an example on installing the Stanford Javascript Crypto Library from NPM.
+Bu klasör, NPM ile yüklediğiniz paketlerin barındığı klasördür. Aşağıda ki örnek komut satırında çalıştırılacak kod ile `Stanford Javascript Crypto Library` paketi NPM tarafından otomatik olarak bu klasör içerisine yüklenecektir. 
 
 ```sh
 $ npm i sjcl
@@ -227,19 +229,19 @@ $ npm i sjcl
 
 ### /resources
 
-Resources is where you create new resources that can be loaded into your `server.cfg`. It is highly recommended that if you are create a very large project that you stick to a single resource for performance reasons and ease of use.
+Yeni bir eklenti yazmaya başladığınızda bu klasörün içerisinde yeni bir klasör oluşturup kodlamaya başlayacağınız ana klasör burasıdır. Burada oluşturduğunuz eklenti klasörlerini `server.cfg` içinde `resources` parametresinde belirtebilirsiniz. Eğer eklentilerinizin boyutları büyükse veya çok fazla eklentiniz varsa performans açısından problem yaşamamanız için hepsini tek bir eklenti olarak birleştirmenizi şiddetle tavsiye ediyoruz. Böylece kontrol edilmesi ve kullanılması daha kolay olacaktır.
 
 ## Opening Up Your Workspace
 
-Open up the folder where you setup your alt:V server in VS:Code.
+alt:V Sunucunuzu kurduğunuz klasörü VS:Code üzerinde açalım.
 
-Should look something like the image below.
+Resimdeki gibi görünmeli.
 
 ![](./img/vscode_entry.png)
 
-You can start writing your code inside of `resources/example/startup.js`.
+`resources/example/startup.js` dosyası içerisinde kodumuzu yazmaya başlayalım.
 
-Make sure your `server.cfg` has `example` inside of the resources section of your `server.cfg`.
+`server.cfg` içerisinde `resources` içinde `example` olduğuna emin olalım.
 
 ```sh
 resources: [
@@ -247,13 +249,15 @@ resources: [
 ],
 ```
 
-Run your server from command line to ensure everything has loaded properly.
+Herşeyin doğru olduğundan emin olmak için komut satırında sunucunuzu çalıştırın.
 
 ![](./img/cmd_loaded.png)
 
 ## Connecting
 
-You may connect by opening your alt:V Client and using direct connect.
+alt:V İstemcisinde `Hızlı Bağlan` ile sunucunuza ip adresi ve port bilgisi ile bağlanabilirsiniz.
+
+Yerel makinenizde açtığınız sunucunun ip adresi her zaman `localhost` veya `127.0.0.1` dir (ikiside geçerli).
 
 ```
 127.0.0.1:7788
@@ -261,9 +265,9 @@ You may connect by opening your alt:V Client and using direct connect.
 
 ## Server-Side
 
-Server side code should be written in the `server` folder.
+Sunucu tarafında çalışacak kodlar `server` klasörü içerisinde yazılmalı.
 
-You also need to import the `types` for alt:V Server Side.
+Aynı zamanda `types` kütüphanesini de import etmelisiniz.
 
 ```js
 /// <reference types="@altv/types-server" />
@@ -272,17 +276,17 @@ import alt from 'alt-server';
 alt.log('test');
 ```
 
-Your server side should now have auto-completion.
+Sunucu tarafında kod yazarken artık otomatik olarak tamamlayıcı çalışacak.
 
 ![](./img/vscode_server_test.png)
 
 ## Client-Side
 
-Client side code should be writtein in the `client` folder.
+İstemci kodları (client-side) `client` klasörü içerisinde yazılmalı.
 
-This is the only section where you can actively use a `native`.
+İstemci tarafı aynı zamanda `native` kütüphanesini kullanabileceğiniz tek kısım.
 
-You also need to import the `types` for alt:V Client Side.
+Aynı zamanda `types` kütüphanesini de alt:V istemci tarafı için import etmelisiniz.
 
 ```js
 /// <reference types="@altv/types-client" />
@@ -293,6 +297,6 @@ import * as native from 'natives';
 alt.log(`You connected! Nice!`);
 ```
 
-Your client side should now have auto-completion.
+İstemci tarafında kod yazarken artık otomatik olarak tamamlayıcı çalışacak.
 
 ![](./img/vscode_client_test.png)

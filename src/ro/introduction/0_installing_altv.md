@@ -11,8 +11,6 @@
 
 ## Ipoteze Generale
 
-This guide will be assuming you will be working in a Windows development environment.
-
 Acest ghid vă presupune că veți lucra într-un mediu de dezvoltare Windows.
 
 -   Ar trebui să știți cum să utilizați un Command Prompt sau Powershell

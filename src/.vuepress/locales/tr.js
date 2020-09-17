@@ -63,7 +63,8 @@ const trMenus = {
         sidebar: {
             collapsable: false,
             [`/${language}/`]: sidebar
-        }
+        },
+        sidebarDepth: 3
     }
 };
 

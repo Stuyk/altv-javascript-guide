@@ -12,6 +12,8 @@ Check out [the support section](./support/) to learn how to contribute.
 
 [English](/en/introduction)
 
-[Türk](/tr/introduction)
-
 [Română](/ro/introduction)
+
+[Slovenský](/sk/introduction)
+
+[Türk](/tr/introduction)

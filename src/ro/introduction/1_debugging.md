@@ -1,4 +1,4 @@
-# Configurați Depanarea Client-ului
+# Configurați Client Debugging-ul
 
 Ar trebui să aveți configurarea serverului alt:V în acest stadiu.
 

@@ -1,8 +1,8 @@
 const { defaultNavbar } = require('../defaults/navbar');
 const { buildSidebar } = require('../utility/sidebarHelper');
-const language = 'sk'; // ie. /tr/
+const language = 'sk';
 const languageUpper = 'SK';
-const languageName = 'Slovak'; // Turkish
+const languageName = 'Slovenský';
 
 const skLocale = {
     [`/${language}/`]: {

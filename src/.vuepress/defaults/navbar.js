@@ -4,7 +4,8 @@ const defaultNavbar = [
         ariaLabel: 'Language Menu',
         items: [
             { text: 'English', link: '/en/introduction/' },
-            { text: 'Türk', link: '/tr/introduction/' }
+            { text: 'Türk', link: '/tr/introduction/' },
+            { text: 'Română', link: '/ro/introduction/' }
         ]
     },
     {

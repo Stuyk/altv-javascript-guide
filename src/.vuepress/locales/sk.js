@@ -22,7 +22,7 @@ const sidebar = [
                 children: buildSidebar(`/${language}/introduction/`)
             },
             {
-                title: `♻️ Conversion`,
+                title: `♻️ Prechod`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/conversion/`)
             },

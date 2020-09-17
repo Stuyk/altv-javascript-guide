@@ -14,4 +14,4 @@ Check out [the support section](./support/) to learn how to contribute.
 
 [Türk](/tr/introduction)
 
-[Slovenský](/sk/introduction)
+[Română](/ro/introduction)

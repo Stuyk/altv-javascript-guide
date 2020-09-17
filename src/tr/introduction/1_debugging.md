@@ -1,16 +1,18 @@
-# Setup Client Debugging
+# İstemciyi Debugging için ayarlamak
 
-You should have the alt:V client setup at this stage.
+Bu aşamada alt:V İstemcisini kurmuş olmanız gerekmekte.
 
-Go to the folder location of where your altv.exe is located and find the altv.cfg.
+`altv.exe`'nin bulunduğu konuma gidip `altv.cfg`'yi bulalım.
+
+**NOT:** *Bu ayarlar sadece debugging yapacağınız zaman geçerlidir. Eğer gireceğiniz sunucuda debug modu açık değilse sunucuya bağlanamazsınız.*
 
 ![](./img/edit_cfg.png)
 
 ## altv.cfg
 
-Make sure that this parameter is set to true.
+Bu parametrenin değerinin `true` olduğuna emin olun.
 
-If it does not exist. Create the parameter.
+Eğer böyle bir parametre yoksa oluşturun.
 
 ```sh
 debug: 'true'
@@ -18,17 +20,18 @@ debug: 'true'
 
 ## Reconnecting
 
-After a server is restarted you will be disconnected. You are only able to reconnect to a server with `debug` set to `true` as well as your own client's `debug` set to `true`.
+Sunucunuzu yeniden başlattığınızda otomatik olarak sunucudan atılacaksınız. Eğer sunucunuzun konfigürasyonunda debug modu açıksa ve istemciniz üzerinde de debug modu açıksa 
+`reconnect` komutunu kullanabileceksiniz. Aksi takdirde bağlantınızın kesildiği bir sunucuya tekrar girmek için istemciyi yeniden başlatmanız gerekiyor.
 
-Simply Press `F8`
+`F8` tuşuna bas ve;
 
-**With Password**
+**Sunucu Şifreliyse**
 
 ```
-reconnect password_goes_here
+reconnect sunucunuzun_sifresi
 ```
 
-**Without Password**
+**Sunucu Şifresizse**
 
 ```
 reconnect

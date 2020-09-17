@@ -1,23 +1,24 @@
-# JavaScript Primer
+# JavaScript İpuçları
 
-This page is to explain some basic JavaScript principles. This is mainly for the people who refuse to look into a place like Code Academy to learn how to code. However, here are some courses.
+Bu sayfa basitçe JavaScript prensiplerini açıklayacaktır. 
+This page is to explain some basic JavaScript principles. Bu sayfa kod yazmayı öğrenmek için araştırmaktan kaçınan ve kurs almayı reddeden insanlar için hazırlanmıştır. Aşağıda bazı kurslar bulunmakta;
 
 -   [https://learnxinyminutes.com/docs/javascript/](https://learnxinyminutes.com/docs/javascript/)
 -   [https://www.learn-js.org/](https://www.learn-js.org/)
 -   [https://bonsaiden.github.io/JavaScript-Garden/](https://bonsaiden.github.io/JavaScript-Garden/)
 
-## Variables
+## Değişkenler
 
-There are two types of variables you should be using in JavaScript these days.
+JavaScript'in bu günlerde kullanabileceğimiz iki farklı değişken türü var.
 
 ```js
 const myVariable = 'example';
 let myVariableName = 'example';
 ```
 
-**const** means the variable is constant. This means the variable type cannot change and the properties of the content can be re-assigned. Also must have a value.
+**const**, sabit değişken anlamına gelir. Bir değere sahip olması zorunludur, boş tanımlanamaz. Bu değişken aynı zamanda tanımlandıktan sonra değiştirilemez ancak tekrar kullanılabilir.
 
-**let** is a type of variable that can have its value re-assigned. Meaning it can be reused over and over again. Value is optional.
+**let**, değeri değişebilen değişken anlamına gelir. Tekrar tekrar kullanabileceğiniz ve içeriğini değiştirebileceğiniz bir değişken türüdür.
 
 ```js
 let myVariable;
@@ -28,40 +29,40 @@ myVariable = {
 };
 ```
 
-## Basic Math
+## Basit Matematik
 
-Mathematics is mostly similar to other programming languages.
+JavaScript üzerinde matematik diğer programlama dilleri ile çok benzerdir.
 
 ```js
 let result;
 
-// Addition
+// Toplama
 result = 5 + 5;
 result += 1;
 console.log(result);
 
-// Subtraction
+// Çıkarma
 result = 10 - 5;
 result -= 1;
 console.log(result);
 
-// Multiplication
+// Çarpım
 result = 10 * 5;
 result *= 2;
 console.log(result);
 
-// Division
+// Bölme
 result = 10 / 5;
 console.log(result);
 ```
 
-## Basic Functions
+## Basit Fonksiyonlar
 
-Functions are special blocks of code that can be called from other blocks of code. They can also be exported and imported into other files and called. We’ll talk about imports just below this section.
+Fonksiyonlar farklı kod blokları üzerinde çalıştırabileceğiniz özel kod bloklarıdır. Fonksiyonlar aynı zamanda farklı dosyalarda çalıştırmak için `export` ve `import` edilebilir. Bu bölümün altında `import` ve `export` işlemlerine değineceğiz.
 
-You can also write functions in a ton of different ways. I prefer traditional rather than the fat arrow functions.
+Fonksiyonlar bir çok farklı şekilde yazılabilir. Biz genelde `fat arrow fonksiyon` yerine geleneksel yöntemi tercih ediyoruz.
 
-**Traditional Function Example**
+**Geleneksel Fonksiyon Örneği**
 
 ```js
 function myFancyFunction(myArgument, myOtherArgument) {
@@ -77,10 +78,10 @@ function add(n1, n2) {
 
 const result = add(5, 5);
 console.log(result);
-// Prints 5 as the result.
+// Geriye 10 değerini döndürür ve yazdırır.
 ```
 
-**Fat Arrow Functions**
+**Fat Arrow Fonksiyonlar**
 
 ```js
 const myFancyFunction = (myArgument, myOtherArgument) => {
@@ -96,16 +97,16 @@ const add = (n1, n2) => {
 
 const result = add(5, 5);
 console.log(result);
-// Prints 5 as the result.
+// Geriye 10 değerini döndürür ve yazdırır.
 ```
 
-## Exporting Functions
+## Fonksiyonlarda `export` işlemi
 
-Exporting is a big part of the process when working with alt:V. However, the exports are not common js. We use ES6 syntax for a majority of imports and exports. This is slightly different if you’re used to the whole module exports part of common js.
+`export` işlemi alt:V üzerindeki çalışmalarımızın çoğunu kapsar ancak `export`. `export` işlemi JavaScript içerisinde yaygın değil. Bunun için ES6'nın yazım eklini `import` ve `export` işlemleri için kullanıyoruz. Bu işlem, JavaScript üzerinde tüm modülün dışa aktarılmasından biraz farklı çalışıyor.
 
-Assume these files are in the same directory.
+Bu dosyaların aynı dizin içerisinde bulunduğunu varsayalım;
 
-**File 1 - file1.js**
+**Dosya 1 - file1.js**
 
 ```js
 export function myFunction(arg1, arg2) {
@@ -113,7 +114,7 @@ export function myFunction(arg1, arg2) {
 }
 ```
 
-**File 2 - file2.js**
+**Dosya 2 - file2.js**
 
 ```js
 import { myFunction } from './file1.js';
@@ -121,7 +122,7 @@ import { myFunction } from './file1.js';
 myFunction('hello', 'world');
 ```
 
-**File 2 (Alternative) - file2.js**
+**Dosya 2 (Alternatif) - file2.js**
 
 ```js
 import * as myFuncs = from './file1.js'
@@ -129,13 +130,13 @@ import * as myFuncs = from './file1.js'
 myFuncs.myFunction('hello', 'world');
 ```
 
-Pretty simple to handle and we’ll be using these exported and imported functions all over the place when it comes down to creating a solid file structure.
+Kontrolü oldukça kolay. Sabit bir klasör yapısı içerisinde `export` ve `import` işlevlerini her yerde kullanacağız.
 
-## For Loops
+## For Döngüleri
 
-Loops are used for so many different things in Javascript and should be used in every part of your toolkit to help you write less code. A for loop allows us to loop through a block of code multiple times. Which allows us to do different things with the results inside of an array.
+Döngüler, JavaScript içinde çok farklı işlevlerde kullanılabilir. Daha az kod yazmınız için herhangi bir yerde kullanabileceğiniz bir araçtır. Döngü, bir döngü bitene kadar içine yazılan kod bloğunu defalarca çalıştıracaktır. Bir dizi veriyle bir çok şey yapmamızı sağlar.
 
-Keep in mind that arrays start at zero (0). This isn’t Lua. Meaning the first element in the array is always a zero.
+Döngülerin sıfırdan (0) başladığını unutmayın. Bu Lua değil. Bir dizinin ilk elemanının adresi her zaman sıfırdır (0).
 
 ```js
 const data = ['test0', 'test1', 'test2'];
@@ -144,11 +145,11 @@ function saySomething(msg) {
     console.log(msg);
 }
 
-// is a number in this for loop
-// i++ increments the number by 1
+// i, bu döngü içerisinde başlangıç numarasıdır.
+// i++ i sayısını her döngünün sonunda birer birer arttırır. 
 for (let i = 0; i < data.length; i++) {
     saySomething(data[i]);
 }
 ```
 
-The above code will print for the above array 3 times. It will first print ‘test0’, ‘test1’, and then ‘test2’. This is done by passing the data inside of the array based on the element number which is i.
+Yukarıda ki kod `data` dizisi için 3 kez çalışacaktır. Önce ‘test0’, ardından ‘test1’ ve son olarak ‘test2’ yazdıracaktır. Bu işlem döngüde ki `i` sayısını kod bloğunun içinde kullanarak sağlanır.

@@ -71,7 +71,7 @@ Urmați instrucțiunile de pe ecran.
 
 ## Înțelegerea fișierelor descărcate
 
-Este important să experimentați câteva dintre fișiere și structura generală creată după descărcarea binarelor serverului. Iată fișierele sau câteva fișiere generale care ar fi trebuit să fie descărcate după executarea comenzii `altv-pkg d release`.
+Este important să explorați câteva dintre fișiere și structura generală creată după descărcarea binarelor serverului. Iată fișierele sau câteva fișiere generale care ar fi trebuit să fie descărcate după executarea comenzii `altv-pkg d release`.
 
 ```
 |   altv-server.exe

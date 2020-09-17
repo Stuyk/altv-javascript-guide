@@ -55,7 +55,6 @@ const sidebar = [
     }
 ];
 
-// change this to first two letters + menus. ie. trMenus
 const roMenus = {
     [`/${language}/`]: {
         label: languageName,

@@ -1,23 +1,24 @@
-# JavaScript Primer
+# Základy jazyka JavaScript
 
-This page is to explain some basic JavaScript principles. This is mainly for the people who refuse to look into a place like Code Academy to learn how to code. However, here are some courses.
+Táto stránka vysvetľuje niektoré základné princípy JavaScriptu. Je to hlavne pre ľudí, ktorí sa odmietajú pozerať na stránku, ako je Code Academy, aby sa naučili programovať. Tu je však niekoľko kurzov, zatiaľ však iba v angličtine. Pre lepšie pochopenie odporúčam si pozrieť túto časť príručky v angličtine [tu](../../en/introduction/2_javascript_primer.html).
 
 -   [https://learnxinyminutes.com/docs/javascript/](https://learnxinyminutes.com/docs/javascript/)
 -   [https://www.learn-js.org/](https://www.learn-js.org/)
 -   [https://bonsaiden.github.io/JavaScript-Garden/](https://bonsaiden.github.io/JavaScript-Garden/)
 
-## Variables
+## Premenné (Variables)
 
-There are two types of variables you should be using in JavaScript these days.
+V dnešnej dobe by ste mali používať dva typy premenných v JavaScripte.
 
 ```js
 const myVariable = 'example';
 let myVariableName = 'example';
 ```
 
-**const** means the variable is constant. This means the variable type cannot change and the properties of the content can be re-assigned. Also must have a value.
+**const** znamená, že premenná je konštantná. To znamená, že typ premennej sa nemôže meniť a vlastnosti obsahu možno znova priradiť. Taktiež musí mať pridelenú hodnotu.
 
-**let** is a type of variable that can have its value re-assigned. Meaning it can be reused over and over again. Value is optional.
+**let** je typ premennej, ktorej hodnota sa môže opätovné priradiť. To znamená, že sa dá opakovane používať. Hodnota je voliteľná.
+
 
 ```js
 let myVariable;
@@ -28,40 +29,40 @@ myVariable = {
 };
 ```
 
-## Basic Math
+## Základná matematika
 
-Mathematics is mostly similar to other programming languages.
+Matematika je väčšinou podobná ako v iných programovacích jazykoch.
 
 ```js
 let result;
 
-// Addition
+// Sčítanie
 result = 5 + 5;
 result += 1;
 console.log(result);
 
-// Subtraction
+// Odčítanie
 result = 10 - 5;
 result -= 1;
 console.log(result);
 
-// Multiplication
+// Násobenie
 result = 10 * 5;
 result *= 2;
 console.log(result);
 
-// Division
+// Delenie
 result = 10 / 5;
 console.log(result);
 ```
 
-## Basic Functions
+## Základné funkcie (functions)
 
-Functions are special blocks of code that can be called from other blocks of code. They can also be exported and imported into other files and called. We’ll talk about imports just below this section.
+Funkcie sú špeciálne bloky kódu, ktoré je možné volať z iných blokov kódu. Môžu byť tiež exportované a importované do iných súborov a byť volané. Hneď pod touto časťou si povieme niečo o *import-och*.
 
-You can also write functions in a ton of different ways. I prefer traditional rather than the fat arrow functions.
+Môžete tiež písať funkcie rôznymi spôsobmi.
 
-**Traditional Function Example**
+**Príklad tradičnej funkcie**
 
 ```js
 function myFancyFunction(myArgument, myOtherArgument) {
@@ -77,10 +78,10 @@ function add(n1, n2) {
 
 const result = add(5, 5);
 console.log(result);
-// Prints 5 as the result.
+// Vo výsledku sa vytlačí 5.
 ```
 
-**Fat Arrow Functions**
+**Príklad šípkovej funkcie (Arrow Function)**
 
 ```js
 const myFancyFunction = (myArgument, myOtherArgument) => {
@@ -96,16 +97,16 @@ const add = (n1, n2) => {
 
 const result = add(5, 5);
 console.log(result);
-// Prints 5 as the result.
+// Vo výsledku sa vytlačí 5.
 ```
 
-## Exporting Functions
+## Export funkcií
 
-Exporting is a big part of the process when working with alt:V. However, the exports are not common js. We use ES6 syntax for a majority of imports and exports. This is slightly different if you’re used to the whole module exports part of common js.
+Export je veľkou súčasťou procesu pri práci s alt:V. Export však nie je bežný v bežnom JS. Syntax ES6 používame pre väčšinu importov a exportov. To sa mierne líši, ak ste zvyknutí, že exportujete celý modul v bežnom JS.
 
-Assume these files are in the same directory.
+Predpokladajme, že tieto súbory sú v rovnakom adresári.
 
-**File 1 - file1.js**
+**Súbor 1 - file1.js**
 
 ```js
 export function myFunction(arg1, arg2) {
@@ -113,7 +114,7 @@ export function myFunction(arg1, arg2) {
 }
 ```
 
-**File 2 - file2.js**
+**Súbor 2 - file2.js**
 
 ```js
 import { myFunction } from './file1.js';
@@ -121,7 +122,7 @@ import { myFunction } from './file1.js';
 myFunction('hello', 'world');
 ```
 
-**File 2 (Alternative) - file2.js**
+**Súbor 2 (alternatívny) - file2.js**
 
 ```js
 import * as myFuncs = from './file1.js'
@@ -129,13 +130,13 @@ import * as myFuncs = from './file1.js'
 myFuncs.myFunction('hello', 'world');
 ```
 
-Pretty simple to handle and we’ll be using these exported and imported functions all over the place when it comes down to creating a solid file structure.
+Manipulácia s nimi je celkom jednoduchá a tieto exportované a importované funkcie budeme používať všade, keď dôjde na vytvorenie pevnej štruktúry súborov.
 
 ## For Loops
 
-Loops are used for so many different things in Javascript and should be used in every part of your toolkit to help you write less code. A for loop allows us to loop through a block of code multiple times. Which allows us to do different things with the results inside of an array.
+Smyčky (Loop-i) sa v Javascripte používajú na toľko rôznych vecí a mali by sa použiť v každej časti vašej súpravy nástrojov, aby vám pomohli napísať menej kódu. Smyčka for (for loop) nám umožňuje opakovane prechádzať blokom kódu, čo nám umožňuje robiť s výsledkami v poli rôzne veci.
 
-Keep in mind that arrays start at zero (0). This isn’t Lua. Meaning the first element in the array is always a zero.
+Majte na pamäti, že polia začínajú na nule (0). Toto nie je Lua. To znamená, že prvý prvok v poli je vždy nula.
 
 ```js
 const data = ['test0', 'test1', 'test2'];
@@ -144,11 +145,10 @@ function saySomething(msg) {
     console.log(msg);
 }
 
-// is a number in this for loop
-// i++ increments the number by 1
+// i++ zvýši číslo o 1
 for (let i = 0; i < data.length; i++) {
     saySomething(data[i]);
 }
 ```
 
-The above code will print for the above array 3 times. It will first print ‘test0’, ‘test1’, and then ‘test2’. This is done by passing the data inside of the array based on the element number which is i.
+Vyššie uvedený kód sa pre vyššie uvedené pole vytlačí trikrát. Najprv vytlačí súbory `test0`, `test1` a potom `test2`. To sa deje odovzdaním údajov do poľa na základe čísla prvku, ktorým je `i`.

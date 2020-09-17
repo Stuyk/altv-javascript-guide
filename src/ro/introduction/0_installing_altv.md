@@ -15,7 +15,7 @@ This guide will be assuming you will be working in a Windows development environ
 
 Acest ghid vă presupune că veți lucra într-un mediu de dezvoltare Windows.
 
--   Ar trebui să știți cum să utilizați o linie de comandă sau Powershell
+-   Ar trebui să știți cum să utilizați un Command Prompt sau Powershell
 -   Ar trebui să știți cum să deschideți Command Prompt sau Powershell
 -   Ar trebui să știți că puteți rula fișiere .exe în Command Prompt sau Powershell
 -   Ar trebui să știți bazele limbajului JavaScript
@@ -30,7 +30,7 @@ Toate blocurile de coduri prefixate cu `$` sunt menite să fie rulate in Command
 
 [altv-pkg](https://github.com/stuyk/altv-pkg) este o utilitate care vă va permite rapid să rotiți serverele binare pe Windows sau Linux. Acest lucru vă va oferi, de asemenea, o resursă de bază cu care puteți lucra.
 
-Puteți să-l instalați dintr-un command prompt.
+Puteți să-l instalați dintr-un Command Prompt.
 
 ```sh
 $ npm install -g altv-pkg
@@ -52,7 +52,7 @@ $ altv-pkg --version
 
 După instalare, vom descărca fișierele serverului.
 
-Creați un director pentru serverul dumneavoastră. Apoi deschideți o linie de comanda în directorul respectiv.
+Creați un director pentru serverul dumneavoastră. Apoi deschideți un command prompt în directorul respectiv.
 
 ```sh
 $ altv-pkg d release
@@ -102,7 +102,7 @@ Este important să explorați câteva dintre fișiere și structura generală cr
 
 ### altv-server.exe
 
-Acesta este principalul fișier binar pentru rularea serverului. Puteți rula acest lucru dintr-o linie de comanda.
+Acesta este principalul fișier binar pentru rularea serverului. Puteți rula acest lucru dintr-un Command Prompt.
 
 ```
 $ altv-server.exe
@@ -241,7 +241,7 @@ Ar trebui să arate ca imaginea de mai jos.
 
 Puteți începe să scrieți propriul cod în `resources/example/startup.js`.
 
-Asigurați-vă că `server.cfg` are `example` în secțiunea de resurse din `server.cfg`.
+Asigurați-vă că `server.cfg` are `example` în secțiunea de `resources` din `server.cfg`.
 
 ```sh
 resources: [
@@ -249,7 +249,7 @@ resources: [
 ],
 ```
 
-Rulați serverul din linia de comandă pentru a vă asigura că totul s-a încărcat corect.
+Rulați serverul din Command Prompt pentru a vă asigura că totul s-a încărcat corect.
 
 ![](./img/cmd_loaded.png)
 

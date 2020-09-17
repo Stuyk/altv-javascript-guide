@@ -1,17 +1,16 @@
 ---
 home: true
 heroImage: ../logo.png
-tagline: Tutorials for the alt:V Framework in JavaScript
-actionText: Start Learning →
+tagline: alt:V Javascript Dersleri
+actionText: Başla →
 actionLink: /tr/introduction/
 footer: Made with ❤️ by Stuyk
 ---
 
 <center>
-This site is provided as is and is not affiliated with the alt:V Development team. The content inside is manually created by Stuyk and acts as a reference to help you learn how to work with the alt:V GTA:V Framework.
-
+Bu websitesinin resmi alt:V Developer ekibi ile alakası yoktur. Bütün içerikler Stuyk tarafından sizlere GTAV üzerinde bir alt:V sunucusu oluşturabilmeniz, kendi oyun modunuzu oluşturabilmeniz için referans olması amacıyla hazırlanmıştır.
 <br />
 
-If your browser freezes. Please refresh this page a few times.
+Eğer tarayıcınız donduysa lütfen bir kaç kez yenileyiniz.
 
 </center>

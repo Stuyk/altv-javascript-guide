@@ -50,6 +50,12 @@ const sidebar = [
                 title: `📚 Príručká`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/cookbook/`)
+            },
+            // Static Categories
+            {
+                title: `📖 Data Tables`,
+                collapsable: false,
+                children: buildSidebar(`/${language}/tables/`)
             }
         ]
     }

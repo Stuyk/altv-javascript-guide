@@ -2,6 +2,8 @@
 
 This page will act as a representation on using the various player properties.
 
+These are meant to be used on server side.
+
 ## player.armour
 
 Used to **set or get** the player's current armour level.
@@ -70,6 +72,8 @@ Used to **get** the currently equipped weapon's tint index.
 ```js
 const currentTint = player.currentWeaponTintIndex;
 ```
+
+### Weapon Tint Table
 
 | Weapon Tint ID | Color    |
 | -------------- | -------- |

@@ -1,5 +1,7 @@
 # Vehicle Bones
 
+Represents the different part locations of a vehicle.
+
 | Bone Name              |
 | ---------------------- |
 | chassis                |

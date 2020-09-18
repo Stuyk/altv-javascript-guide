@@ -1,5 +1,7 @@
 # Weapon Components
 
+This section represents weapon components that may be added to individual weapons that have corresponding sections.
+
 ## Knuckle Duster
 
 | Name        | Hash Key                         | Hash       |

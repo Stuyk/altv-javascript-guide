@@ -1,5 +1,7 @@
 # Vehicle Mods
 
+Vehicle mods require setting a ModKit in order to use them server-side.
+
 | Mod Index                   | Description        |
 | --------------------------- | ------------------ |
 | 0                           | Spoilers           |

@@ -1,5 +1,7 @@
 # Ped Bones
 
+Represents the different parts of a player model.
+
 | Bone Name           | ID    |
 | ------------------- | ----- |
 | SKEL_ROOT           | 0     |

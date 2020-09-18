@@ -1,5 +1,7 @@
 # Vehicle Color IDs
 
+List of standard GTA:V colors for GTA:V Vehicles.
+
 | ID  | Description                  | HEX                                      | RGB             | HEX       |
 | --- | ---------------------------- | ---------------------------------------- | --------------- | --------- |
 | 0   | Metallic Black               | <span style="color: #0d1116">■■■■</span> | `13, 17, 22`    | `#0d1116` |

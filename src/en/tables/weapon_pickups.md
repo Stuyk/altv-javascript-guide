@@ -1,5 +1,7 @@
 # Weapon Pickups
 
+These are pickup hashes that can be used on **client-side**.
+
 | Pickup Model                                               | Pickup Hash |
 | ---------------------------------------------------------- | ----------- |
 | PICKUP_AMMO_BULLET_MP                                      | 0x550447A9  |

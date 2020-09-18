@@ -1,5 +1,7 @@
 # Vehicle Seats
 
+This section represents seats where player's can sit.
+
 | Index | Description                                                 |
 | ----- | ----------------------------------------------------------- |
 | -1    | Driver                                                      |

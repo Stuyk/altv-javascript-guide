@@ -1,5 +1,9 @@
 # Cause of Death
 
+This object of Cause of Death represents the weaponHash that kills a player.
+
+Hash can also be used to spawn weapons.
+
 ```js
 const CauseOfDeath = {
     2460120199: 'Antique Cavalry Dagger',

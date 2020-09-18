@@ -50,6 +50,11 @@ const sidebar = [
                 title: `📚 Cookbook`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/cookbook/`)
+            },
+            {
+                title: `📖 Data Tables`,
+                collapsable: false,
+                children: buildSidebar(`/${language}/tables/`)
             }
         ]
     }

@@ -79,6 +79,7 @@ module.exports = {
         '@vuepress/medium-zoom',
         '@vuepress/active-header-links',
         ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }],
+        ['@dovyp/vuepress-plugin-clipboard-copy', true],
         [
             'robots',
             {

@@ -6,6 +6,8 @@ sidebar: false
 
 These documents may not have your language.
 
+English will always be the **most up to date** section.
+
 Check out [the support section](./support/) to learn how to contribute.
 
 ## Languages

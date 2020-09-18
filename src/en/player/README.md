@@ -2,15 +2,15 @@
 
 The player is you. You are the player. Your friend is the player. Everyone is the player.
 
-Player's also come with plenty of properties and functions.
+Player's also come with plenty of properties and functions. Player is most often accessed through events. 
+
+Meaning an event will give you access to a player instance depending on the behavior from the player.
 
 ## Player Properties
 
 Here are some very commonly used properties.
 
-**Server Side**
-
-Player is most often accessed through a series of events, commands, etc.
+### Server Side
 
 | Property Name | Description                                                               |
 | ------------- | ------------------------------------------------------------------------- |
@@ -32,13 +32,7 @@ Player is most often accessed through a series of events, commands, etc.
 
 [alt:V Player Server Typings](https://altmp.github.io/altv-typings/classes/_alt_server_.player.html)
 
-**Client Side**
-
-Use `alt.Player.local` to access yourself on client-side.
-
-Other players can be passed down from the server and your local client can modify that player.
-
-Example: `alt.Player.local.pos`
+### Client Side
 
 | Property Name | Description                                                         |
 | ------------- | ------------------------------------------------------------------- |

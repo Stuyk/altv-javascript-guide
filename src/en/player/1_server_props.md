@@ -27,7 +27,7 @@ function handleConnect(player) {
         player.kick(`No Auth Token Found`);
         return;
     }
-    
+
     alt.log(`${player.name}'s authToken is ${authToken}`);
 }
 ```
@@ -39,7 +39,7 @@ Used to **set or get** the player's current weapon hash.
 ```js
 player.currentWeapon = alt.hash('weapon_pistol'); // 0x1B06D571
 
-if (player.currentWeapon === 0x1B06D571) {
+if (player.currentWeapon === 0x1b06d571) {
     console.log(`Player has a pistol equipped.`);
 }
 ```
@@ -50,7 +50,7 @@ If you want to handle all weapon checking server-side in plain English rather th
 alt.Player.prototype.setWeapon = function(weaponName) {
     this.currentWeapon = alt.hash(weaponName);
     this.currentWeaponName = weaponName;
-}
+};
 ```
 
 ## player.currentWeaponComponents
@@ -60,7 +60,7 @@ Used to **get** all weapon components that are currently on a player's currently
 ```js
 const currentWeaponComponents = player.currentWeaponComponents;
 
-for(let i = 0; i < currentWeaponComponents.length; i++) {
+for (let i = 0; i < currentWeaponComponents.length; i++) {
     const weaponComponentHash = currentWeaponComponents[i];
 }
 ```
@@ -73,22 +73,9 @@ Used to **get** the currently equipped weapon's tint index.
 const currentTint = player.currentWeaponTintIndex;
 ```
 
-### Weapon Tint Table
-
-| Weapon Tint ID | Color    |
-| -------------- | -------- |
-| 0              | Normal   |
-| 1              | Green    |
-| 2              | Gold     |
-| 3              | Pink     |
-| 4              | Army     |
-| 5              | LSPD     |
-| 6              | Orange   |
-| 7              | Platinum |
-
 ## player.dimension
 
-Used to **get** or **set** the player's current dimension. Dimensions are based on INT32. Which means there is a minimum and maximum value for a dimension. From `-32768` to `32767`.
+Used to **get** or **set** the player's current dimension. Dimensions are based on INT32. Which means there is a minimum and maximum value for a dimension. From `-2147483648` to `2147483648`.
 
 A description for dimensions written by Heron is as follows.
 
@@ -106,7 +93,7 @@ player.dimension = 1;
 
 // If you need a unique instance per player join. This is a decent way to handle it.
 // Just remember to set it back to zero after you do whatever you need to do in a unique dimension.
-player.dimension = player.id; 
+player.dimension = player.id;
 ```
 
 ## player.entityAimOffset
@@ -123,7 +110,7 @@ At the time of writing this document we're not even sure if it's functioning.
 
 ## player.flashlightActive
 
-Used to **get** the player's flashlight activity? 
+Used to **get** the player's flashlight activity?
 
 At the time of writing this document we're not even sure if it's functioning.
 
@@ -189,7 +176,7 @@ function handleConnect(player) {
 
 ## player.ip
 
-In most cases this is an IP that is converted from IPv4 to IPv6. 
+In most cases this is an IP that is converted from IPv4 to IPv6.
 
 An example of what a local host IP looks like: `::ffff:127.0.0.1`
 
@@ -198,7 +185,7 @@ alt.on('playerConnect', handleConnect);
 
 function handleConnect(player) {
     if (player.ip === `::ffff:127.0.0.1`) {
-        alt.log(`${player.name} has joined from local host.`)
+        alt.log(`${player.name} has joined from local host.`);
     }
 }
 ```
@@ -216,7 +203,7 @@ if (currentMaxArmour <= 100) {
     player.armour = 65535;
 }
 
-alt.log(`${player.name} is a chunker.`)
+alt.log(`${player.name} is a chunker.`);
 ```
 
 ## player.maxHealth
@@ -232,12 +219,12 @@ if (currentMaxHealth <= 100) {
     player.health = 65535;
 }
 
-alt.log(`${player.name} is a healthy chunker.`)
+alt.log(`${player.name} is a healthy chunker.`);
 ```
 
 ## player.model
 
-Used to set **set or get** the player's current model. 
+Used to set **set or get** the player's current model.
 
 You may pass a string value here.
 
@@ -267,7 +254,7 @@ function handleConnect(player) {
 
 ## player.netOwner
 
-Used to **get** the current network owner responsible for syncing an entity with the server. Inherited from entity. 
+Used to **get** the current network owner responsible for syncing an entity with the server. Inherited from entity.
 
 This is not necessarily a useful property for the average developer.
 
@@ -290,13 +277,13 @@ alt.setInterval(handlePingUpdate, 5000);
 
 function handlePingUpdate() {
     const currentPlayers = [...alt.Player.all];
-    
-    for(let i = 0; i < currentPlayers.length; i++) {
+
+    for (let i = 0; i < currentPlayers.length; i++) {
         const player = currentPlayers[i];
         if (!player || !player.valid) {
             continue;
         }
-        
+
         player.setSyncedMeta('ping', player.ping);
     }
 }
@@ -309,7 +296,7 @@ Used to **get** or **set** the player's current position.
 When getting the player's current position you should use a spread operator to make it modifiable.
 
 ```js
-const currentPos = {...player.pos};
+const currentPos = { ...player.pos };
 currentPos.x += 1;
 
 // Teleport them under the map.
@@ -317,7 +304,7 @@ player.pos = {
     x: 0,
     y: 0,
     z: 0
-}
+};
 
 // Create a Vector3 with the alt function.
 player.pos = new alt.Vector3(0, 0, 0);
@@ -328,7 +315,7 @@ player.pos = new alt.Vector3(0, 0, 0);
 Used to **get or set** the player's current rotation. However, **setting rotation is broken on server-side**.
 
 ```js
-const currentRot = {...player.rot};
+const currentRot = { ...player.rot };
 ```
 
 ## player.seat
@@ -349,7 +336,7 @@ if (player.vehicle && player.seat === 1) {
 }
 
 if (player.vehicle && player.seat === 2) {
-    alt.log(`Player is behind the player riding shotgun.`) // Back Right
+    alt.log(`Player is behind the player riding shotgun.`); // Back Right
 }
 ```
 
@@ -365,7 +352,7 @@ const social = player.socialId;
 
 ## player.valid
 
-Used to **get** if a player entity is still valid. This is useful when using timeouts, intervals, and handling disconnect events. 
+Used to **get** if a player entity is still valid. This is useful when using timeouts, intervals, and handling disconnect events.
 
 A player that invalid means that it can longer receive data from the server.
 
@@ -377,7 +364,7 @@ function handleDisconnect(player, reason) {
         console.log(`Looks like this player is already invalid. Can't save anything.`);
         return;
     }
-    
+
     console.log(`${player.name} has disconnected.`);
 }
 ```
@@ -394,7 +381,7 @@ if (player.vehicle) {
         g: 0,
         b: 0,
         a: 255
-    }
+    };
 }
 
 if (!player.vehicle) {

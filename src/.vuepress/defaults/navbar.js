@@ -6,7 +6,8 @@ const defaultNavbar = [
             { text: 'English', link: '/en/introduction/' },
             { text: 'Română', link: '/ro/introduction/' },
             { text: 'Slovenský', link: '/sk/introduction/' },
-            { text: 'Türk', link: '/tr/introduction/' }
+            { text: 'Türk', link: '/tr/introduction/' },
+            { text: 'Deutsch', link: '/de/introduction/' }
         ]
     },
     {

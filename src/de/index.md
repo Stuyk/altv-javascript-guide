@@ -4,7 +4,7 @@ heroImage: ../logo.png
 tagline: Hilfestellungen zum entwickeln mit dem alt:V Framework in JavaScript
 actionText: Erste Schritte →
 actionLink: /de/introduction/
-footer: Erstell mit ❤️ von Stuyk | t4styy
+footer: Erstellt mit ❤️ von Stuyk | t4styy
 ---
 
 <center>

@@ -3,11 +3,11 @@ const defaultNavbar = [
         text: 'Languages',
         ariaLabel: 'Language Menu',
         items: [
+            { text: 'Deutsch', link: '/de/introduction/' },
             { text: 'English', link: '/en/introduction/' },
             { text: 'Română', link: '/ro/introduction/' },
             { text: 'Slovenský', link: '/sk/introduction/' },
-            { text: 'Türk', link: '/tr/introduction/' },
-            { text: 'Deutsch', link: '/de/introduction/' }
+            { text: 'Türk', link: '/tr/introduction/' }
         ]
     },
     {

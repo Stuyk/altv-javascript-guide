@@ -104,6 +104,7 @@ div[class*="language-"]
 for lang in $codeLang
   div{'[class~="language-' + lang + '"]'}
     &:before
+      display none
       content ('' + lang)
 
 div[class~="language-javascript"]

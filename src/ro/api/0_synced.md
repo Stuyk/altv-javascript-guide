@@ -1,10 +1,10 @@
-# What is Synchronized
+# Ce este sincronizarea?
 
-alt:V has a lot of things that are automatically synchronized.
+alt:V are o mulțime de lucuri care sunt sincronizate automat.
 
-It takes a lot of the pain out of developing a server when things already work outright.
+Acesta face ca dezvoltarea unui server să fie mult mai ușoară când lucrurile funcționează deja la parametrii normali.
 
-Here is an unofficial list of things that may be synchronized.
+Iată o listă neoficială de lucuri care pot fi sincronizate.
 
 -   Player/Ped Clothing
 -   Player/Ped Appearance
@@ -27,4 +27,4 @@ Here is an unofficial list of things that may be synchronized.
 -   Diving
 -   Waves (Weather Dependent)
 
-This synchronization can be confirmed with upwards of 600+ players.
+Această sincronizare poate fi confirmată cu peste 600+ de jucători.

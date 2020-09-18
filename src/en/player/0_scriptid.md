@@ -1,4 +1,4 @@
-# What is a scriptID?
+# Understanding ScriptID
 
 This is a way for us to identify another player or ourselves on client-side.
 
@@ -22,7 +22,7 @@ This is the equivalent of `local playerPed = PlayerPedId()` from FiveM.
 
 However, for individual players it depends on how you recieve their player instance.
 
-**Server Side**
+### Server Side
 
 ```js
 alt.on('playerConnect', player => {
@@ -31,12 +31,22 @@ alt.on('playerConnect', player => {
 });
 ```
 
-**Client Side**
+### Client Side
 
 ```js
 alt.onServer('joined', otherPlayer => {
     // Check if self. Ignore self.
     if (otherPlayer === alt.Player.local) {
+        // Let's freeze ourself.
+        // Don't actually do this. This is just how most natives work with scriptID.
+        alt.log(`You have frozen.`);
+        native.freezeEntityPosition(alt.Player.local.scriptID, true);
+
+        // We'll unfreeze ourself in 5 seconds.
+        alt.setTimeout(() => {
+            alt.log(`You are unfrozen.`);
+            native.freezeEntityPosition(alt.Player.local.scriptID, false);
+        }, 5000);
         return;
     }
 
@@ -44,7 +54,3 @@ alt.onServer('joined', otherPlayer => {
     alt.log(`Their scriptID is: ${otherPlayer.scriptID}`);
 });
 ```
-
-Really simple to understand.
-
-Just don't overthink it.

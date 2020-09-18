@@ -1,5 +1,7 @@
 # Weapon Tint Table
 
+These are weapon tints.
+
 | Weapon Tint ID | Color    |
 | -------------- | -------- |
 | 0              | Normal   |

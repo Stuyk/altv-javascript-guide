@@ -1,6 +1,6 @@
 # Rezumat
 
-alt:V este o modificare alternativa GTA:V multiplayer care permite dezvoltatorilor și jucătorilor să joace pe servere cu moduri de joc personazilzate. Aceste servere pot utiliza limbaje precum C#, JavaScript si Lua.
+alt:V este o modificare alternativa GTA:V multiplayer care permite dezvoltatorilor și jucătorilor să joace pe servere cu moduri de joc personalizate. Aceste servere pot utiliza limbaje precum C#, JavaScript si Lua.
 
 Acest website vă va învăța cum să lucrați cu alt:V în JavaScript ținându-vă de mână, cum să configurați corect un proiect și cum să vă construiți propriul mod de joc.
 

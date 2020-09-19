@@ -13,14 +13,14 @@ După cum puteți vedea, pe baza a ceea ce am citit mai sus, este nevoie de mai 
 Putem folosi aceste cunoștințe pentru a genera un vehicul.
 
 ```js
-// Crează autovehiculul
-// Variabila 'vehicle' este o instanță a autovehiculului nostru.
+// Crează vehiculul
+// Variabila 'vehicle' este o instanță a vehiculului nostru.
 const vehicle = new alt.Vehicle('infernus', 0, 0, 0, 0, 0, 0);
 
-// Porniți autovehiculul
+// Porniți vehiculul
 vehicle.engineOn = true;
 
-// Ajustați culoarea primară a autovehiculul în roșu.
+// Ajustați culoarea primară a vehiculului în roșu.
 vehicle.customPrimaryColor = {
     r: 255,
     g: 0,

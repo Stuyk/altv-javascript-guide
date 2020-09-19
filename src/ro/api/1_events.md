@@ -16,7 +16,7 @@ Un client **NU POATE** comunica cu alt client.
 | alt.onClient   | Obțineți un eveniment emis de la client catre server. Declanșat cu `alt.emitServer`.                                     |
 | alt.emitClient | Emiteți un eveniment în server care este primit cu `alt.onClient`.                                                       |
 
-## Din Server în Client
+## Server to Client
 
 Serverul poate emite date către client numai cu emitClient care necesită un Player.
 Cu toate acestea, Player-ul poate fi înlocuit și cu null, care va emite tuturor jucătorilor.
@@ -37,7 +37,7 @@ alt.onServer('sayHello', () => {
 });
 ```
 
-## Din Client în Server
+## Client to Server
 
 Clientul poate emite date către server numai cu emitServer.
 Evenimentul onServer de la server va primi automat un Player în event handler.
@@ -58,7 +58,7 @@ alt.onClient('sayHello', player => {
 });
 ```
 
-## Din Server Resource în Server Resource
+## Server Resource to Server Resource
 
 Serverul poate comunica cu el însuși numai cu funcțiile on și emit.
 Clientul poate comunica cu el însuși numai cu funcțiile on și emit.
@@ -74,7 +74,7 @@ alt.on('hello', msg => {
 });
 ```
 
-## Din Client Resource în Client Resource
+## Client Resource to Client Resource
 
 **Client Side**
 
@@ -86,7 +86,7 @@ alt.on('hello', msg => {
 });
 ```
 
-## Din Client în WebView și Înapoi
+## Client to WebView and Back
 
 **Notă:** Resursa din adresa HTTP se referă la resursa pentru care scrieți în prezent codul.
 

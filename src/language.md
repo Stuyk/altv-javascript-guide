@@ -19,3 +19,5 @@ Check out [the support section](./support/) to learn how to contribute.
 [Slovenský](/sk/introduction)
 
 [Türk](/tr/introduction)
+
+[Deutsch](/de/introduction)

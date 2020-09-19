@@ -3,6 +3,7 @@ const { enLocale, enMenus } = require('./locales/en');
 const { roLocale, roMenus } = require('./locales/ro');
 const { skLocale, skMenus } = require('./locales/sk');
 const { trLocale, trMenus } = require('./locales/tr');
+const { deLocale, deMenus } = require('./locales/de');
 
 const googleSearchConsole = 'bRc7ZyO5gVfceHGhFLN1AvtcptSSPl_6SaLIMHde7bQ';
 const title = 'Unofficial alt:V Documentation';
@@ -51,7 +52,8 @@ module.exports = {
         // Import all normal locales here.
         ...roLocale,
         ...skLocale,
-        ...trLocale
+        ...trLocale,
+        ...deLocale
     },
     head: meta,
     themeConfig: {
@@ -66,7 +68,8 @@ module.exports = {
             // Import  all locales for menus here.
             ...roMenus,
             ...skMenus,
-            ...trMenus
+            ...trMenus,
+            ...deMenus
         },
         nav: [...defaultNavbar]
     },

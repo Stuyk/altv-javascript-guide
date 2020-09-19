@@ -1,10 +1,10 @@
-# Help Text
+# Hilfstext
 
-Help text is the little box that appears in the upper left corner of your game.
+Der Hilfstext ist eine kleine Tippbox die innerhalb deines Spiels dargestellt wird.
 
-You cannot change the position of this text.
+Die Position von der Tippbox ist nicht veränderbar.
 
-**Client Side**
+**Clientseitig**
 
 ```js
 alt.onServer('showHelpText', showHelpText);
@@ -16,9 +16,9 @@ export function showHelpText(text, milliseconds) {
 }
 ```
 
-## Example Usage
+## Beispiel
 
-**Server Side**
+**Serverseitig**
 
 ```js
 alt.on('playerConnect', player => {
@@ -26,7 +26,7 @@ alt.on('playerConnect', player => {
 });
 ```
 
-**Client Side**
+**Clientseitig**
 
 ```js
 showHelpText('Press ~INPUT_MOVE_UP_ONLY~ to move forward.', 5000);

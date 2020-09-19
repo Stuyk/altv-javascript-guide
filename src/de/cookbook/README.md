@@ -1,5 +1,5 @@
-# Snippets
+# Codeschnipsel
 
-These are going to assist with general server building.
+Diese Codeschnipsel werden dir sehr weiterhelfen, um grundlegende Sachen umzusetzen.
 
-Use the sidebar to navigate and check out these snippets.
+Benutze die Navigationsleiste , welche sich links befindet, um ein paar nützliche Codeschnipsel zu sehen.

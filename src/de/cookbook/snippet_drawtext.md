@@ -1,10 +1,10 @@
-# Drawing Text 3D & 2D
+# Zeichnen von Text 3D & 2D
 
-Used to draw text on your screen or in a 3D space. This only works on **client-side**.
+Durch diese Funktionen kann ein Text wahlweise zweidimensional oder dreidimensional auf deinen Bildschirm gezeichnet werden. Dies funktioniert nur **clientseitig**.
 
 ![](./img/drawtext.jpg)
 
-**Client Side**
+**Clientseitig**
 
 ```js
 export function drawText2d(
@@ -97,9 +97,9 @@ export function drawText3d(
 }
 ```
 
-## Example Usage
+## Beispiel
 
-**Client Side**
+**Clientseitig**
 
 ```js
 alt.everyTick(() => {

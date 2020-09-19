@@ -6,7 +6,7 @@ Auf dieser Webseite lernst du, wie du mit alt:V in JavaScript arbeiten kannst, i
 
 ✔️ Kostenlos nutzbar
 
-✔️ Serverslots prinzipiell nur durch Hardware limitiert.
+✔️ Serverslots prinzipiell nur durch Hardware limitiert
 
 ✔️ Mit Freunden spielbar
 

@@ -21,9 +21,9 @@ Die hier veröffentlichten Hilfestellungen erwarten, dass auf Windows programmie
 
 Alle Codeblöcke mit dem Prefix `$` sind dafür gemacht in der Eingabeaufforderung (CMD) oder Powershell ausgeführt zu werden.
 
-**Tue dies nicht!** Kopieren des `$` Prefix während des kopierens von Befehlen.
+**Tue dies nicht!** Mitkopieren des `$` Prefix während des kopierens von Befehlen.
 
-## Installieren des alt:V-Pakets von Stuyk
+## Installieren des altv-pkg von Stuyk
 
 [altv-pkg](https://github.com/stuyk/altv-pkg) ist ein Hilfepaket, welches dir schnell und sicher alle benötigten Dateien von alt:V für Windows oder Linux bereitstellt. Dieses Paket enthält außerdem eine Beispielresource mit der du starten kannst.
 
@@ -55,20 +55,20 @@ Erstelle einen Ordner für deinen Server. Gehe mit der Eingabeaufforderung oder 
 $ altv-pkg d release
 ```
 
-This will prompt you for information regarding the gamemode you are creating.
+Dieser Befehl wird dazu führen, dass du danach gefragt wirst, welchen Spielmodus du erstellen möchtest.
 
-By default the server files and resource files will automatically generate in your current directory.
+Standardmäßig werden die Serverdateien und Resourcedateien automatisch in deinem aktuellen Verzeichnis erstellt.
 
-Follow the on-screen instructions.
+Folge den Instruktionen.
 
--   **N** for Voice
--   **Y** for Example Resource
+-   Drücke **N**, wenn du das Voice (Sprachkommunikation) installieren willst
+-   Drücke **Y**, für eine Beispielresource
 
 ![](./img/cmd_altvpkg.gif)
 
-## Understanding the Files Downloaded
+## Verstehen der heruntergeladenen Dateien
 
-It is important to discuss a few of the files and the general structure created after downloading the server binaries. Here are the files or some general files that should have been downloaded after you run `altv-pkg d release`.
+Es ist wichtig über ein paar Dateien und die Generelle Ordnerstruktur nach dem herunterladen zu sprechen. Hier sind ein paar Dateien aufgelistet die vorhanden sein sollten nachdem `altv-pkg d release` ausgeführt wurde.
 
 ```
 |   altv-server.exe
@@ -99,17 +99,17 @@ It is important to discuss a few of the files and the general structure created 
 
 ### altv-server.exe
 
-This is your main binary file for running your server. You can run this from command prompt.
+Mit dieser ausführbaren Datei kannst du den Server starten. Über die Eingabeaufforderung (CMD) oder Powershell ist diese ebenfalls ausführbar.
 
 ```
 $ altv-server.exe
 ```
 
-Use `Ctrl + C` to kill the server.
+Benutze die Tastenkombination `Ctrl + C`, um den Server zu stoppen.
 
 ### package.json
 
-This is where your `node_modules` that you are using will be defined. This is where you install packages that may be used by the server-side. Keep in mind that you cannot use `node_modules` on client-side.
+Hier werden die `node_modules` definiert die du benutzt. In diesen Ordner werden alle Pakete von NPM isntalliert, die du installierst. Sei dir bewusst, dass du clientseitig ohne einen Bundler keine npm-packages aus dem `node_modules` Verzeichnis benutzen kannst.
 
 ```json
 {
@@ -137,17 +137,17 @@ This is where your `node_modules` that you are using will be defined. This is wh
 }
 ```
 
-Important takeaways from what is defined in this structure.
+Wichtige Informationen, die du aus obiger Struktur mitnehmen kannst sind:
 
--   We are using the [Prettier extension for VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
--   We are using `"type": "module"` to support [ES6 Syntax](https://www.w3schools.com/js/js_es6.asp).
--   We can update our server files by running `$ npm run update` from the base directory.
+-   Wir benutzen die [Prettier Erweiterung für VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+-   Wir benutzen `"type": "module"`, um den [ES6 Syntax](https://www.w3schools.com/js/js_es6.asp) nutzen zu können.
+-   Der Server wird aktualisiert, indem `$ npm run update` aus dem Hauptverzeichnis ausgeführt wird.
 
-That's mainly the structure of the package.json and mostly functions like a normal NodeJS project.
+Dies ist der allgemeine Aufbau der package.json und funktioniert hier genauso wie in einem normalen NodeJS-Projekt.
 
 ### server.cfg
 
-This uses a custom parser for your server's configuration.
+Aus dieser Konfigurationsdatei liest der Server aus, mit welchen Parametern er starten soll.
 
 ```sh
 name: "TestServer",
@@ -178,21 +178,21 @@ tags: [
 
 #### password
 
-Password is an optional parameter. Commented out with `#`.
+Password ist ein optionaler Parameter. Auskommentiert wird mit `#`.
 
 #### token
 
-Token is an optional parameter. Commented out with `#`. You may get a token from the alt:V Discord by messaging one of the bots in the member list.
+Token ist ein optionaler Parameter. Auskommentiert wird mit `#`. Den Token erhälst du nachdem du eine Nachricht an den alt:V Discord Bot gesendet hast.
 
 #### debug
 
-It is recommended to set this `true` in order to work with your server in development mode. This will allow reconnecting to your server if you setup `debug` in your [client configuration](https://wiki.altv.mp/Altv.cfg) as well.
+Während der Entwicklung eines Servers ist zu empfehlen diesen Parameter auf `true` zu setzen. Dies erlaubt dir, dich mit einem Server neuzuverbinden nachdem der Server neugestartet wurde. Mehr Informationen auf [Client Konfiguration](https://wiki.altv.mp/Altv.cfg).
 
 #### resources
 
-This is where you list the folders inside of the `/resources` folder that you want to use. All resources must have a `resource.cfg` inside of their respective folder in order to be loaded as a resource.
+Hier listest du alle Ordner auf, welche sich innerhalb des `/resources` Ordners befinden. Alle Resourcen benötigen eine `resource.cfg` innerhalb ihres Ordners, um durch den Server geladen werden zu können.
 
-Here is the `resource.cfg` from the `/resources/example` folder.
+Dies ist die `resource.cfg` Datei aus dem `/resources/example` Ordner.
 
 ```sh
 type: js,
@@ -204,21 +204,21 @@ client-files: [
 deps: []
 ```
 
-The main entry point for server-side is the `example` resource is `/resources/example/server/startup.js`
+Der Haupteinstiegspunkt ist die `example` resource in `/resources/example/server/startup.js`
 
-The same for client-side except it uses `client` instead of `server`.
+Dasselbe gilt für die clientseitigen Dateien mit dem Unterschied, dass überall `client` anstatt `server` in den Pfaden stehen muss.
 
 ### /data
 
-This folder is where we have data files that help us define what vehicle names correspond with what values. These should be downloaded and used automatically.
+Dieser Ordner beinhaltet binäre Dateien, die uns definieren welche Fahrzeugnamen mit welchen Werten zusammengehören. Zum Beispiel enthalten diese Dateien, welche Tuningmöglichkeiten ein Fahrzeug hat. Diese werden nach heruntergeladen automatisch benutzt.
 
 ### /modules
 
-This is where you load special `.dll` or `.so` files for modules that use different languages. ie. C#, Lua, etc. These are usually generated by users who are developing for alt:V. Community made.
+Hier werden spezielle `.dll` oder `.so` Dateien für die verschiedensten Module, welche die Programmiersprachen verfügbar machen, abgelegt. Zum Beispiel JS, C#, Lua, etc. Diese Module sind normalerweise von Leuten erstellt, welche für alt:V entwickeln. Diese sind oft ein Produkt der Community.
 
 ### /node_modules
 
-This is where packages you download from NPM are installed. Here is an example on installing the Stanford Javascript Crypto Library from NPM.
+In diesen Ordner werden packages durch NPM installiert. Hier ist ein Beispiel, welches die Stanford Javascript Crypto Library von NPM installiert.
 
 ```sh
 $ npm i sjcl
@@ -226,19 +226,19 @@ $ npm i sjcl
 
 ### /resources
 
-Resources is where you create new resources that can be loaded into your `server.cfg`. It is highly recommended that if you are create a very large project that you stick to a single resource for performance reasons and ease of use.
+`resources` ist der Ordner an dem du Resourcen erstellt, welche durch die `server.cfg` geladen werden können. Solltest du ein größeres Projekt planen, empfehle ich nur eine einzige Resource für den Code zu haben. Der Umgang damit ist einfacher und hat Performanzvorteile.
 
-## Opening Up Your Workspace
+## Öffnen deines Arbeitsbereiches
 
-Open up the folder where you setup your alt:V server in VS:Code.
+Öffne in VS:Code deinen Ordner in dem du deinen alt:V Server installiert hast.
 
-Should look something like the image below.
+Dies sollte so aussehen wie auf dem folgendem Foto:
 
 ![](./img/vscode_entry.png)
 
-You can start writing your code inside of `resources/example/startup.js`.
+In `resources/example/startup.js` kannst du starten deinen Code zu schreiben.
 
-Make sure your `server.cfg` has `example` inside of the resources section of your `server.cfg`.
+Stelle sicher, dass die `server.cfg` die Resource namens `example` in der `resources` Sektion stehen hat.
 
 ```sh
 resources: [
@@ -246,23 +246,23 @@ resources: [
 ],
 ```
 
-Run your server from command line to ensure everything has loaded properly.
+Starte deinen Server in einer Eingabeaufforderung (CMD) oder Powershell, um zu überprüfen, ob dieser richtig gestartet ist.
 
 ![](./img/cmd_loaded.png)
 
-## Connecting
+## Zum Server verbinden
 
-You may connect by opening your alt:V Client and using direct connect.
+Mit dem Server verbinden kannst du, in dem du den alt:V Client startest, auf Direkt verbinden drückst und folgende IP eingibst.
 
 ```
 127.0.0.1:7788
 ```
 
-## Server-Side
+## Serverseitig
 
-Server side code should be written in the `server` folder.
+Serverseitiger Code sollte im `server` Ordner geschrieben werden.
 
-You also need to import the `types` for alt:V Server Side.
+Du musst zusätzlich noch die serverseitigen `types` von alt:V importtieren.
 
 ```js
 /// <reference types="@altv/types-server" />
@@ -271,17 +271,17 @@ import alt from 'alt-server';
 alt.log('test');
 ```
 
-Your server side should now have auto-completion.
+Dein serverseitiger Code sollte nun Autovervollständigung des Syntax unterstützen.
 
 ![](./img/vscode_server_test.png)
 
-## Client-Side
+## Clientseitig
 
-Client side code should be writtein in the `client` folder.
+Clientseitiger Code sollte im `client` Ordner geschrieben werden.
 
-This is the only section where you can actively use a `native`.
+Dies ist der einzige Bereich, in dem eine `native` benutzbar ist.
 
-You also need to import the `types` for alt:V Client Side.
+Du musst zusätzlich noch die clientseitigen `types` von alt:V importtieren.
 
 ```js
 /// <reference types="@altv/types-client" />
@@ -292,6 +292,6 @@ import * as native from 'natives';
 alt.log(`You connected! Nice!`);
 ```
 
-Your client side should now have auto-completion.
+Dein clientseitiger Code sollte nun Autovervollständigung des Syntax unterstützen.
 
 ![](./img/vscode_client_test.png)

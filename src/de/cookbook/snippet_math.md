@@ -1,8 +1,8 @@
-# Math & Distance
+# Mathematik & Distanzberechnung
 
-alt:V by default does not come with default functions for getting distance.
+alt:V stellt standardmäßig keine Funktionen bereit, um die Distanz zu anderen Spielern oder Fahrzeugen zu berechnen.
 
-Use these functions on server-side or client-side.
+Dabei werden folgende Funktionen helfen, egal ob Serverseitig oder Clientseitig.
 
 ```js
 /**
@@ -134,7 +134,7 @@ export function getClosestVehicle(player) {
 }
 ```
 
-## Example Usage
+## Beispiel
 
 ```js
 const dist1 = { x: 5, y: 2, z: 0 };

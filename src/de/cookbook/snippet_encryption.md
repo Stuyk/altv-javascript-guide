@@ -1,10 +1,11 @@
-# Encryption / Password Hashing
+# Verschlüsselung / Passwort Hashing
 
-This requires a library called `sjcl`.
+Passwörter sollten **niemals** als Klartext in die Datenbank gespeichert werden. Dieser Algorithmus hilft dir dabei.
+Dieser Code benötigt das Package `sjcl`.
 
-You can install it in your package.json by doing: `npm install sjcl`
+Du kannst es in deine package.json durch folgenden Befehl installieren: `npm install sjcl`
 
-**Server Side**
+**Serverseitig**
 
 ```js
 import sjcl from 'sjcl';
@@ -59,9 +60,9 @@ export function persistentHash(data) {
 }
 ```
 
-## Example Usage
+## Beispiel
 
-**Server Side**
+**Serverseitig**
 
 ```js
 const hash = encryptPassword('test');

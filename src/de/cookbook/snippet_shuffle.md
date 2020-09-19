@@ -1,8 +1,8 @@
-# Shuffle Array
+# Mischen eines Arrays
 
-If you find yourself ever needing to shuffle an array.
+Wenn du irgendwann mal in die Situation kommen solltest, in der du ein Array mischen musst ist dass, die richtige Hilfe.
 
-Here's a simple exported function to shuffle your array.
+Hier ist eine relativ einfache Lösung für eine exportierte Mischfunktion.
 
 ```js
 export function shuffle(array) {
@@ -23,7 +23,7 @@ export function shuffle(array) {
 }
 ```
 
-## Example Usage
+## Beispiel
 
 ```js
 const myArray = [1, 2, 3, 4, 5];

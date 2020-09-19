@@ -58,11 +58,11 @@ console.log(result);
 
 ## Basis Funktionen
 
-Functions are special blocks of code that can be called from other blocks of code. They can also be exported and imported into other files and called. We’ll talk about imports just below this section.
+Funktionen sind spezielle Codeblöcke, die von anderen Codeblöcken aufgerufen werden können. Diese Blöcke können aus Dateien exportiert und in anderen Dateien zum benutzen importiert werden. Über das Importieren von Funktionen sprechen wir in wenigen Augenblicken.
 
-You can also write functions in a ton of different ways. I prefer traditional rather than the fat arrow functions.
+Funktionen können in verschiedensten Art und Weisen geschrieben werden. Ich persönlich bevorzuge die klassischen Funktionen, anstatt die sogenannten Pfeilfunktionen. Diese Funktionsarten haben allerdings unterschiedliches Verhalten.
 
-**Traditionelles Funktionsbeispiel**
+**Klassisches Funktionsbeispiel**
 
 ```js
 function myFancyFunction(myArgument, myOtherArgument) {
@@ -78,7 +78,7 @@ function add(n1, n2) {
 
 const result = add(5, 5);
 console.log(result);
-// Prints 5 as the result.
+// Gibt 5 als Ergebnis zurück.
 ```
 
 **Pfeilfunktionen**
@@ -97,16 +97,16 @@ const add = (n1, n2) => {
 
 const result = add(5, 5);
 console.log(result);
-// Prints 5 as the result.
+// Gibt 5 als Ergebnis zurück.
 ```
 
 ## Exportieren von Funktionen
 
-Exporting is a big part of the process when working with alt:V. However, the exports are not common js. We use ES6 syntax for a majority of imports and exports. This is slightly different if you’re used to the whole module exports part of common js.
+Exportieren von Funktionen ist ein wichtiger und großer Bestandteil des Programmierens mit alt:V. Das exportieren von Funktionen gehört allerdings nicht zu der Standardversion von Javascript, auch commonjs genannt. Wir benutzen allerdings den sogenannten ES6 Standard, welcher es uns erlaubt diese Funktionen zu benutzen. Solltest du mit dem sogenannten Modulexport aus commonjs vertraut sein, wirst du nur eine Kleinigkeit dazu lernen müssen.
 
-Assume these files are in the same directory.
+Gehe davon aus, dass sich diese Dateien in einem Ordner befinden.
 
-**File 1 - file1.js**
+**Datei 1 - file1.js**
 
 ```js
 export function myFunction(arg1, arg2) {
@@ -114,7 +114,7 @@ export function myFunction(arg1, arg2) {
 }
 ```
 
-**File 2 - file2.js**
+**Datei 2 - file2.js**
 
 ```js
 import { myFunction } from './file1.js';
@@ -122,7 +122,7 @@ import { myFunction } from './file1.js';
 myFunction('hello', 'world');
 ```
 
-**File 2 (Alternative) - file2.js**
+**Datei 2 (Alternative) - file2.js**
 
 ```js
 import * as myFuncs = from './file1.js'
@@ -130,13 +130,13 @@ import * as myFuncs = from './file1.js'
 myFuncs.myFunction('hello', 'world');
 ```
 
-Pretty simple to handle and we’ll be using these exported and imported functions all over the place when it comes down to creating a solid file structure.
+Wie man sieht ist dies relativ einfach zu verwenden. Das Importieren und Exportieren von Funktionen werden wir überall benutzen, um eine ordentliche Projektstruktur.
 
-## For Loops
+## for Anweisung
 
-Loops are used for so many different things in Javascript and should be used in every part of your toolkit to help you write less code. A for loop allows us to loop through a block of code multiple times. Which allows us to do different things with the results inside of an array.
+Die for Anweisung beschreibt eine Schleife mit drei optionalen Ausdrücken und einer oder mehreren Anweisungen. Diese Schleife erlaubt es dir über iterierbare Objekte zu iterieren.
 
-Keep in mind that arrays start at zero (0). This isn’t Lua. Meaning the first element in the array is always a zero.
+Behalte im Kopf, dass das erste Element in einem Array mit dem Index 0 startet.
 
 ```js
 const data = ['test0', 'test1', 'test2'];
@@ -152,4 +152,4 @@ for (let i = 0; i < data.length; i++) {
 }
 ```
 
-The above code will print for the above array 3 times. It will first print ‘test0’, ‘test1’, and then ‘test2’. This is done by passing the data inside of the array based on the element number which is i.
+Die oben gezeigte Schleife wird 3 mal etwas in die Konsole ausgeben. Es wird zuerst ‘test0’, ‘test1’ und dann ‘test2’ ausgeben. Dies wird durch das hereingeben der Variable `data` in die for Schleife ermöglicht. `i` bedeutet hier auf welche Position, also Index, in dem Array zugegriffen wird.

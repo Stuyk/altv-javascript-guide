@@ -1,10 +1,12 @@
-# Prototyping
+# Prototypen
 
-This is also known as prototyping.
+Unter den commonJS-Entwicklern ist dies bekannt als Prototyp einer Prototypenkette. (engl.: prototyping)
 
-They do **NOT** work in multiple resources. Single resource only.
+Diese funktionieren in alt:V **NICHT** nicht in mehreren Resourcen gleichzeitig. Die Prototypveränderung ist also in jeder Resource isoliert.
 
-**Server Side**
+Wenn du kein Freund der Objektorientierten Entiwicklung bist könnte dir das verändern von Prototypen enorm helfen.
+
+**Serverseitig**
 
 ```js
 alt.Player.prototype.emitMeta = function emitMeta(key, value) {
@@ -78,9 +80,9 @@ alt.Player.prototype.addCash = function addCash(value) {
 };
 ```
 
-## Example Usage
+## Beispiel
 
-**Server Side**
+**Serverseitig**
 
 ```js
 player.init();

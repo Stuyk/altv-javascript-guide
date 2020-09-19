@@ -1,48 +1,48 @@
-# Understanding ScriptID
+# Das Verstehen der ScriptID
 
-This is a way for us to identify another player or ourselves on client-side.
+Diese Nummer gibt uns die Möglichkeit andere Spieler oder uns Selber in unserem lokal geöffneten Spiel zu identifizieren.
 
-A General Overview
+Generelle Übersicht
 
--   A scriptID is unique to only the client side.
--   scriptID will provide us a way to modify the native behavior of a player.
--   They are most often used in tandem with natives.
--   They are unique per client per player.
-    -   Do not try to share scriptID with another player. It will not work.
+-   Die scriptID ist einzigartig in jeder geöffneten Spielanwendung.
+-   Die scriptID gibt uns die Möglichkeit, dass native Verhalten des Spielers zu beeinflussen.
+-   Diese Nummer wird überwiegend für GTA originale Funktionen benutzt. (`handle` Parameter bei natives)
+-   Diese Nummern sind einzigartig und unterschiedlich auf jedem Client für jeden Spieler.
+    -   Versuche die scriptID nicht mit anderen Spielern zu teilen, also an dere Spielclients zu senden. Es wird nicht funktioneren.
 
-## How to obtain it.
+## Wie du auf sie zugreifen kannst.
 
-Your scriptID for your player can be retrieved in this way.
+Die scriptID kann auf diesem Wege erhalten werden.
 
 ```js
 alt.Player.local.scriptID;
 ```
 
-This is the equivalent of `local playerPed = PlayerPedId()` from FiveM.
+Dies ist das Äquivalent von `local playerPed = PlayerPedId()` auf FiveM.
 
-However, for individual players it depends on how you recieve their player instance.
+Für andere Spieler ist das zugreifen auf die scriptID davon abhängig, wie du deren Spielerinstanz beziehst.
 
-### Server Side
+### Serverseitig
 
 ```js
 alt.on('playerConnect', player => {
-    // This emits to all player
+    // Dieses event wird an alle Spieler auf dem Server gesendet
     alt.emitClient(null, 'joined', player);
 });
 ```
 
-### Client Side
+### Clientseitig
 
 ```js
 alt.onServer('joined', otherPlayer => {
-    // Check if self. Ignore self.
+    // Wenn der lokale Spieler dem gesendeten Spieler entspricht gehe in die IF-Anweisung
     if (otherPlayer === alt.Player.local) {
-        // Let's freeze ourself.
-        // Don't actually do this. This is just how most natives work with scriptID.
+        // Nun werden wir uns bewegungsunfähig machen.
+        // Dies sollte normalerweise nicht getan werden. Es ist nur ein Beispiel, um zu zeigen, wie die GTA-natives mit der scriptID funktionieren.
         alt.log(`You have frozen.`);
         native.freezeEntityPosition(alt.Player.local.scriptID, true);
 
-        // We'll unfreeze ourself in 5 seconds.
+        // Nach 5 Sekunden wirst du dich wieder bewegen können.
         alt.setTimeout(() => {
             alt.log(`You are unfrozen.`);
             native.freezeEntityPosition(alt.Player.local.scriptID, false);
@@ -50,7 +50,7 @@ alt.onServer('joined', otherPlayer => {
         return;
     }
 
-    // Log their scriptID to the 'F8' console.
+    // Dies wird die scriptID in die 'F8' Konsole ausgeben.
     alt.log(`Their scriptID is: ${otherPlayer.scriptID}`);
 });
 ```

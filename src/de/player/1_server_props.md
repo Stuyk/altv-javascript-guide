@@ -1,10 +1,10 @@
-# Player Properties
+# Spielerobjekteigenschaften (Serverseitig)
 
-This page will act as a representation on using the various player properties.
+Diese Seite wird dir zeigen, wie die Spielereigenschaften benutzt werden können.
 
 ## player.armour
 
-Used to **set or get** the player's current armour level.
+Wird benutzt, um den aktuellen Rüstungswert des Spielers zu **setzen oder lesen**.
 
 ```js
 const currentArmour = player.armour;
@@ -15,7 +15,7 @@ player.armour -= 10;
 
 ## player.authToken
 
-Used to **get** an authToken provided during early auth implementations. Most users will not be utilizing this.
+Wird benutzt, um das authToken zu **lesen**. Vorhanden bei earlyAuth-Implementationen. Die meisten Benutzer werden dies nicht benutzen.
 
 ```js
 alt.on('playerConnect', handleConnect);
@@ -25,113 +25,113 @@ function handleConnect(player) {
         player.kick(`No Auth Token Found`);
         return;
     }
-    
+
     alt.log(`${player.name}'s authToken is ${authToken}`);
 }
 ```
 
 ## player.currentWeapon
 
-Used to **set or get** the player's current weapon hash.
+Wird benutzt, um den hash der aktuell getragenen Waffe zu **setzen oder lesen**.
 
 ```js
 player.currentWeapon = alt.hash('weapon_pistol'); // 0x1B06D571
 
-if (player.currentWeapon === 0x1B06D571) {
+if (player.currentWeapon === 0x1b06d571) {
     console.log(`Player has a pistol equipped.`);
 }
 ```
 
-If you want to handle all weapon checking server-side in plain English rather than hashes. You should try using a prototype to set and give a player a weapon.
+Insofern du die Klartextnamen der Waffen auf dem Server lesen und setzen möchtest ohne den Hash zu benutzen, empfehle ich prototype-Funktionen zu schreiben.
 
 ```js
 alt.Player.prototype.setWeapon = function(weaponName) {
     this.currentWeapon = alt.hash(weaponName);
     this.currentWeaponName = weaponName;
-}
+};
 ```
 
 ## player.currentWeaponComponents
 
-Used to **get** all weapon components that are currently on a player's currently equipped weapon. All weapon components are hashed.
+Wird benutzt, um alle Waffenerweiterungen der aktuell getragenen Waffe des Spielers zu **lesen** Alle Waffenerweiterungen sind Hashbasierend.
 
 ```js
 const currentWeaponComponents = player.currentWeaponComponents;
 
-for(let i = 0; i < currentWeaponComponents.length; i++) {
+for (let i = 0; i < currentWeaponComponents.length; i++) {
     const weaponComponentHash = currentWeaponComponents[i];
 }
 ```
 
 ## player.currentWeaponTintIndex
 
-Used to **get** the currently equipped weapon's tint index.
+Wird benutzt, um den Farbtonindex der aktuell getragenen Waffe zu **lesen**.
 
 ```js
 const currentTint = player.currentWeaponTintIndex;
 ```
 
-| Weapon Tint ID | Color    |
-| -------------- | -------- |
-| 0              | Normal   |
-| 1              | Green    |
-| 2              | Gold     |
-| 3              | Pink     |
-| 4              | Army     |
-| 5              | LSPD     |
-| 6              | Orange   |
-| 7              | Platinum |
+| Waffen Farbton ID | Farbe  |
+| ----------------- | ------ |
+| 0                 | Normal |
+| 1                 | Grün   |
+| 2                 | Gold   |
+| 3                 | Pink   |
+| 4                 | Armee  |
+| 5                 | LSPD   |
+| 6                 | Orange |
+| 7                 | Platin |
 
 ## player.dimension
 
-Used to **get** or **set** the player's current dimension. Dimensions are based on INT32. Which means there is a minimum and maximum value for a dimension. From `-32768` to `32767`.
+Wird benutzt, um die aktuelle Dimension des Spielers zu **setzen oder lesen**. Dimensionen basieren auf dem int32 Datentyp. Dies bedeutet, dass es eine Minimale und Maximale Zahl zum setzen der Dimension gibt. Von `-2.147.483.648` bis `2.147.483.647`.
 
-A description for dimensions written by Heron is as follows.
+Folgende Darstellung beschreibt, welche Spieler sich in welchen Dimensionen sehen. Danke an Heron hierfür.
 
 ```
-X can see only X
--X can see 0 and -X
-0 can't see -X and X
+X sieht nur X
+-X sieht 0 und -X
+0 sieht nicht -X und X
 ```
 
-The default dimension is **0**.
+Die Standarddimension ist **0**.
 
 ```js
 const currentDimension = player.dimension;
 player.dimension = 1;
 
-// If you need a unique instance per player join. This is a decent way to handle it.
-// Just remember to set it back to zero after you do whatever you need to do in a unique dimension.
-player.dimension = player.id; 
+// Wenn du willst, dass der Spieler nur sich selbst sieht und niemand anderen ist dies ein Beispiel, um dies zu erzielen.
+// Beachte, dass du diesen Spieler auch wieder in Dimension 0 zurücksetzt, nachdem du fertig bist, wofür du den Spieler in die eigene Dimension gesetzt hast.
+player.dimension = player.id;
 ```
 
 ## player.entityAimOffset
 
-Used to **get** the player's current aim offset. There is currently not existing use case for this specific function.
+Wird benutzt, um den Zielvektor des Spielers zu **lesen**. Hierfür existiert bisher kein offensichtlicher Usecase.
 
-At the time of writing this document we're not even sure if it's functioning.
+Während diese Seite geschrieben wurde war nicht klar, ob dies überhaupt funktionert.
 
 ## player.entityAimingAt
 
-Used to **get** the player's current entity they are aiming at. The current sentiment is that this specific property does not work.
+Wird benutzt, um die Objektinstanz zu **lesen**, auf die der Spieler gerade zielt. Laut aktuellem Stand funktioniert des nicht korrekt.
 
-At the time of writing this document we're not even sure if it's functioning.
+Während diese Seite geschrieben wurde war nicht klar, ob dies überhaupt funktionert.
 
 ## player.flashlightActive
 
-Used to **get** the player's flashlight activity? 
+Wird benutzt, um zu **lesen**, ob der Spieler eine Taschenlampe benutzt. (Unsicher, ob dies der einzige usecase ist)
 
-At the time of writing this document we're not even sure if it's functioning.
+Während diese Seite geschrieben wurde war nicht klar, ob dies überhaupt funktionert.
 
 ## player.health
 
-Used to **get or set** the player's current health.
+Wird benutzt, um den aktuellen Lebenswert des Spielers zu **lesen oder setzen**.
 
-Health in GTA:V is based on the values `100 - 200`.
+Das Leben in GTA:V basiert auf diesen Werten `100 - 200`.
 
-200 is the player's maximum health.
+200 ist das Maximale Leben.
 
-< 100 means the player is dead.
+< 100 bedeutet das der Spieler Tot ist.
 
 ```js
 const currentHealth = player.health;
@@ -141,17 +141,17 @@ if (player.health > 200) {
     player.health = 200;
 }
 
-// Kill the player.
+// Töte den Spieler.
 player.health = 100;
 ```
 
 ## player.hwidExHash
 
-This is one of two ways to get a unique hardware hash that belongs to the player.
+Dies ist einer von Zwei wegen, um die Hardware (also den PC) eines Spielers einzigartig zu identifizieren.
 
-This is a great way to ban a player; especially when they'll need a whole new set of hardware to get past your ban.
+Dies ist ein guter Weg spieler zu bannen, da diese Spieler sich neue Hardware kaufen müssen, um ihren Ban eventuell zu umgehen.
 
-Nobody currently knows the way this hardware information is determined.
+Momentan weiß niemand genau, wie und welche Informationen hier ausgelesen werden.
 
 ```js
 const currentHwidEx = player.hwidExHash;
@@ -159,11 +159,11 @@ const currentHwidEx = player.hwidExHash;
 
 ## player.hwidHash
 
-This is one of two ways to get a unique hardware hash that belongs to the player.
+Dies ist einer von Zwei wegen, um die Hardware (also den PC) eines Spielers einzigartig zu identifizieren.
 
-This is a great way to ban a player; especially when they'll need a whole new set of hardware to get past your ban.
+Dies ist ein guter Weg spieler zu bannen, da diese Spieler sich neue Hardware kaufen müssen, um ihren Ban eventuell zu umgehen.
 
-Nobody currently knows the way this hardware information is determined.
+Momentan weiß niemand genau, wie und welche Informationen hier ausgelesen werden.
 
 ```js
 const currentHwid = player.hwidHash;
@@ -171,9 +171,9 @@ const currentHwid = player.hwidHash;
 
 ## player.id
 
-Used to **get** the player's current id. These are strictly unique to the join order of a player.
+Wird benutzt, um die aktuelle intern alt:V-Netzwerkid des Spielers zu **lesen**. Diese ist stets einzigartig für jeden Spieler.
 
-ID's may be used up to the value `65535`. After reaching 65,535 the id is recycled to a new joiner.
+ID's werden ohne Änderung benutzt solange das Limit von `65535` nicht erreicht ist. Sollte diese Zahl erreicht werden kann es zu einer Neuverteilung von ids kommen.
 
 ```js
 alt.on('playerConnect', handleConnect);
@@ -185,25 +185,25 @@ function handleConnect(player) {
 
 ## player.ip
 
-In most cases this is an IP that is converted from IPv4 to IPv6. 
+In den meisten Fällen gibt dies die IP des Spielers in IPv6 Format zurück.
 
-An example of what a local host IP looks like: `::ffff:127.0.0.1`
+Ein Beispiel für das Muster, wenn du mit deinem lokalen Server verbunden bist: `::ffff:127.0.0.1`
 
 ```js
 alt.on('playerConnect', handleConnect);
 
 function handleConnect(player) {
     if (player.ip === `::ffff:127.0.0.1`) {
-        alt.log(`${player.name} has joined from local host.`)
+        alt.log(`${player.name} has joined from local host.`);
     }
 }
 ```
 
 ## player.maxArmour
 
-Used to **set or get** the player's current maximum armour. The maximum value this can be set to is `65535`.
+Wird benutzt, um den maximal zu erreichenden Rüstungswert zu **setzen oder lesen**. Der Wert kann maximal nur `65535` betragen.
 
-After setting this you can set the player's current armour to the maximum armour value.
+Nachdem dies bei dem Spieler gesetzt wurde, kann der aktuelle Rüstungswert auf den Maximal möglichen Wert angehoben werden.
 
 ```js
 const currentMaxArmour = player.maxArmour;
@@ -212,14 +212,14 @@ if (currentMaxArmour <= 100) {
     player.armour = 65535;
 }
 
-alt.log(`${player.name} is a chunker.`)
+alt.log(`${player.name} is a chunker.`);
 ```
 
 ## player.maxHealth
 
-Used to **set or get** the player's current maximum health. The maximum value this can be set to is 65535.
+Wird benutzt, um den maximal zu erreichenden Lebenswert zu **setzen oder lesen**. Der Wert kann maximal nur `65535` betragen.
 
-After setting this you can set the player's current health to the maximum health value.
+Nachdem dies bei dem Spieler gesetzt wurde, kann der aktuelle Lebenswert auf den Maximal möglichen Wert angehoben werden.
 
 ```js
 const currentMaxHealth = player.maxHealth;
@@ -228,16 +228,16 @@ if (currentMaxHealth <= 100) {
     player.health = 65535;
 }
 
-alt.log(`${player.name} is a healthy chunker.`)
+alt.log(`${player.name} is a healthy chunker.`);
 ```
 
 ## player.model
 
-Used to set **set or get** the player's current model. 
+Wird benutzt, um das Model des Spielers zu **setzen der lesen**.
 
-You may pass a string value here.
+Du benutzt einen String zum setzen.
 
-No model is set automatically and should be set when the player is connected or authenticated.
+Kein Model ist automatisch gesetzt, daher muss bei jedem Spieler der sich verbindet ein Model gesetzt werden.
 
 ```js
 alt.on('playerConnect', handleConnect);
@@ -249,7 +249,7 @@ function handleConnect(player) {
 
 ## player.name
 
-Used to **get** the player's current name. This is set by the player in their options.
+Wird benutzt, um den Namen des Spielers zu **lesen**. Dieser wird von den Spielern in den alt:V Optionen eingestellt.
 
 ```js
 alt.on('playerConnect', handleConnect);
@@ -263,9 +263,9 @@ function handleConnect(player) {
 
 ## player.netOwner
 
-Used to **get** the current network owner responsible for syncing an entity with the server. Inherited from entity. 
+Wird benutzt, um den aktuellen Netzwerbesitzer zu **lesen**, welcher die Spielerinstanz auf dem Server synchronisiert. Vererbt durch entity.
 
-This is not necessarily a useful property for the average developer.
+Für Entwickler ohne Erfahrung wird diese Eigenschaft nicht wichtig sein.
 
 ```js
 const currentOwner = player.netOwner;
@@ -277,22 +277,22 @@ if (!currentOwner) {
 
 ## player.ping
 
-Used to **get** the player's current ping.
+Wird benutzt, um die aktuelle Latenz des Spielers zu **lesen**.
 
-Below is a snippet to make player ping accessible by all players.
+Unten siehst du einen Ausschnitt, wie du die Latenz für alle Spieler aufrufbar machen kannst.
 
 ```js
 alt.setInterval(handlePingUpdate, 5000);
 
 function handlePingUpdate() {
     const currentPlayers = [...alt.Player.all];
-    
-    for(let i = 0; i < currentPlayers.length; i++) {
+
+    for (let i = 0; i < currentPlayers.length; i++) {
         const player = currentPlayers[i];
         if (!player || !player.valid) {
             continue;
         }
-        
+
         player.setSyncedMeta('ping', player.ping);
     }
 }
@@ -300,60 +300,59 @@ function handlePingUpdate() {
 
 ## player.pos
 
-Used to **get** or **set** the player's current position.
+Wird benutzt, um die aktuelle Position des Spielers zu **setzen oder lesen**.
 
-When getting the player's current position you should use a spread operator to make it modifiable.
+Da der Vektor oder das Objekt, welches die aktuellen Daten der Position enthält nut gelesen werden kann, solltest du immer einen neuen Vektor initialisieren oder den Spreadoperator für Objekte benutzen.
 
 ```js
-const currentPos = {...player.pos};
+const currentPos = { ...player.pos };
 currentPos.x += 1;
 
-// Teleport them under the map.
+// Teleportiert den Spieler unter die Map.
 player.pos = {
     x: 0,
     y: 0,
     z: 0
-}
+};
 
-// Create a Vector3 with the alt function.
+// Erstellt einen neuen Vektor mit der alt:V Klasse und teleportiert den Spieler unter die Map.
 player.pos = new alt.Vector3(0, 0, 0);
 ```
 
 ## player.rot
 
-Used to **get or set** the player's current rotation. However, **setting rotation is broken on server-side**.
+Wird benutzt, um die aktuelle Rotation des Spielers zu **setzen oder lesen**. **Leider ist das setzten aktuell fehlerhaft oder nicht zuverlässig serverseitig**.
 
 ```js
-const currentRot = {...player.rot};
+const currentRot = { ...player.rot };
 ```
 
 ## player.seat
 
-Used to **get** the current seat that the player is in.
+Wird benutzt, um den aktuellen Fahrzeugsitz zu **lesen**, wenn dieser in einem Fahrzeug sitzt.
 
 ```js
 if (player.vehicle && player.seat === -1) {
-    alt.log(`Player is in the driver's seat.`); // Front Left
+    alt.log(`Player is in the driver's seat.`); // Vorne Links
 }
 
 if (player.vehicle && player.seat === 0) {
-    alt.log(`Player is riding shotgun.`); // Passenger. Right side.
+    alt.log(`Player is riding shotgun.`); // Beifahrer. Rechts.
 }
 
 if (player.vehicle && player.seat === 1) {
-    alt.log(`Player is behind the driver's seat.`); // Back Left
+    alt.log(`Player is behind the driver's seat.`); // Hinten Links
 }
 
 if (player.vehicle && player.seat === 2) {
-    alt.log(`Player is behind the player riding shotgun.`) // Back Right
+    alt.log(`Player is behind the player riding shotgun.`); // Hinten Rechts
 }
 ```
 
 ## player.socialId
 
-Used to **get** a non-safe version of a player's current social club identification that is linked to their Rockstar account.
-
-Keep in mind that this value **IS NOT SAFE** do not use it for authentication. **IT CAN BE SPOOFED**.
+Wird benutzt, um eine unsichere Version der SocialClubId (Bereitgestellt durch Rockstar) des Spielers zu **lesen**.
+Bitte behalte im Kopf, dass diese Id **nicht sicher** für die Authentifikation eines Spielers ist. **Diese ID kann manipuliert werden**.
 
 ```js
 const social = player.socialId;
@@ -361,9 +360,9 @@ const social = player.socialId;
 
 ## player.valid
 
-Used to **get** if a player entity is still valid. This is useful when using timeouts, intervals, and handling disconnect events. 
+Wird benutzt, um zu **lesen**, ob das Spielerobjekt und dessen Instanz noch benutzbar ist. Dies ist sehr gut, wenn Timeouts, Intervalle oder Disconnect-Events benutzt werden.
 
-A player that invalid means that it can longer receive data from the server.
+Ein Spieler der nicht mehr gültig ist bedeutet, dass dieser keine Daten mehr vom Server gesendet kriegen kann.
 
 ```js
 alt.on('playerDisconnect', handleDisconnect);
@@ -373,14 +372,14 @@ function handleDisconnect(player, reason) {
         console.log(`Looks like this player is already invalid. Can't save anything.`);
         return;
     }
-    
+
     console.log(`${player.name} has disconnected.`);
 }
 ```
 
 ## player.vehicle
 
-Used to **get** the current vehicle that the player is inside. Returns **null** or **undefined** if the player is **NOT** in a vehicle.
+Wird benutzt, um das Fahrzeugobjekt, also dessen Instanz zu **lesen**. Zurückgegeben wird **null** oder **undefined**, wenn der Spieler **NICHT** in einem Fahrzeug sitzt.
 
 ```js
 if (player.vehicle) {
@@ -390,7 +389,7 @@ if (player.vehicle) {
         g: 0,
         b: 0,
         a: 255
-    }
+    };
 }
 
 if (!player.vehicle) {

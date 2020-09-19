@@ -1,10 +1,10 @@
-# Markers
+# Marker
 
-Markers are those slightly transparent objects in the 3D world.
+Markers sind leicht transparente geometrische Figuren, welche im 3D-Raum gezeichnet werden können.
 
 ![](./img/marker.jpg)
 
-**Client Side**
+**Clientseitig**
 
 ```js
 /**
@@ -50,9 +50,9 @@ export function drawMarker(type, pos, dir, rot, scale, r, g, b, alpha) {
 }
 ```
 
-## Example Usage
+## Beispiel
 
-**Client Side**
+**Clientseitig**
 
 ```js
 alt.everyTick(() => {

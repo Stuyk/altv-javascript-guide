@@ -27,7 +27,7 @@ const sidebar = [
                 children: buildSidebar(`/${language}/conversion/`)
             },
             {
-                title: `📄 API Guide`,
+                title: `📄 API Hilfe`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/api/`)
             },

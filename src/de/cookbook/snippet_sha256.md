@@ -1,8 +1,8 @@
 # Pure JS SHA256
 
-If you need a hashing algorithm that works on client-side and server-side this is it.
+Wenn du eine Hashfunktion benötigst, um Strings zum Beispiel einen Fingerabdruck zu verpassen wird dies dir helfen. Funktionert auf Client.- sowie Serverseite.
 
-This was created by [https://username1565.github.io/sha256/](https://username1565.github.io/sha256/)
+Dieser Algorithmus wurde erstellt von: [https://username1565.github.io/sha256/](https://username1565.github.io/sha256/)
 
 ```js
 export function sha256(ascii) {
@@ -97,7 +97,7 @@ export function sha256(ascii) {
 }
 ```
 
-## Example Usage
+## Beispiel
 
 ```js
 const result = sha256(`test`);

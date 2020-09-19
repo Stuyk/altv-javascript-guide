@@ -1,63 +1,63 @@
-# Converting from another Client?
+# Du wechselst von einer anderen Mehrspielermodifikation?
 
-Well, you're not the only user who has done this.
+Wirklich, du bist nicht der einzige, der das getan hat.
 
-alt:V has a lot to offer but there are some considerations when using this client.
+alt:V hat einiges zu bieten, allerdings sind Entscheidungen zu treffen, wenn man auf diesem Mod aufbauen will.
 
--   Server code can only be in JS, C#, or LUA.
--   Client code can only be in JS.
--   A module is being created to allow **any** language with WASM.
--   Natives are based on Rockstar's Actual Native Names
+-   Servercode kann in den Programmiersprachen JS, C# oder LUA geschrieben werden.
+-   Clientcode kann momentan nur in JS geschrieben werden.
+-   Es wird an einem Modul gearbeitet, welches durch `WASM` **alle** Programmiersprachen erlauben wird.
+-   Die nativen Funktionen basieren auf den von Rockstar Games selbst gegebenen Funktionsnamen.
 
-Those are the only major things to consider about alt:V.
+Dies sind die grundlegendsten Sachen über alt:V.
 
-Otherwise here's some other important aspects.
+Hier sind weitere wichtige Aspekte.
 
-✔️ Yes alt:V supports clothing addons.
+✔️ Ja alt:V unterstützt Anziehsachenmodifikationen (clothing addons).
 
-✔️ Yes alt:V supports most modifications.
+✔️ Ja alt:V unterstützt die meisten Modifikationen.
 
-✔️ Yes alt:V supports MLOs.
+✔️ Ja alt:V unterstützt MLOs.
 
-✔️ Yes alt:V supports custom maps.
+✔️ Ja alt:V unterstützt selbsterstellte Maps.
 
-Here are some things alt:V does not have.
+Hier sind ein paar Dinge, die alt:V nicht hat.
 
-❌ No LUA on client-side
+❌ Kein LUA clientseitig
 
-❌ No ESX
+❌ Kein ESX
 
-❌ No ELS (Dex++ is working on this)
+❌ Kein ELS (Dex++ funktioniert)
 
-❌ No censorship if you poke the wrong person
+❌ Kein Zensur wenn du mal eine Person eventuell angehst.
 
-❌ No we do not support .asi, .dll, or ENB files.
+❌ Keine Injektionen von .asi, .dll, or ENB Dateien.
 
-❌ No we do not support ScriptHookV.
+❌ Kein ScriptHookV.
 
 <br />
 
 ---
 
-## FiveM to alt:V
+## FiveM zu alt:V
 
-Here are some key differences between alt:V and FiveM.
+Hier sind einige Unterschiede zwischen alt:V und FiveM.
 
-### Server Side and Client Side
+### Serverseitig und Clientseitig
 
-Yes, we actually have a server side and a client side. Which means that injections are not a very common issue for alt:V. Let alone client manipulation. However, nothing is safe from an expert programmer.
+Ja wir haben serverseitigen und clientseitigen Code. Dies bedeutet das Injektionen kein wirkliches Problem auf alt:V darstellen. Nichtsdestotrotz, ist nichts sicher für einen erfahrenen Programmierer.
 
-[Here is a video covering serverside vs clientside.](https://www.youtube.com/watch?v=z-knlYI_QZM)
+[Hier ist ein Video, in welchem es darum geht, die Serverseite mit der CLientseite zu vergleichen](https://www.youtube.com/watch?v=z-knlYI_QZM)
 
-### Local Player?
+### Lokaler Spieler (Local player)?
 
-We don't use `local playerPed = PlayerPedId()` to get our local player.
+Wir benutzen `local playerPed = PlayerPedId()` nicht, um den lokalen Spieler auszulesen.
 
-We use `alt.Player.local.scriptID`.
+Wir benutzen `alt.Player.local.scriptID`.
 
-### Local Player Vehicle?
+### Lokaler Spieler mit Fahrzeug (Vehicle)?
 
-We don't use natives when we don't have to.
+Wir benutzen keine nativen FUnktionen, wenn wir es nicht müssen.
 
 ```js
 alt.Player.local.vehicle;
@@ -65,9 +65,9 @@ alt.Player.local.vehicle;
 
 ### Threads?
 
-We use intervals and timeouts to generate threads.
+Wir benutzen Intervalle und Timeouts, um Code zeitbasierend ausführen zu lassen.
 
-We also have access to `alt.everyTick` which is basically an interval at 0ms.
+Außerdem existiert die `alt.everyTick` Funktion, welche identisch mit einem Intervall von 0ms ist.
 
 ```js
 const myInterval = alt.setInterval(doSomething, 5000);
@@ -88,35 +88,35 @@ alt.everyTick(() => {
 
 ### Events?
 
-Events come in all shapes and sizes. Checkout [the API:Events section.](../api/events)
+Events existieren in allen Arten und Formen. Mehr unter [der API:Events Sektion.](../api/events)
 
 ### Natives?
 
-Natives are imported and only accessible from client-side.
+Native Funktionen sind import und könnten nur clientseitig ausgeführt werden.
 
-You can visit [alt:V Native Database](https://natives.altv.mp) to better understand what is available.
+Besuche die [alt:V Native Datenbank](https://natives.altv.mp), um besser verstehen zu können, welche Funktionen verfügbar sind.
 
-### Loading Screens?
+### Ladebildschirme?
 
-We do not currently support loading screens of any sort. We feel it is an unnecessary feature for multiplayer.
+Momentan unterstüzten wir keine eigenen Ladebildschirme oder ähnliches. Wir denken, dass es kein notwendiges Feature für eine Mehrspielermodifikation ist.
 
 ---
 
-## RAGE:MP to alt:V
+## RAGE:MP zu alt:V
 
-Here are some key differences between alt:V and RAGE:MP.
+Hier sind einige Unterschiede zwischen alt:V und RAGE:MP.
 
-### Local Player?
+### Lokaler Spieler (Local Player)?
 
-We don't use `local playerPed = PlayerPedId()` to get our local player.
+Wir benutzen `const localPlayer = mp.players.local;` nicht, um den lokalen Spieler auszulesen.
 
-We use `alt.Player.local.scriptID`.
+Wir benutzen `const localPlayer = alt.Player.local`.
 
 ### mp.events.add('render')
 
-We use intervals and timeouts to generate threads.
+Wir benutzen Intervalle und Timeouts, um Code zeitbasierend ausführen zu lassen.
 
-We also have access to `alt.everyTick` which is basically an interval at 0ms.
+Außerdem existiert die `alt.everyTick` Funktion, welche identisch mit einem Intervall von 0ms ist.
 
 ```js
 const myInterval = alt.setInterval(doSomething, 5000);
@@ -137,10 +137,10 @@ alt.everyTick(() => {
 
 ### mp.events.add & mp.events.call
 
-Events come in all shapes and sizes. Checkout [the API:Events section.](../api/events)
+Events existieren in allen Arten und Formen. Mehr unter [der API:Events Sektion.](../api/events)
 
-We get a lot finer control over our events for alt:V.
+Wir haben viel mehr Kontrolle über unsere Events auf alt:V.
 
-### Text Labels, Markers, etc.
+### Text Labels, Marker, etc.
 
-Check out the snippets section of this document.
+Schau mal bei der Codeschnipselsektion vorbei!

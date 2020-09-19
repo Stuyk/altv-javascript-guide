@@ -1,14 +1,16 @@
-# Notifications
+# Spielerbenachrichtigung
 
-Notifications are the black boxes that appear above your map on bottom left-hand side.
+Die Spielerbenachrichtigung ist eine Nachrichtenbox die links über der Minimap dargestellt wird.
 
-They are only accessible from client-side but you can call them from server-side.
+Die Position an der diese Nachricht angezeigt wird ist nicht veränderbar.
 
-See the example below on how to utilize this in two different ways.
+Sie ist nur clientseitig benutzbar, da sie das aufrufen einer Nativen Funktion benötigt, kann aber durch ein Event serverseitig angesprochen werden.
+
+Schau dir das Beispiel unten an, um zu sehen wie es funktionieren kann!
 
 ![](./img/notification.jpg)
 
-**Client Side**
+**Clientseitig**
 
 ```js
 alt.onServer('drawNotification', drawNotification);
@@ -30,15 +32,15 @@ export function drawNotification(imageName, headerMsg, detailsMsg, message) {
 }
 ```
 
-## Example Usage
+## Beispiel
 
-**Server Side**
+**Serverseitig**
 
 ```js
 alt.emitClient(player, 'drawNotification', 'CHAR_AMMUNATION', 'Header', 'Small Details', 'The rest of the owl.');
 ```
 
-**Client Side**
+**Clientseitig**
 
 ```js
 drawNotification('CHAR_AMMUNATION', 'Header', 'Small Details', 'The rest of the owl.');

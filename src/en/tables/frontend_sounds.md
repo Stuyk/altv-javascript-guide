@@ -484,7 +484,3 @@ native.playSoundFrontend(-1, '10_SEC_WARNING', 'HUD_MINI_GAME_SOUNDSET', 1); // 
 | -1       | Goon_Paid_Large                      | GTAO_Boss_Goons_FM_Soundset           |
 | -1       | COLLECTED                            | HUD_AWARDS                            |
 | -1       | PEYOTE_COMPLETED                     | HUD_AWARDS                            |
-
-```
-
-```

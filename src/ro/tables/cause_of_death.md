@@ -1,4 +1,4 @@
-# Cauza Morții
+# Cause of Death
 
 Acest obiect al Cause of Death reprezintă weaponHash-ul cu care un jucător este ucis cu sânge rece.
 

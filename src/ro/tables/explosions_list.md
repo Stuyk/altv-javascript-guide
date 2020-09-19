@@ -1,4 +1,4 @@
-# Lista de Explozii
+# Explosions List
 
 Lista exploziilor și ID-urile lor care corespund cu acestea.
 

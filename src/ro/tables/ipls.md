@@ -1,4 +1,4 @@
-# IPL-uri Interioare Lipsă
+# Missing Interiors IPLs
 
 Acestea sunt loate din [Dzeknjak's Missing Interiors](https://github.com/jovanivanovic/altv-os-missing-interiors/).
 

@@ -1,4 +1,4 @@
-# Sunete Frontend
+# Frontend Sounds
 
 Rețineți că nu toate aceste sunete pot funcționa. Este sugerat să le testați individual.
 

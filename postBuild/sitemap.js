@@ -4,9 +4,13 @@ const path = require('path');
 const glob = require('glob');
 const fs = require('fs');
 
-const SITE_ROOT = 'https://www.altv.stuyk.com';
-const SOURCE = path.join(__dirname, '..', '/src', '/.vuepress', '/dist', '/**/*.js');
-const DESTINATION = path.join(__dirname, '..', '/src', '/.vuepress', '/dist', '/sitemap.xml');
+const CWD = path.join(process.cwd());
+const DIST_PATH = path.join(CWD, '/src/', '/.vuepress/', '/dist/');
+const SITE_ROOT = 'https://www.altv.stuyk.com/';
+const SOURCE = path.join(CWD, '/src', '/.vuepress', '/dist', '/**/*.html');
+const DESTINATION = path.join(CWD, '/src', '/.vuepress', '/dist', '/sitemap.xml');
+
+console.log(CWD);
 
 let diskPages = glob.sync(SOURCE);
 
@@ -15,12 +19,11 @@ xml += '<?xml version="1.0" encoding="UTF-8"?>';
 xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
 diskPages.forEach(page => {
-    let stats = fs.statSync(page);
     let lastMod = new Date(Date.now()).toISOString();
 
-    page = page.replace(path.join(__dirname, '..', 'pages'), '');
-    page = page.replace(/.js$/, '');
-    page = `${SITE_ROOT}${page}`;
+    page = path.join(page, '');
+    page = page.replace(DIST_PATH, SITE_ROOT);
+    page = page.replace(/\\/g, '/');
 
     if (page.match(/.*\/index$/)) {
         page = page.replace(/(.*)index$/, '$1');

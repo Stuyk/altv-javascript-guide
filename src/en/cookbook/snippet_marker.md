@@ -2,7 +2,7 @@
 
 Markers are those slightly transparent objects in the 3D world.
 
-![](./img/marker.jpg)
+![](../../img/marker.jpg)
 
 **Client Side**
 

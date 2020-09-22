@@ -6,7 +6,7 @@ They are only accessible from client-side but you can call them from server-side
 
 See the example below on how to utilize this in two different ways.
 
-![](./img/notification.jpg)
+![](../../img/notification.jpg)
 
 **Client Side**
 

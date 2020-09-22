@@ -8,7 +8,7 @@ Sie ist nur clientseitig benutzbar, da sie das aufrufen einer Nativen Funktion b
 
 Schau dir das Beispiel unten an, um zu sehen wie es funktionieren kann!
 
-![](./img/notification.jpg)
+![](../../img/notification.jpg)
 
 **Clientseitig**
 

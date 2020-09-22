@@ -26,5 +26,9 @@ Here is an unofficial list of things that may be synchronized.
 -   Swimming
 -   Diving
 -   Waves (Weather Dependent)
+-   Wind Turbines
+-   Street Lights
+-   Moving Stunt Props
+-   Anything that uses Network Time
 
 This synchronization can be confirmed with upwards of 600+ players.

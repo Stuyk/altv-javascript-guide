@@ -6,7 +6,7 @@ const fs = require('fs');
 
 const CWD = path.join(process.cwd());
 const DIST_PATH = path.join(CWD, '/src/', '/.vuepress/', '/dist/');
-const SITE_ROOT = 'https://www.altv.stuyk.com/';
+const SITE_ROOT = 'https://altv.stuyk.com/';
 const SOURCE = path.join(CWD, '/src', '/.vuepress', '/dist', '/**/*.html');
 const DESTINATION = path.join(CWD, '/src', '/.vuepress', '/dist', '/sitemap.xml');
 

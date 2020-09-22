@@ -1,4 +1,6 @@
 const { defaultNavbar } = require('./defaults/navbar');
+
+// Locale Imports
 const { enLocale, enMenus } = require('./locales/en');
 const { roLocale, roMenus } = require('./locales/ro');
 const { skLocale, skMenus } = require('./locales/sk');
@@ -80,6 +82,13 @@ module.exports = {
         '@vuepress/active-header-links',
         ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }],
         ['@dovyp/vuepress-plugin-clipboard-copy', true],
+        [
+            'seo',
+            {
+                publishedAt: () => new Date(Date.now()).toISOString(),
+                modifiedAt: () => new Date(Date.now()).toISOString()
+            }
+        ],
         [
             'robots',
             {

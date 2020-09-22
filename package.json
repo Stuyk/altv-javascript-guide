@@ -8,7 +8,8 @@
     },
     "scripts": {
         "dev": "vuepress dev src",
-        "build": "vuepress build src"
+        "build": "vuepress build src",
+        "sitemap": "node ./postBuild/sitemap.js"
     },
     "license": "MIT",
     "devDependencies": {
@@ -21,6 +22,7 @@
         "vuepress": "^1.5.3",
         "vuepress-plugin-authors": "0.0.2",
         "vuepress-plugin-robots": "^1.0.1",
+        "vuepress-plugin-seo": "^0.1.4",
         "vuepress-theme-yuu": "^2.3.0"
     },
     "prettier": {
@@ -29,7 +31,7 @@
         "printWidth": 120,
         "singleQuote": true
     },
-    "author": "",
+    "author": "Stuyk",
     "dependencies": {
         "@dovyp/vuepress-plugin-clipboard-copy": "git+https://github.com/dovy/vuepress-plugin-clipboard-copy.git"
     }

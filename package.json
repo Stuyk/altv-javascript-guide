@@ -13,6 +13,7 @@
     },
     "license": "MIT",
     "devDependencies": {
+        "@dovyp/vuepress-plugin-clipboard-copy": "git+https://github.com/dovy/vuepress-plugin-clipboard-copy.git",
         "@vuepress/plugin-active-header-links": "^1.5.4",
         "@vuepress/plugin-back-to-top": "^1.5.4",
         "@vuepress/plugin-google-analytics": "^1.5.4",
@@ -23,6 +24,7 @@
         "vuepress-plugin-authors": "0.0.2",
         "vuepress-plugin-robots": "^1.0.1",
         "vuepress-plugin-seo": "^0.1.4",
+        "vuepress-plugin-web-monetization": "0.0.2",
         "vuepress-theme-yuu": "^2.3.0"
     },
     "prettier": {
@@ -32,7 +34,5 @@
         "singleQuote": true
     },
     "author": "Stuyk",
-    "dependencies": {
-        "@dovyp/vuepress-plugin-clipboard-copy": "git+https://github.com/dovy/vuepress-plugin-clipboard-copy.git"
-    }
+    "dependencies": {}
 }

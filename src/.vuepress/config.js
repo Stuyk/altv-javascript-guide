@@ -6,6 +6,7 @@ const { roLocale, roMenus } = require('./locales/ro');
 const { skLocale, skMenus } = require('./locales/sk');
 const { trLocale, trMenus } = require('./locales/tr');
 const { deLocale, deMenus } = require('./locales/de');
+const { defaultSEO } = require('./seo/default');
 
 const googleSearchConsole = 'bRc7ZyO5gVfceHGhFLN1AvtcptSSPl_6SaLIMHde7bQ';
 const title = 'Unofficial alt:V Documentation';
@@ -40,8 +41,12 @@ const meta = [
     ['script', { src: 'https://contextual.media.net/dmedianet.js?cid=8CU1P49EP', async: 'async' }],
     [
         'script',
-        {},
-        `window._mNHandle = window._mNHandle || {}; window._mNHandle.queue = window._mNHandle.queue || []; medianet_versionId = "3121199";`
+        { type: 'text/javascript' },
+        `
+            window._mNHandle = window._mNHandle || {};
+            window._mNHandle.queue = window._mNHandle.queue || [];
+            medianet_versionId = "3121199";
+        `
     ]
 ];
 
@@ -80,23 +85,16 @@ module.exports = {
         '@vuepress/back-to-top',
         '@vuepress/medium-zoom',
         '@vuepress/active-header-links',
-        ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }],
         ['@dovyp/vuepress-plugin-clipboard-copy', true],
         [
-            'seo',
+            '@snowdog/vuepress-plugin-pdf-export',
             {
-                publishedAt: () => new Date(Date.now()).toISOString(),
-                modifiedAt: () => new Date(Date.now()).toISOString()
+                puppeteerLaunchOptions: {
+                    args: ['--no-sandbox', '--disable-setuid-sandbox']
+                }
             }
         ],
-        [
-            'robots',
-            {
-                host: 'https://altv.stuyk.com/',
-                allowAll: true,
-                sitemap: '/sitemap.xml'
-            }
-        ]
+        ...defaultSEO
     ],
     configureWebpack: {
         resolve: {

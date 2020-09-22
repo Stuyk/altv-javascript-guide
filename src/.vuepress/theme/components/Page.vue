@@ -6,7 +6,15 @@
         <PageEdit />
 
         <PageNav v-bind="{ sidebarItems }" />
-        <div class="ad" id="447954467" style="display: block !important"></div>
+        <div class="ad" id="522369680">
+            <script type="text/javascript">
+    try {
+        window._mNHandle.queue.push(function() {
+            window._mNDetails.loadTag('522369680', '728x90', '522369680');
+        });
+    } catch (error) {}
+            </script>
+        </div>
         <slot name="bottom" />
     </main>
 </template>
@@ -18,11 +26,6 @@ import PageNav from '@theme/components/PageNav.vue';
 export default {
     components: { PageEdit, PageNav },
     props: ['sidebarItems'],
-    mounted() {
-        window._mNHandle.queue.push(function() {
-            window._mNDetails.loadTag('447954467', '728x90', '447954467');
-        });
-    }
 };
 </script>
 

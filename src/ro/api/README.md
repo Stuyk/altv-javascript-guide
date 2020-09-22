@@ -61,7 +61,7 @@ Să vorbim despre ceea ce înseamnă fiecare dintre aceastea și cum arată în 
 
 Funcțiile funcționează întotdeauna ca funcții (duh), iar API-ul are de obicei o secțiune pentru ele.
 
-![](./img/functions.png)
+![](../../img/functions.png)
 
 Iată un exemplu de cum ar putea arăta utilizarea uneia dintre funcțiile de mai sus.
 
@@ -77,7 +77,7 @@ Clasele funcționează ca cele normale din JavaScript. Depinde doar de modul în
 
 Să presupunem că aveți `alt` ca prefix pentru toate.
 
-![](./img/classes.png)
+![](../../img/classes.png)
 
 Rețineți că nu toate clasele sunt accesibile sau pot fi create.
 

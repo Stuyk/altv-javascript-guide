@@ -1,6 +1,6 @@
 # API : Giriş
 
-API, alt:V üzerinde yazacağınız kodların çoğunluğunu oluşturur ve işlevsel kod yazmanıza yardımcı olur. 
+API, alt:V üzerinde yazacağınız kodların çoğunluğunu oluşturur ve işlevsel kod yazmanıza yardımcı olur.
 
 Tek bilmeniz gereken fonksiyonuların çoğunun kullanımıyla ilgili birkaç örnek olmasıdır.
 
@@ -43,7 +43,7 @@ Eğer API'lar nasıl okunur, nasıl kullanılır bilmiyorsanız yukarıdaki kodu
 
 Aşağıda kullanım örneğini görebilirsiniz;
 
-**NOT:** `playerConnect` Sunucu (server-side) için alt:V tarafından verilmiş bir eventtir. Bir oyuncunun sunucuya bağlanma evresini kontrol eder, oyuncu bağlandığında otomatik olarak oyuncuyu fonksiyon içerisine verir. 
+**NOT:** `playerConnect` Sunucu (server-side) için alt:V tarafından verilmiş bir eventtir. Bir oyuncunun sunucuya bağlanma evresini kontrol eder, oyuncu bağlandığında otomatik olarak oyuncuyu fonksiyon içerisine verir.
 
 ```js
 alt.on('playerConnect', handlePlayerConnect);
@@ -55,7 +55,6 @@ function handlePlayerConnect(player) {
 
 Bir oyuncu sunucuya bağlandığında otomatik olarak `playerConnect` eventi tetiklenecek ve yazdığımız bu kod sayesinde bir oyuncu sunucuya bağlanma isteği gönderiğinde sunucu konsoluna `xxx sunucuya bağlandı` mesajını göreceğiz.
 
-
 ## API Kullanımı
 
 Değişkenler, fonksiyonlar, sınıflar (class) vb. şeylerin bir çok farklı hali vardır.
@@ -66,7 +65,7 @@ Bunların ne anlama geldiğinden ve neye benzediğinden biraz bahsedelim.
 
 Fonksiyonlar her zaman fonksiyon gibi çalışır ve API içinde bunlar için bir bölüm vardır.
 
-![](./img/functions.png)
+![](../../img/functions.png)
 
 Yukarıdaki fonksiyonların nasıl kullanıldığına ilişkin bir örnek aşağıda mevcut.
 
@@ -82,7 +81,7 @@ Sınıflar normal `JavaScript` sınıfları ile aynı çalışma prensibine sahi
 
 Ön ekimizin `alt` olduğunu varsayalım.
 
-![](./img/classes.png)
+![](../../img/classes.png)
 
 Her sınıfı oluşturamayacağınızı ve her sınıfa erişemeyeceğinizi unutmayın.
 
@@ -127,4 +126,3 @@ const vehicle = new alt.Vehicle('infernus', 0, 0, 0, 0, 0, 0);
 const result = vehicle.getDoorState(0);
 vehicle.setArmoredWindowHealth(0, 100);
 ```
-

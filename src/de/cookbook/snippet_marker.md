@@ -2,7 +2,7 @@
 
 Markers sind leicht transparente geometrische Figuren, welche im 3D-Raum gezeichnet werden können.
 
-![](./img/marker.jpg)
+![](../../img/marker.jpg)
 
 **Clientseitig**
 

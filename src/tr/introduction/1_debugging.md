@@ -4,9 +4,9 @@ Bu aşamada alt:V İstemcisini kurmuş olmanız gerekmekte.
 
 `altv.exe`'nin bulunduğu konuma gidip `altv.cfg`'yi bulalım.
 
-**NOT:** *Bu ayarlar sadece debugging yapacağınız zaman geçerlidir. Eğer gireceğiniz sunucuda debug modu açık değilse sunucuya bağlanamazsınız.*
+**NOT:** _Bu ayarlar sadece debugging yapacağınız zaman geçerlidir. Eğer gireceğiniz sunucuda debug modu açık değilse sunucuya bağlanamazsınız._
 
-![](./img/edit_cfg.png)
+![](../../img/edit_cfg.png)
 
 ## altv.cfg
 
@@ -20,7 +20,7 @@ debug: 'true'
 
 ## Reconnecting
 
-Sunucunuzu yeniden başlattığınızda otomatik olarak sunucudan atılacaksınız. Eğer sunucunuzun konfigürasyonunda debug modu açıksa ve istemciniz üzerinde de debug modu açıksa 
+Sunucunuzu yeniden başlattığınızda otomatik olarak sunucudan atılacaksınız. Eğer sunucunuzun konfigürasyonunda debug modu açıksa ve istemciniz üzerinde de debug modu açıksa
 `reconnect` komutunu kullanabileceksiniz. Aksi takdirde bağlantınızın kesildiği bir sunucuya tekrar girmek için istemciyi yeniden başlatmanız gerekiyor.
 
 `F8` tuşuna bas ve;

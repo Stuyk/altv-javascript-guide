@@ -289,7 +289,7 @@ if (player.hasMeta('cash')) { // key
 
 Used to change this entities network owner. Average developers will likely not be using this.
 
-## setStreamedSyncedMeta
+## setStreamSyncedMeta
 
 Used to set the data stored on the player entity. This is accessible on **server-side** and **client-side**.
 

@@ -45,7 +45,7 @@ Iată câteva proprietăți foarte frecvent utilizate.
 | neonColor            | Setați culoarea neonului. `{r, g, b, a}`                                                      |
 | nightlightOn         | Folosit pentru a porni sau opri o lampă de iluminat din vehicul.                              |
 | numberPlateIndex     | Folosit pentru a schimba aspectul unei plăcuțe de înmatriculare.                              |
-| numberPlateText      | Set the text on a number plate.                                                               |
+| numberPlateText      | Setați textul pe o placuță de înmatriculare.                                                  |
 | pearlColor           |                                                                                               |
 | petrolTankHealth     |                                                                                               |
 | pos                  | Poziția actuală a vehiculului.                                                                |

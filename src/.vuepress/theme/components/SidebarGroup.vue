@@ -106,7 +106,7 @@ export default {
     }
 
     & > .sidebar-group-items {
-      padding-left: 1rem;
+      padding-left: 0.5rem;
 
       & > li > .sidebar-link {
         font-size: 0.95em;
@@ -126,7 +126,7 @@ export default {
   color: $textColor;
   transition: color 0.15s ease;
   cursor: pointer;
-  font-size: 1.1em;
+  font-size: 2em;
   font-weight: bold;
   padding: 0.35rem 1.5rem 0.35rem 1.25rem;
   width: 100%;

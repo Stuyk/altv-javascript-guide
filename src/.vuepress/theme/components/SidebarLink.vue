@@ -14,7 +14,7 @@ export default {
         // matches
         const active =
             item.type === 'auto'
-                ? selfActive || item.children.some((c) => isActive($route, item.basePath + '#' + c.slug))
+                ? selfActive || item.children.some(c => isActive($route, item.basePath + '#' + c.slug))
                 : selfActive;
         const link =
             item.type === 'external'
@@ -26,8 +26,8 @@ export default {
             sidebarDepth,
             $themeLocaleConfig.sidebarDepth,
             $themeConfig.sidebarDepth,
-            1,
-        ].find((depth) => depth !== undefined);
+            1
+        ].find(depth => depth !== undefined);
 
         const displayAllHeaders = $themeLocaleConfig.displayAllHeaders || $themeConfig.displayAllHeaders;
 
@@ -39,7 +39,7 @@ export default {
         } else {
             return link;
         }
-    },
+    }
 };
 
 function renderLink(h, to, text, active, level) {
@@ -47,17 +47,17 @@ function renderLink(h, to, text, active, level) {
         props: {
             to,
             activeClass: '',
-            exactActiveClass: '',
+            exactActiveClass: ''
         },
         class: {
             active,
-            'sidebar-link': true,
-        },
+            'sidebar-link': true
+        }
     };
 
     if (level > 2) {
         component.style = {
-            'padding-left': level + 'rem',
+            'padding-left': level + 'rem'
         };
     }
 
@@ -69,11 +69,11 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
     return h(
         'ul',
         { class: 'sidebar-sub-headers' },
-        children.map((c) => {
+        children.map(c => {
             const active = isActive(route, path + '#' + c.slug);
             return h('li', { class: 'sidebar-sub-header' }, [
                 renderLink(h, path + '#' + c.slug, c.title, active, c.level - 1),
-                renderChildren(h, c.children, path, route, maxDepth, depth + 1),
+                renderChildren(h, c.children, path, route, maxDepth, depth + 1)
             ]);
         })
     );
@@ -86,11 +86,11 @@ function renderExternal(h, to, text) {
             attrs: {
                 href: to,
                 target: '_blank',
-                rel: 'noopener noreferrer',
+                rel: 'noopener noreferrer'
             },
             class: {
-                'sidebar-link': true,
-            },
+                'sidebar-link': true
+            }
         },
         [text, h('OutboundLink')]
     );
@@ -126,8 +126,10 @@ a.sidebar-link {
   &.active {
     font-weight: 600;
     color: $accentColor;
-    border-left-color: $accentColor;
-    border-left: 2px solid $accentColor;
+
+    &::before {
+        content: '> ';
+    }
   }
 
   .sidebar-group & {
@@ -135,8 +137,8 @@ a.sidebar-link {
   }
 
   .sidebar-sub-headers & {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border-left: none;
     transition: 200ms;
 
@@ -144,7 +146,7 @@ a.sidebar-link {
       font-weight: 600;
 
       &::before {
-        content: '> ';
+        content: '# ';
       }
     }
   }

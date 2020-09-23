@@ -1,6 +1,6 @@
 ## alt:V JavaScript Guide
 
-![](https://i.imgur.com/Wp1rE91.png)
+![](https://i.imgur.com/1Ger0uz.png)
 
 [Click to Open Documents](https://altv.stuyk.com/)
 

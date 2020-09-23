@@ -30,5 +30,9 @@ export default {
       font-weight bold
       letter-spacing 0.02em
   }
+
+  img {
+      max-height 400px !important;
+  }
 }
 </style>

@@ -72,6 +72,8 @@ export default {
 
 @media (max-width: $MQMobile) {
   .sidebar {
+    background: #1f1f1f
+
     .nav-links {
       display: block;
 

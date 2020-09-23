@@ -42,6 +42,11 @@ const sidebar = [
                 children: buildSidebar(`/${language}/player/`)
             },
             {
+                title: `🚙 Vehicle`,
+                collapsable: false,
+                children: buildSidebar(`/${language}/vehicle/`)
+            },
+            {
                 title: `📊 Databases`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/databases/`)

@@ -105,6 +105,11 @@ $navbar-horizontal-padding = 1.5rem;
     font-weight: 600;
     color: $textColor;
     position: relative;
+    transition 0.2s
+
+    &:hover {
+      color: $altvColor
+    }
   }
 
   .links {

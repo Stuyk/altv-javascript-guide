@@ -14,7 +14,7 @@ export default {
         // matches
         const active =
             item.type === 'auto'
-                ? selfActive || item.children.some(c => isActive($route, item.basePath + '#' + c.slug))
+                ? selfActive || item.children.some((c) => isActive($route, item.basePath + '#' + c.slug))
                 : selfActive;
         const link =
             item.type === 'external'
@@ -26,8 +26,8 @@ export default {
             sidebarDepth,
             $themeLocaleConfig.sidebarDepth,
             $themeConfig.sidebarDepth,
-            1
-        ].find(depth => depth !== undefined);
+            1,
+        ].find((depth) => depth !== undefined);
 
         const displayAllHeaders = $themeLocaleConfig.displayAllHeaders || $themeConfig.displayAllHeaders;
 
@@ -39,7 +39,7 @@ export default {
         } else {
             return link;
         }
-    }
+    },
 };
 
 function renderLink(h, to, text, active, level) {
@@ -47,17 +47,17 @@ function renderLink(h, to, text, active, level) {
         props: {
             to,
             activeClass: '',
-            exactActiveClass: ''
+            exactActiveClass: '',
         },
         class: {
             active,
-            'sidebar-link': true
-        }
+            'sidebar-link': true,
+        },
     };
 
     if (level > 2) {
         component.style = {
-            'padding-left': level + 'rem'
+            'padding-left': level + 'rem',
         };
     }
 
@@ -69,11 +69,11 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
     return h(
         'ul',
         { class: 'sidebar-sub-headers' },
-        children.map(c => {
+        children.map((c) => {
             const active = isActive(route, path + '#' + c.slug);
             return h('li', { class: 'sidebar-sub-header' }, [
                 renderLink(h, path + '#' + c.slug, c.title, active, c.level - 1),
-                renderChildren(h, c.children, path, route, maxDepth, depth + 1)
+                renderChildren(h, c.children, path, route, maxDepth, depth + 1),
             ]);
         })
     );
@@ -86,11 +86,11 @@ function renderExternal(h, to, text) {
             attrs: {
                 href: to,
                 target: '_blank',
-                rel: 'noopener noreferrer'
+                rel: 'noopener noreferrer',
             },
             class: {
-                'sidebar-link': true
-            }
+                'sidebar-link': true,
+            },
         },
         [text, h('OutboundLink')]
     );
@@ -98,42 +98,55 @@ function renderExternal(h, to, text) {
 </script>
 
 <style lang="stylus">
-.sidebar .sidebar-sub-headers
-  padding-left 1rem
-  font-size 0.95em
+body, html {
+  overflow-x: hidden;
+}
 
-a.sidebar-link
-  font-size 1em
-  font-weight 400
-  display inline-block
-  color $textColor
-  border-left 3px solid transparent
-  padding 0.35rem 1rem 0.35rem 1.25rem
-  line-height 1.4
-  width: 100%
-  box-sizing: border-box
-  transition 200ms
+.sidebar .sidebar-sub-headers {
+  padding-left: 1rem;
+  font-size: 0.95em;
+}
 
-  &:hover
-    color $accentColor
+a.sidebar-link {
+  font-size: 1em;
+  font-weight: 400;
+  display: inline-block;
+  color: $textColor;
+  border-left: 3px solid transparent;
+  padding: 0.35rem 1rem 0.35rem 1.25rem;
+  line-height: 1.4;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 200ms;
 
-  &.active
-    font-weight 600
-    color $accentColor
-    border-left-color $accentColor
-    border-left: 2px solid $accentColor
+  &:hover {
+    color: $accentColor;
+  }
 
-  .sidebar-group &
-    padding-left 2rem
-  .sidebar-sub-headers &
-    padding-top 0.25rem
-    padding-bottom 0.25rem
-    border-left none
-    transition 200ms
+  &.active {
+    font-weight: 600;
+    color: $accentColor;
+    border-left-color: $accentColor;
+    border-left: 2px solid $accentColor;
+  }
 
-    &.active
-      font-weight 600
+  .sidebar-group & {
+    padding-left: 2rem;
+  }
+
+  .sidebar-sub-headers & {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-left: none;
+    transition: 200ms;
+
+    &.active {
+      font-weight: 600;
+
       &::before {
-        content: '> '
+        content: '> ';
       }
+    }
+  }
+}
 </style>

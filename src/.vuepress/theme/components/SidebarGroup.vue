@@ -59,75 +59,107 @@ export default {
         this.$options.components.SidebarLinks = require('@theme/components/SidebarLinks.vue').default;
     },
 
-    methods: { isActive }
+    methods: {
+        isActive
+    }
 };
 </script>
 
 <style lang="stylus">
-.sidebar-group
-  .sidebar-links
-    background: rgba(0, 0, 0, 0.1);
+.sidebar-group {
+  background rgba(255, 255, 255, 0.02);
+
+  .sidebar-links {
     padding-bottom: 1rem;
-  .sidebar-group
-    padding-left 0.5em
-  &:not(.collapsable)
-    .sidebar-heading:not(.clickable)
-      cursor auto
-      color white
-      font-weight bolder
-      letter-spacing 0.05em
-      font-size: 16px
+  }
+
+  .sidebar-group {
+    padding-left: 0.5em;
+  }
+
+  &:not(.collapsable) {
+    .sidebar-heading:not(.clickable) {
+      cursor: auto;
+      color: white;
+      font-weight: bolder;
+      letter-spacing: 0.05em;
+      font-size: 16px;
+    }
+  }
+
   // refine styles of nested sidebar groups
-  &.is-sub-group
-    padding-left 0
-    & > .sidebar-heading
-      font-size 0.95em
-      line-height 1.4
-      font-weight normal
-      padding-left 2rem
-      &:not(.clickable)
-        color rgba(255, 255, 255, 0.8)
-        margin-bottom 0.3rem
-        background: rgba(0, 0, 0, 0.3);
-        box-sizing border-box
-    & > .sidebar-group-items
-      padding-left 1rem
-      & > li > .sidebar-link
+  &.is-sub-group {
+    padding-left: 0;
+
+    & > .sidebar-heading {
+      font-size: 0.95em;
+      line-height: 1.4;
+      font-weight: normal;
+      padding-left: 2rem;
+
+      &:not(.clickable) {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.3rem;
+        // background: rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+      }
+    }
+
+    & > .sidebar-group-items {
+      padding-left: 1rem;
+
+      & > li > .sidebar-link {
         font-size: 0.95em;
-        border-left none
-  &.depth-2
-    & > .sidebar-heading
-      border-left none
+        border-left: none;
+      }
+    }
+  }
 
-.sidebar-heading
-  color $textColor
-  transition color .15s ease
-  cursor pointer
-  font-size 1.1em
-  font-weight bold
-  // text-transform uppercase
-  padding 0.35rem 1.5rem 0.35rem 1.25rem
-  width 100%
-  box-sizing border-box
-  margin 0
-  border-left 0.25rem solid transparent
+  &.depth-2 {
+    & > .sidebar-heading {
+      border-left: none;
+    }
+  }
+}
 
-  &.open, &:hover
-    color inherit
-  .arrow
-    position relative
-    top -0.12em
-    left 0.5em
-  &.clickable
-    &.active
-      font-weight 600
-      color $accentColor
-      border-left-color $accentColor
-    &:hover
-      color $accentColor
+.sidebar-heading {
+  color: $textColor;
+  transition: color 0.15s ease;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 0.35rem 1.5rem 0.35rem 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border-left: 0.25rem solid transparent;
 
-.sidebar-group-items
-  transition height .1s ease-out
-  font-size 0.95em
-  overflow hidden
+  &.open, &:hover {
+    color: inherit;
+  }
+
+  .arrow {
+    position: relative;
+    top: -0.12em;
+    left: 0.5em;
+  }
+
+  &.clickable {
+    &.active {
+      font-weight: 600;
+      color: $accentColor;
+      border-left-color: $accentColor;
+    }
+
+    &:hover {
+      color: $accentColor;
+    }
+  }
+}
+
+.sidebar-group-items {
+  transition: height 0.1s ease-out;
+  font-size: 0.95em;
+  overflow: hidden;
+}
 </style>

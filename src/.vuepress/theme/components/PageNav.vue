@@ -128,6 +128,7 @@ function flatten(items, res) {
   @extend $wrapper
   padding-top 1rem
   padding-bottom 0
+  width: 80%;
   .inner
     min-height 2rem
     margin-top 0

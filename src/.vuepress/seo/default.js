@@ -15,7 +15,8 @@ const defaultSEO = [
         }
     ],
     ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }],
-    ['web-monetization', { address: '$ilp.uphold.com/gJRgqRGGRFHp' }]
+    ['web-monetization', { address: '$ilp.uphold.com/gJRgqRGGRFHp' }],
+    ['meta', { name: 'google-site-verification', content: 'bRc7ZyO5gVfceHGhFLN1AvtcptSSPl_6SaLIMHde7bQ' }]
 ];
 
 module.exports = {

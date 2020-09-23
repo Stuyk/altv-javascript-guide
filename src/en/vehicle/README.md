@@ -55,7 +55,7 @@ Here are some very commonly used properties.
 | roofLivery           |                                                                                        |
 | roofOpened           |                                                                                        |
 | rot                  | Get the current rotation of the vehicle.                                               |
-| secondaryColor       | Set the secondary in dex color of the vehicle.                                         |
+| secondaryColor       | Set the secondary index color of the vehicle.                                          |
 | sirenActive          | Get if the siren is currently active.                                                  |
 | tireSmokeColor       |                                                                                        |
 | valid                | Check if the vehicle still exists and has not been destroyed.                          |

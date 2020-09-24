@@ -1,4 +1,4 @@
-# Ce este defapt ScriptID-ul?
+# Ce este defapt scriptID-ul?
 
 Aceasta este o modalitate pentru noi de a identifica un alt player sau pe noi înșine în client-side.
 

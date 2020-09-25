@@ -26,7 +26,7 @@ Windows çalışma ortamında geliştirme yaptığınızı varsayarsak;
 
 ## altv-pkg Kurulumu
 
-[altv-pkg](https://github.com/stuyk/altv-pkg), hızlı bir şekilde Windows veya Linux üzerinde sunucu için gerekli dosyaları indirerek hazır hale getiren Stuyk tarafından oluşturulmuş bir yardımcı programdır. Üzerinde çalışmanız için size bir ***resource*** (script) tabanı hazırlar.
+[altv-pkg](https://github.com/stuyk/altv-pkg), hızlı bir şekilde Windows veya Linux üzerinde sunucu için gerekli dosyaları indirerek hazır hale getiren Stuyk tarafından oluşturulmuş bir yardımcı programdır. Üzerinde çalışmanız için size bir **_resource_** (script) tabanı hazırlar.
 
 Windows Komut Satırı (CMD) veya PowerShell ile birlikte kurabilirsiniz.
 
@@ -62,14 +62,12 @@ Standart olarak sunucu dosyaları otomatik olarak bulunduğunuz dizinde oluştur
 
 Ekran üzerinde ki yönergeleri izleyiniz.
 
--   Sesli Sohbet seçeneği için **N** 
+-   Sesli Sohbet seçeneği için **N**
 -   Örnek resource için **Y**
 
-![](./img/cmd_altvpkg.gif)
+![](../../img/cmd_altvpkg.gif)
 
 ## İndirilen Dosyaları Anlamak
-
-
 
 İndirdiğimiz sunucu dosyalarının ne işe yaradığını, nasıl bir klasör yapısında bulunduğunu anlamak ve algılamak çok önemli. Aşağıda `altv-pkg d release` komutu ile kurulumunu sağladığımız sunucu dosyalarımızın genel dosyalarını ve dosya-klasör yapısın görebiliriz.
 
@@ -142,7 +140,7 @@ $ altv-server.exe
 
 Bu dosya üzerinden görebileceğimiz tanımlamalar;
 
--   [Prettier extension for VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) eklentisini kullanıyoruz ve ayarlarını bu dosya üzerinde belirledik. 
+-   [Prettier extension for VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) eklentisini kullanıyoruz ve ayarlarını bu dosya üzerinde belirledik.
 -   `"type": "module"` satırını ES6 desteği için kullanıyoruz. [ES6 Syntax](https://www.w3schools.com/js/js_es6.asp).
 -   Server dosyalarımız `$ npm run update` komutunu çalıştırarak tek seferde güncelleyebiliriz
 
@@ -221,7 +219,7 @@ Bu klasör ise kullandığınız farklı dil destekleri için kullandığınız 
 
 ### /node_modules
 
-Bu klasör, NPM ile yüklediğiniz paketlerin barındığı klasördür. Aşağıda ki örnek komut satırında çalıştırılacak kod ile `Stanford Javascript Crypto Library` paketi NPM tarafından otomatik olarak bu klasör içerisine yüklenecektir. 
+Bu klasör, NPM ile yüklediğiniz paketlerin barındığı klasördür. Aşağıda ki örnek komut satırında çalıştırılacak kod ile `Stanford Javascript Crypto Library` paketi NPM tarafından otomatik olarak bu klasör içerisine yüklenecektir.
 
 ```sh
 $ npm i sjcl
@@ -237,7 +235,7 @@ alt:V Sunucunuzu kurduğunuz klasörü VS:Code üzerinde açalım.
 
 Resimdeki gibi görünmeli.
 
-![](./img/vscode_entry.png)
+![](../../img/vscode_entry.png)
 
 `resources/example/startup.js` dosyası içerisinde kodumuzu yazmaya başlayalım.
 
@@ -251,7 +249,7 @@ resources: [
 
 Herşeyin doğru olduğundan emin olmak için komut satırında sunucunuzu çalıştırın.
 
-![](./img/cmd_loaded.png)
+![](../../img/cmd_loaded.png)
 
 ## Connecting
 
@@ -278,7 +276,7 @@ alt.log('test');
 
 Sunucu tarafında kod yazarken artık otomatik olarak tamamlayıcı çalışacak.
 
-![](./img/vscode_server_test.png)
+![](../../img/vscode_server_test.png)
 
 ## Client-Side
 
@@ -299,4 +297,4 @@ alt.log(`You connected! Nice!`);
 
 İstemci tarafında kod yazarken artık otomatik olarak tamamlayıcı çalışacak.
 
-![](./img/vscode_client_test.png)
+![](../../img/vscode_client_test.png)

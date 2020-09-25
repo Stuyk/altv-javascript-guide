@@ -28,8 +28,18 @@ tr {
 .suggestions {
   background-color #1f1f1f !important;
 
-  li:hover {
-    background-color rgba(255, 255, 255, 0.1) !important;
+  li {
+    &:hover {
+      background-color rgba(255, 255, 255, 0.1) !important;
+    }
+
+    &:first-child {
+      background-color transparent !important;
+
+      &:hover {
+        background-color rgba(255, 255, 255, 0.1) !important;
+      }
+    }
   }
 }
 
@@ -38,10 +48,10 @@ tr {
 }
 
 *::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.5);        /* color of the tracking area */
+  background: rgba(15, 15, 15, 1);        /* color of the tracking area */
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.75);
+  background: rgba(255, 255, 255, 0.4);
+  border: 0px solid rgba(0, 0, 0, 0.75);
 }

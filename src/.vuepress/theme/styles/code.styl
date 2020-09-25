@@ -8,6 +8,8 @@
     border-radius 3px
     max-height 800px
     overflow auto
+    font-family Consolas !important
+
     .token
       &.deleted
         color #EC5975
@@ -23,6 +25,8 @@
     border-radius 6px
     overflow auto
     max-height 800px
+    border: 3px solid rgba(255, 255, 255, 0.1);
+
     code
       color #fff
       padding 0
@@ -109,33 +113,55 @@ for lang in $codeLang
 
 div[class~="language-javascript"]
   &:before
+    display none
     content "js"
 
 div[class~="language-typescript"]
   &:before
+    display none
     content "ts"
 
 div[class~="language-markup"]
   &:before
+    display none
     content "html"
 
 div[class~="language-markdown"]
   &:before
+    display none
     content "md"
 
 div[class~="language-json"]:before
+  display none
   content "json"
 
 div[class~="language-ruby"]:before
   content "rb"
+  display none
 
 div[class~="language-python"]:before
   content "py"
+  display none
 
 div[class~="language-bash"]:before
   content "sh"
+  display none
 
 div[class~="language-php"]:before
   content "php"
+  display none
+
+.code-copy
+  top: 5px !important
+  user-select none !important;
+  opacity: 0.8 !important;
+
+  &:hover {
+    opacity: 1.0 !important;
+  }
+
+  &:active {
+    top: 3px !important;
+  }
 
 @import '~prismjs/themes/prism-tomorrow.css'

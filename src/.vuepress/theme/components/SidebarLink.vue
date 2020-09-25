@@ -98,42 +98,57 @@ function renderExternal(h, to, text) {
 </script>
 
 <style lang="stylus">
-.sidebar .sidebar-sub-headers
-  padding-left 1rem
-  font-size 0.95em
+body, html {
+  overflow-x: hidden;
+}
 
-a.sidebar-link
-  font-size 1em
-  font-weight 400
-  display inline-block
-  color $textColor
-  border-left 3px solid transparent
-  padding 0.35rem 1rem 0.35rem 1.25rem
-  line-height 1.4
-  width: 100%
-  box-sizing: border-box
-  transition 200ms
+.sidebar .sidebar-sub-headers {
+  padding-left: 1rem;
+  font-size: 0.95em;
+}
 
-  &:hover
-    color $accentColor
+a.sidebar-link {
+  font-size: 1em;
+  font-weight: 400;
+  display: inline-block;
+  color: $textColor;
+  border-left: 3px solid transparent;
+  padding: 0.35rem 1rem 0.35rem 1.25rem;
+  line-height: 1.4;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 200ms;
 
-  &.active
-    font-weight 600
-    color $accentColor
-    border-left-color $accentColor
-    border-left: 2px solid $accentColor
+  &:hover {
+    color: $accentColor;
+  }
 
-  .sidebar-group &
-    padding-left 2rem
-  .sidebar-sub-headers &
-    padding-top 0.25rem
-    padding-bottom 0.25rem
-    border-left none
-    transition 200ms
+  &.active {
+    font-weight: 600;
+    color: $accentColor;
 
-    &.active
-      font-weight 600
+    &::before {
+        content: '> ';
+    }
+  }
+
+  .sidebar-group & {
+    padding-left: 2rem;
+  }
+
+  .sidebar-sub-headers & {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-left: none;
+    transition: 200ms;
+
+    &.active {
+      font-weight: 600;
+
       &::before {
-        content: '> '
+        content: '# ';
       }
+    }
+  }
+}
 </style>

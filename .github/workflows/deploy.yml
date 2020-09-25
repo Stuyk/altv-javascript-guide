@@ -24,6 +24,9 @@ jobs:
             - name: Copy CNAME
               run: cp ./CNAME ./src/.vuepress/dist/CNAME
 
+            - name: Build Sitemap
+              run: npm run sitemap
+
             - name: Deploy
               uses: JamesIves/github-pages-deploy-action@releases/v3
               with:

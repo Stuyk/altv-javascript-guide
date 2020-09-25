@@ -4,7 +4,7 @@ Ar trebui să aveți configurarea serverului alt:V în acest stadiu.
 
 Mergeți la locația folderului unde se află executabilul altv.exe și căutați fișierul altv.cfg.
 
-![](./img/edit_cfg.png)
+![](../../img/edit_cfg.png)
 
 ## altv.cfg
 

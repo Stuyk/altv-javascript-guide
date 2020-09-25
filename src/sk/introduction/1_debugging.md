@@ -1,10 +1,10 @@
-# Nastaviť klienta *debugging*
+# Nastaviť klienta _debugging_
 
 V tejto fáze by ste mali mať nastaveného alt:V klienta.
 
 Prejdite do priečinka, kde sa nachádza váš `altv.exe`, a vyhľadajte súbor `altv.cfg`.
 
-![](./img/edit_cfg.png)
+![](../../img/edit_cfg.png)
 
 ## altv.cfg
 
@@ -37,5 +37,3 @@ ak váš server je zabezpečené heslo, zadajte nasledovný príkaz:
 ```
 reconnect <heslo>
 ```
-
-

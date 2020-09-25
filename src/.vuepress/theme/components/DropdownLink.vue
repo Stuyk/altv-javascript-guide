@@ -102,7 +102,7 @@ export default {
 
 <style lang="stylus">
 .dropdown-wrapper
-  background: $bgColor
+  // background: $bgColor
   cursor pointer
   .dropdown-title
     display block
@@ -130,7 +130,7 @@ export default {
         color $accentColor
   .nav-dropdown
     .dropdown-item
-      background: $bgColor
+      background: rgb(50, 50, 50)
       color inherit
       line-height 1.7rem
       h4
@@ -211,12 +211,11 @@ export default {
       position absolute
       top 100%
       right 0
-      background: $bgColor
-      padding 0.6rem 0
-      border 1px solid #ddd
-      border-bottom-color #ccc
+      border 3px solid rgba(75, 75, 75, 1)
+      padding 0
       text-align left
       border-radius 0.25rem
       white-space nowrap
-      margin 0
+      margin-top 0px
+      list-style-type none
 </style>

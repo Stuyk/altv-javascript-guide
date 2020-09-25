@@ -20,7 +20,7 @@ alt.Player.local.scriptID;
 
 This is the equivalent of `local playerPed = PlayerPedId()` from FiveM.
 
-However, for individual players it depends on how you recieve their player instance.
+However, for individual players it depends on how you receive their player instance.
 
 ### Server Side
 

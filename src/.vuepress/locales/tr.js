@@ -7,7 +7,7 @@ const languageName = 'Turkish';
 const trLocale = {
     [`/${language}/`]: {
         lang: `${language}-${languageUpper}`,
-        title: `Documentation | ${languageName}`
+        title: `Döküman | ${languageName}`
     }
 };
 
@@ -17,42 +17,42 @@ const sidebar = [
         collapsable: false,
         children: [
             {
-                title: '🚀 Introduction',
+                title: '🚀 Giriş',
                 collapsable: false,
                 children: buildSidebar(`/${language}/introduction/`)
             },
             {
-                title: `♻️ Conversion`,
+                title: `♻️ Taşıma`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/conversion/`)
             },
             {
-                title: `📄 API Guide`,
+                title: `📄 API Rehberi`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/api/`)
             },
             {
-                title: `💡 Events`,
+                title: `💡 Eventler`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/events/`)
             },
             {
-                title: `🧍 Player`,
+                title: `🧍 Oyuncu`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/player/`)
             },
             {
-                title: `📊 Databases`,
+                title: `📊 Veritabanları`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/databases/`)
             },
             {
-                title: `📚 Cookbook`,
+                title: `📚 El kitabı`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/cookbook/`)
             },
             {
-                title: `📖 Data Tables`,
+                title: `📖 Data Tabloları`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/tables/`)
             }

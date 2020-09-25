@@ -65,7 +65,7 @@ Urmați instrucțiunile de pe ecran.
 -   **N** pentru Voce
 -   **Y** pentru un Exemplu de Sursa
 
-![](./img/cmd_altvpkg.gif)
+![](../../img/cmd_altvpkg.gif)
 
 ## Înțelegerea fișierelor descărcate
 
@@ -235,7 +235,7 @@ Deschideți folderul în care ați configurat serverul alt:V în VS:Code.
 
 Ar trebui să arate ca imaginea de mai jos.
 
-![](./img/vscode_entry.png)
+![](../../img/vscode_entry.png)
 
 Puteți începe să scrieți propriul cod în `resources/example/startup.js`.
 
@@ -249,7 +249,7 @@ resources: [
 
 Rulați serverul din Command Prompt pentru a vă asigura că totul s-a încărcat corect.
 
-![](./img/cmd_loaded.png)
+![](../../img/cmd_loaded.png)
 
 ## Conectarea
 
@@ -274,7 +274,7 @@ alt.log('test');
 
 Partea de server-side ar trebui să aibă acum completare automată.
 
-![](./img/vscode_server_test.png)
+![](../../img/vscode_server_test.png)
 
 ## Client-Side
 
@@ -295,4 +295,4 @@ alt.log(`You connected! Nice!`);
 
 Partea de client-side ar trebui să aibă acum completare automată.
 
-![](./img/vscode_client_test.png)
+![](../../img/vscode_client_test.png)

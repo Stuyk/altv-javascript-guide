@@ -198,7 +198,7 @@ Pretty easy to update and manage!
 You can improve this by using Prototyping on a Player to extend their functionality.
 
 ```js
-alt.Player.local.prototype.saveField = async function(fieldName, fieldValue, sync = false) {
+alt.Player.prototype.saveField = async function(fieldName, fieldValue, sync = false) {
 	if (sync) {
         this.setSyncedMeta(fieldName, this.data[fieldName]);
     }

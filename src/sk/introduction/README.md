@@ -33,4 +33,4 @@ Predtým, ako začnete so skriptovaním, nezabudnite na tieto body:
 - Všetky stránky sú založené na názoroch a používajú nástroje, ktoré nemusia byť v budúcnosti podporované.
 - Pre najnovšie informáciám sa môžete kedykoľvek pripojiť k [alt:V Discord](https://discord.altv.mp/).
 
-Táto stránka je poskytovaná taká, ako je, a nie je spojená s vývojovým tímom alt:V. Obsah vo vnútri je ručne písaní Stuyk-om a prekladani Tim3Game-om a slúži ako referencia, ktorá vám pomôže naučiť sa pracovať s alt:V GTA:V Framework-om.
+Táto stránka je poskytovaná taká, ako je, a nie je spojená s vývojovým tímom alt:V. Obsah vo vnútri ručne napísal Stuyk a preložil Tim3Game a slúži ako referencia, ktorá vám pomôže naučiť sa pracovať s alt:V GTA:V Framework-om.

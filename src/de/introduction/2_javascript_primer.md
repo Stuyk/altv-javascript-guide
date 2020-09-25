@@ -1,7 +1,6 @@
 # JavaScript Grundlagen
 
 Folgende Webseiten sind für JavaScript Grundlagen gut geeignet.
-Dies ist hauptsächlich für Leute gedacht, die sich weigern, in einen Ort wie die Code Academy zu schauen, um zu lernen, wie man programmiert. Wie auch immer hier sind einige Kurse zum lernen.
 
 -   [https://learnxinyminutes.com/docs/javascript/](https://learnxinyminutes.com/docs/javascript/)
 -   [https://www.learn-js.org/](https://www.learn-js.org/)
@@ -9,7 +8,7 @@ Dies ist hauptsächlich für Leute gedacht, die sich weigern, in einen Ort wie d
 
 ## Variablen
 
-Hier sind zwie Variablen die du heutzutage in JavaScript kennen und benutzen solltest.
+Hier sind zwei Variablen die du heutzutage in JavaScript kennen und benutzen solltest.
 
 ```js
 const myVariable = 'example';

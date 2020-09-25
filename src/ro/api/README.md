@@ -1,4 +1,4 @@
-# Introducere în API
+# Ce este defapt API-ul?
 
 API-ul este locul în care puteți obține majoritatea informațiilor cu privire la funcționalitatea și codul scris pentru alt:V.
 

@@ -2,7 +2,7 @@
 
 The player is you. You are the player. Your friend is the player. Everyone is the player.
 
-Player's also come with plenty of properties and functions. Player is most often accessed through events. 
+Player's also come with plenty of properties and functions. Player is most often accessed through events.
 
 Meaning an event will give you access to a player instance depending on the behavior from the player.
 
@@ -11,6 +11,8 @@ Meaning an event will give you access to a player instance depending on the beha
 Here are some very commonly used properties.
 
 ### Server Side
+
+[Check Server Player Properties](./1_server_props) for usage.
 
 | Property Name | Description                                                               |
 | ------------- | ------------------------------------------------------------------------- |

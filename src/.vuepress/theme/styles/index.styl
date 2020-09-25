@@ -8,10 +8,16 @@
 html, body
   padding 0
   margin 0
-  background-color $bgColor
+  //background-color $bgColor
+
+html
+  background: url('/bg.jpg');
+  background-size cover
+  background-attachment fixed
+  background-color #1f1f1f
 
 body
-  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  font-family Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size 16px
@@ -27,9 +33,9 @@ body
   left 0
   right 0
   height $navbarHeight
-  background-color $bgColor
+  background-color rgb(50, 50, 50);
   box-sizing border-box
-  border-bottom 2px solid $borderColor
+  border-bottom 2px solid rgba(255, 255, 255, 0.1);
 
 .sidebar-mask
   position fixed
@@ -51,7 +57,6 @@ body
   left 0
   bottom 0
   box-sizing border-box
-  border-right 1px solid $borderColor
   overflow-y auto
 
 {$contentClass}:not(.custom)
@@ -70,6 +75,8 @@ body
 
   img
     max-width 100%
+    border 3px solid rgba(255, 255, 255, 0.2);
+    border-radius 6px
 
 {$contentClass}.custom
   padding 0
@@ -80,12 +87,12 @@ body
 
 a
   font-weight 500
-  color lighten($altvColor, 10%)
-  text-decoration none
+  color $altvCompliment
+  text-decoration none 
   transition 200ms
 
   &:hover {
-    color lighten($altvColor, 20%)
+    color lighten($altvCompliment, 50%)
   }
 
 p a code
@@ -205,5 +212,9 @@ th, td
 
     .page
       padding-left 0
+
+.medium-zoom-overlay
+  background rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(5px);
 
 @require 'mobile.styl'

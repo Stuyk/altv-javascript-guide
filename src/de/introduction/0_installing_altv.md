@@ -64,7 +64,7 @@ Folge den Instruktionen.
 -   Drücke **N**, wenn du das Voice (Sprachkommunikation) installieren willst
 -   Drücke **Y**, für eine Beispielresource
 
-![](./img/cmd_altvpkg.gif)
+![](../../img/cmd_altvpkg.gif)
 
 ## Verstehen der heruntergeladenen Dateien
 
@@ -234,7 +234,7 @@ $ npm i sjcl
 
 Dies sollte so aussehen wie auf dem folgendem Foto:
 
-![](./img/vscode_entry.png)
+![](../../img/vscode_entry.png)
 
 In `resources/example/startup.js` kannst du starten deinen Code zu schreiben.
 
@@ -248,7 +248,7 @@ resources: [
 
 Starte deinen Server in einer Eingabeaufforderung (CMD) oder Powershell, um zu überprüfen, ob dieser richtig gestartet ist.
 
-![](./img/cmd_loaded.png)
+![](../../img/cmd_loaded.png)
 
 ## Zum Server verbinden
 
@@ -273,7 +273,7 @@ alt.log('test');
 
 Dein serverseitiger Code sollte nun Autovervollständigung des Syntax unterstützen.
 
-![](./img/vscode_server_test.png)
+![](../../img/vscode_server_test.png)
 
 ## Clientseitig
 
@@ -294,4 +294,4 @@ alt.log(`You connected! Nice!`);
 
 Dein clientseitiger Code sollte nun Autovervollständigung des Syntax unterstützen.
 
-![](./img/vscode_client_test.png)
+![](../../img/vscode_client_test.png)

@@ -166,7 +166,7 @@ function handlePlayerDeath(victim, killer, weaponHash) {
 let interval;
 let isDead = false;
 
-// Recieve the value from server side.
+// Receive the value from server side.
 alt.on('death:Handle', value => {
     // Update our local value.
     isDead = value;

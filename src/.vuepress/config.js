@@ -1,11 +1,13 @@
 const { defaultNavbar } = require('./defaults/navbar');
+
+// Locale Imports
 const { enLocale, enMenus } = require('./locales/en');
 const { roLocale, roMenus } = require('./locales/ro');
 const { skLocale, skMenus } = require('./locales/sk');
 const { trLocale, trMenus } = require('./locales/tr');
 const { deLocale, deMenus } = require('./locales/de');
+const { defaultSEO } = require('./seo/default');
 
-const googleSearchConsole = 'bRc7ZyO5gVfceHGhFLN1AvtcptSSPl_6SaLIMHde7bQ';
 const title = 'Unofficial alt:V Documentation';
 const desc = 'Unoffical Documentation and Tutorials for the GTA:V Client alt:V.';
 const card = 'https://i.imgur.com/G09dNXt.png';
@@ -21,6 +23,14 @@ const meta = [
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
     ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    [
+        'link',
+        {
+            href:
+                'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap',
+            rel: 'stylesheet'
+        }
+    ],
     // SEO
     ['meta', { itemprop: 'name', content: title }],
     ['meta', { itemprop: 'description', content: desc }],
@@ -33,14 +43,7 @@ const meta = [
     ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { property: 'twitter:title', content: title }],
     ['meta', { property: 'twitter:description', content: desc }],
-    ['meta', { property: 'twitter:image', content: card }],
-    ['meta', { name: 'google-site-verification', content: googleSearchConsole }],
-    ['script', { src: 'https://contextual.media.net/dmedianet.js?cid=8CU1P49EP', async: 'async' }],
-    [
-        'script',
-        {},
-        `window._mNHandle = window._mNHandle || {}; window._mNHandle.queue = window._mNHandle.queue || []; medianet_versionId = "3121199";`
-    ]
+    ['meta', { property: 'twitter:image', content: card }]
 ];
 
 module.exports = {
@@ -78,16 +81,16 @@ module.exports = {
         '@vuepress/back-to-top',
         '@vuepress/medium-zoom',
         '@vuepress/active-header-links',
-        ['@vuepress/google-analytics', { ga: 'UA-83296585-4' }],
         ['@dovyp/vuepress-plugin-clipboard-copy', true],
         [
-            'robots',
+            '@snowdog/vuepress-plugin-pdf-export',
             {
-                host: 'https://altv.stuyk.com/',
-                allowAll: true,
-                sitemap: '/sitemap.xml'
+                puppeteerLaunchOptions: {
+                    args: ['--no-sandbox', '--disable-setuid-sandbox']
+                }
             }
-        ]
+        ],
+        ...defaultSEO
     ],
     configureWebpack: {
         resolve: {

@@ -53,7 +53,8 @@ We need French Translators.
 
 ## German Translators
 
-We need German Translators.
+-   [LeonMrBonnie](https://github.com/leonmrbonnie)
+-   [tastydev](https://github.com/tastydev)
 
 ## Polish Translators
 

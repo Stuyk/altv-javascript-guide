@@ -3,7 +3,7 @@
 Zu diesem Zeitpunkt sollte dein alt:V Client fertig installiert sein.
 
 Gehe in deinen alt:V Installationsordner und suche nach der altv.cfg.
-![](./img/edit_cfg.png)
+![](../../img/edit_cfg.png)
 
 ## altv.cfg
 

@@ -4,9 +4,7 @@
 
         <Content class="theme-default-content" />
         <PageEdit />
-
         <PageNav v-bind="{ sidebarItems }" />
-        <div class="ad" id="447954467" style="display: block !important"></div>
         <slot name="bottom" />
     </main>
 </template>
@@ -17,12 +15,7 @@ import PageNav from '@theme/components/PageNav.vue';
 
 export default {
     components: { PageEdit, PageNav },
-    props: ['sidebarItems'],
-    mounted() {
-        window._mNHandle.queue.push(function() {
-            window._mNDetails.loadTag('447954467', '728x90', '447954467');
-        });
-    }
+    props: ['sidebarItems']
 };
 </script>
 
@@ -32,5 +25,14 @@ export default {
 .page {
   padding-bottom: 2rem;
   display: block;
+
+  h1, h2, h3, h4 {
+      font-weight bold
+      letter-spacing 0.02em
+  }
+
+  img {
+      max-height 400px !important;
+  }
 }
 </style>

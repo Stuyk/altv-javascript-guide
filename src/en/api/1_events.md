@@ -9,12 +9,12 @@ A client **CANNOT** talk to another client.
 
 | Function Name  | Description                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------ |
-| alt.emit       | Emit an event on server or client side. Only recieved on the side it was emitted from.     |
-| alt.on         | Recieves an event. Server only recieves server events. Client only recieves client events. |
-| alt.onServer   | Recieves an event emitted from the server on client-side. Triggered with `alt.emitClient`. |
-| alt.emitClient | Emit an event to a specific client that they recieve with `alt.onServer`.                  |
-| alt.onClient   | Recieves an event emitted from the client on server-side. Triggered with `alt.emitServer`. |
-| alt.emitClient | Emit an event to the server that is recieved with `alt.onClient`.                          |
+| alt.emit       | Emit an event on server or client side. Only received on the side it was emitted from.     |
+| alt.on         | Receives an event. Server only receives server events. Client only receives client events. |
+| alt.onServer   | Receives an event emitted from the server on client-side. Triggered with `alt.emitClient`. |
+| alt.emitClient | Emit an event to a specific client that they receive with `alt.onServer`.                  |
+| alt.onClient   | Receives an event emitted from the client on server-side. Triggered with `alt.emitServer`. |
+| alt.emitServer | Emit an event to the server that is received with `alt.onClient`.                          |
 
 ## Server to Client
 

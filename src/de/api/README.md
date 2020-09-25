@@ -59,7 +59,7 @@ Lass uns darüber reden, was jeder Typ davon bedeutet und wie er im Code aussieh
 
 Funktionen funktionieren stets wie Funktionen (Lol) und die API hat eine Sektion für sie.
 
-![](./img/functions.png)
+![](../../img/functions.png)
 
 Hier ist ein Beispiel, wie eine der obigen Funktionen im Code aussieht.
 
@@ -75,7 +75,7 @@ Klassen funktionieren wie normale JavaScript Klassen. Der Aufruf dieser, ist nur
 
 Gehen wir hier mal davon aus, dass alles das Prefix `alt` benötigt.
 
-![](./img/classes.png)
+![](../../img/classes.png)
 
 Sei dir bewusst, dass nicht alle Klassen aufrufbar sind oder erstellt werden können.
 

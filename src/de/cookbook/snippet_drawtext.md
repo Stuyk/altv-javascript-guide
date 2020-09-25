@@ -2,7 +2,7 @@
 
 Durch diese Funktionen kann ein Text wahlweise zweidimensional oder dreidimensional auf deinen Bildschirm gezeichnet werden. Dies funktioniert nur **clientseitig**.
 
-![](./img/drawtext.jpg)
+![](../../img/drawtext.jpg)
 
 **Clientseitig**
 

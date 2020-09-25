@@ -100,6 +100,7 @@ export default {
   padding-top 1rem
   padding-bottom 1rem
   overflow auto
+  width: 90%;
 
   .edit-link
     display inline-block

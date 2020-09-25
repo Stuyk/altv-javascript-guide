@@ -105,6 +105,11 @@ $navbar-horizontal-padding = 1.5rem;
     font-weight: 600;
     color: $textColor;
     position: relative;
+    transition 0.2s
+
+    &:hover {
+      color: $altvColor
+    }
   }
 
   .links {
@@ -120,6 +125,10 @@ $navbar-horizontal-padding = 1.5rem;
     .search-box {
       flex: 0 0 auto;
       vertical-align: top;
+
+      input {
+        border-radius 6px
+      }
     }
   }
 }

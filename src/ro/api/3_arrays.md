@@ -1,6 +1,6 @@
-# Parcurgeți Jucătorii și Vehiculele
+# Parcurgerea prin Jucători și Vehicule
 
-Există două matrice speciale în server care vă va ajuta să determinați toți jucătorii sau toate vehiculele.
+Există două matrice speciale în server care vă va ajuta să parcurgeți toți jucătorii sau toate vehiculele.
 
 ## alt.Player.all
 

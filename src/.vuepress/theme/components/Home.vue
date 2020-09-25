@@ -56,13 +56,13 @@ export default {
         text-align: center;
 
         img {
-            max-width: 225px !important;
+            max-width: 175px !important;
             display: block;
             margin: 3rem auto 1.5rem;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
 
         h1,
@@ -84,15 +84,15 @@ export default {
             display: inline-block;
             font-size: 1.2rem;
             color: #fff;
-            background-color: $altvColor;
+            background-color: darken($altvColor, 50%);
             padding: 0.8rem 1.6rem;
             border-radius: 4px;
             transition: background-color 0.1s ease;
             box-sizing: border-box;
-            border-bottom: 1px solid darken($altvColor, 10%);
+            border-bottom: 3px solid darken($altvColor, 60%);
 
             &:hover {
-                background-color: lighten($altvColor, 10%);
+                background-color: darken($altvColor, 40%);
             }
         }
 

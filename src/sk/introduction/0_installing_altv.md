@@ -13,10 +13,10 @@ Skôr ako začnete, nainštalujte si tieto a pomocné programy.
 
 Táto príručka bude predpokladať, že budete pracovať vo vývojovom prostredí Windows.
 
-- Mali by ste vedieť, ako používať príkazový riadok alebo Powershell
-- Mali by ste vedieť, ako otvoriť príkazový riadok alebo Powershell
-- Mali by ste vedieť, že súbory .exe môžete spúšťať v príkazovom riadku alebo v aplikácii Powershell
-- Mali by ste vedieť veľmi základný JavaScript.
+-   Mali by ste vedieť, ako používať príkazový riadok alebo Powershell
+-   Mali by ste vedieť, ako otvoriť príkazový riadok alebo Powershell
+-   Mali by ste vedieť, že súbory .exe môžete spúšťať v príkazovom riadku alebo v aplikácii Powershell
+-   Mali by ste vedieť veľmi základný JavaScript.
 
 **Dôležité**
 
@@ -58,14 +58,14 @@ $ altv-pkg d release
 
 Zobrazí sa výzva na získanie informácií ohľadom gamemódu ktorý vytvárate.
 
-V predvolenom nastavení sa súbory servera a súbory *resource* generujú automaticky vo vašom aktuálnom adresári.
+V predvolenom nastavení sa súbory servera a súbory _resource_ generujú automaticky vo vašom aktuálnom adresári.
 
 Postupujte podľa pokynov na obrazovke.
 
 -   **N** pri `Using voice?`
 -   **Y** pre `Generate example resource?`
 
-![](./img/cmd_altvpkg.gif)
+![](../../img/cmd_altvpkg.gif)
 
 ## Pochopenie stiahnutých súborov
 
@@ -106,7 +106,7 @@ Toto je váš hlavný binárny súbor na spustenie servera. Môžete to spustiť
 $ altv-server.exe
 ```
 
-Použite `Ctrl + C` pre *killnutie* servera.
+Použite `Ctrl + C` pre _killnutie_ servera.
 
 ### package.json
 
@@ -140,15 +140,15 @@ Toto je miesto, kde budú definované vaše `node_modules`, ktoré používate. 
 
 Dôležité kroky z definície v tejto štruktúre.
 
-- Používame [rozšírenie Prettier pre VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- Používame  `"type": "module"` pre podporu [ES6 Syntaxu](https://www.w3schools.com/js/js_es6.asp).
-- Súbory nášho servera môžeme aktualizovať spustením programu `$ npm run update` zo základného adresára.
+-   Používame [rozšírenie Prettier pre VSCode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+-   Používame `"type": "module"` pre podporu [ES6 Syntaxu](https://www.w3schools.com/js/js_es6.asp).
+-   Súbory nášho servera môžeme aktualizovať spustením programu `$ npm run update` zo základného adresára.
 
 Jedná sa hlavne o štruktúru package.json a väčšinou funguje ako normálny projekt NodeJS.
 
 ### server.cfg
 
-Na konfiguráciu vášho servera sa používa vlastný syntaktický *parser*.
+Na konfiguráciu vášho servera sa používa vlastný syntaktický _parser_.
 
 ```sh
 name: "TestServer",
@@ -227,7 +227,7 @@ $ npm i sjcl
 
 ### /resources
 
-*Resources* priečinok slúži na vytváranie nových *resource* balíčkov, ktoré je možné načítať do súboru `server.cfg`. Dôrazne sa odporúča, aby ste pri vytváraní veľmi veľkého projektu z dôvodu výkonu a ľahkého použitia zostali pri jedinom prostriedku.
+_Resources_ priečinok slúži na vytváranie nových _resource_ balíčkov, ktoré je možné načítať do súboru `server.cfg`. Dôrazne sa odporúča, aby ste pri vytváraní veľmi veľkého projektu z dôvodu výkonu a ľahkého použitia zostali pri jedinom prostriedku.
 
 ## Otvorenie vášho pracovného priestoru
 
@@ -235,7 +235,7 @@ Otvorte priečinok, kde nastavujete svoj alt:V server vo VS:Code.
 
 Mal by vyzerať asi ako na obrázku nižšie.
 
-![](./img/vscode_entry.png)
+![](../../img/vscode_entry.png)
 
 Svoj kód môžete začať písať vo vnútri `resources/example/startup.js`.
 
@@ -249,7 +249,7 @@ resources: [
 
 Spustite server z príkazového riadku a ubezpečte sa, že je všetko správne načítané.
 
-![](./img/cmd_loaded.png)
+![](../../img/cmd_loaded.png)
 
 ## Pripojenie
 
@@ -274,7 +274,7 @@ alt.log('test');
 
 Vaša serverová strana by teraz mala mať automatické dokončovanie.
 
-![](./img/vscode_server_test.png)
+![](../../img/vscode_server_test.png)
 
 ## Na strane klienta
 
@@ -295,4 +295,4 @@ alt.log(`You connected! Nice!`);
 
 Vaša klientská strana by teraz mala mať automatické dokončovanie.
 
-![](./img/vscode_client_test.png)
+![](../../img/vscode_client_test.png)

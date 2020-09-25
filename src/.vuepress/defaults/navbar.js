@@ -11,12 +11,16 @@ const defaultNavbar = [
         ]
     },
     {
-        text: 'Unofficial Docs Discord',
-        link: 'https://discord.gg/UubceKy'
-    },
-    {
         text: 'Support',
         link: '/support/'
+    },
+    {
+        text: 'alt:V Hub',
+        link: 'https://hub.altv.mp'
+    },
+    {
+        text: 'Unofficial Docs Discord',
+        link: 'https://discord.gg/UubceKy'
     }
 ];
 

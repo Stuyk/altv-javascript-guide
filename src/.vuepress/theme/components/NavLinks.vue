@@ -103,7 +103,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: $mobileResponsive) {
   .nav-links {
     .nav-item, .repo-link {
       margin-left: 0;
@@ -111,7 +111,7 @@ export default {
   }
 }
 
-@media (min-width: $MQMobile) {
+@media (min-width: $mobileResponsive) {
   .nav-links a {
     &:hover, &.router-link-active {
       color: $accentColor;

@@ -33,6 +33,17 @@ tr {
   }
 }
 
+@media (max-width $mobileResponsive)
+  .search-box
+    .suggestions
+      right 0rem !important
+
+@media (max-width: 959px) and (min-width: 719px)
+  .search-box
+    .suggestions
+      left: auto !important;
+
+
 *::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
 }

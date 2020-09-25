@@ -138,7 +138,7 @@ export default {
     }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: $mobileResponsive) {
     .home {
         .features {
             flex-direction: column;

@@ -22,6 +22,8 @@ Quick explanation for what voice functionality is available through the alt:V AP
 `micLevel` number - player talking volume
 
 ```js
+import * as alt from 'alt-client';
+
 let localPlayer = alt.Player.local;
 alt.log('Is player talking: ' + localPlayer.isTalking);
 alt.log('Player talking volume: ' + localPlayer.micLevel);
@@ -44,14 +46,15 @@ alt.log('Player talking volume: ' + localPlayer.micLevel);
 `isPlayerMuted(player: alt.Player)` function - checks if the player is muted in the specific channel
 
 ```js
-let testChannel = new VoiceChannel(true, 20);
+import * as alt from 'alt-server';
+
+let testChannel = new alt.VoiceChannel(true, 20);
 alt.on('playerConnect', player => {
     testChannel.addPlayer(player);
     testChannel.unmutePlayer(player);
 });
 
 alt.on('playerDisconnect', player => {
-    testChannel;
     testChannel.removePlayer(player);
 });
 

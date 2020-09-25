@@ -125,7 +125,7 @@ export default {
       background-color #e7edf3 !important
       color $textColor
 
-@media (min-width: $MQMobile)
+@media (min-width: $mobileResponsive)
   .algolia-search-wrapper
     .algolia-autocomplete
       .algolia-docsearch-suggestion
@@ -142,7 +142,7 @@ export default {
         .ds-dropdown-menu
           min-width 515px !important
 
-@media (max-width: $MQMobile)
+@media (max-width: $mobileResponsive)
   .algolia-search-wrapper
     .ds-dropdown-menu
       min-width calc(100vw - 4rem) !important

@@ -2,18 +2,18 @@
 
 | Weather    | ID  |
 | ---------- | --- |
-| EXTRASUNNY | 0   |
-| CLEAR      | 1   |
-| CLOUDS     | 2   |
-| SMOG       | 3   |
-| FOGGY      | 4   |
-| OVERCAST   | 5   |
-| RAIN       | 6   |
-| THUNDER    | 7   |
-| CLEARING   | 8   |
-| NEUTRAL    | 9   |
-| SNOW       | 10  |
-| BLIZZARD   | 11  |
+| Extra însorit | 0   |
+| Senin      | 1   |
+| Înnorat     | 2   |
+| Ceață + Fum       | 3   |
+| Ceață      | 4   |
+| Cer acoperit de nori   | 5   |
+| Ploaie       | 6   |
+| Tunet    | 7   |
+| În curs de limpezire   | 8   |
+| Neutru    | 9   |
+| Zăpadă       | 10  |
+| Viscol   | 11  |
 | SNOWLIGHT  | 12  |
-| XMAS       | 13  |
+| Crăciun       | 13  |
 | HALLOWEEN  | 14  |

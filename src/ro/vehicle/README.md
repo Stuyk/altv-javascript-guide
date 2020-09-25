@@ -68,18 +68,18 @@ Iată câteva proprietăți foarte frecvent utilizate.
 
 ### Client Side
 
-| Property Name | Description |
-| ------------- | ----------- |
-| gear          |             |
-| id            |             |
-| model         |             |
-| pos           |             |
-| rot           |             |
-| rpm           |             |
-| scriptID      |             |
-| speed         |             |
-| speedVector   |             |
-| valid         |             |
-| wheelsCount   |             |
+| Numele proprietății | Descriere                                   |
+| ------------------- | ------------------------------------------- |
+| gear                | Treapta în care este vehiculul              |
+| id                  |                                             |
+| model               | Modelul vehiculului                         |
+| pos                 | Poziția vehiculului                         |
+| rot                 | Rotația vehiculului                         |
+| rpm                 | Valoarea turometrului ( Rotații pe minut)   |
+| scriptID            |                                             |
+| speed               | Viteza de deplasare                         |
+| speedVector         |                                             |
+| valid               |                                             |
+| wheelsCount         | Numărul roților                             |
 
 [alt:V Vehicle Client Typings](https://altmp.github.io/altv-typings/classes/_alt_client_.vehicle.html)

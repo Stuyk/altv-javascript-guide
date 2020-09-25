@@ -1,6 +1,6 @@
-# Parcurgerea prin Jucători și Vehicule
+# Parcurgerea listei de Jucători și a listei de Vehicule
 
-Există două matrice speciale în server care vă va ajuta să parcurgeți toți jucătorii sau toate vehiculele.
+În server-side există două matrice cu ajutorul care conțin jucătorii respectiv vehiculele de pe server. Cu ajutorul acestora putem acționa asupra tuturor vehiculelor respectiv jucătorilor.
 
 ## alt.Player.all
 
@@ -19,11 +19,11 @@ const currentPlayers = [...alt.Player.all];
 ```js
 const currentPlayers = [...alt.Player.all];
 
-// Parcurgeți jucătorii
+// Parcurgerea jucătorilor
 for (let i = 0; i < currentPlayers.length; i++) {
     const aPlayer = currentPlayers[i];
 
-    // Verificăm dacă 'aPlayer.valid' este true, pentru a evita eventuale probleme.
+    // Verificăm dacă jucătorul (aPlayer.valid) este încă valid, pentru a evita eventuale probleme.
     if (!aPlayer || !aPlayer.valid) {
         continue;
     }
@@ -44,7 +44,7 @@ currentPlayers.forEach((player, index) => {
 
 ## alt.Vehicle.all
 
-Asigurați-vă că ați citit mai sus. Același proces și verificări se aplică și la vehicule.
+Asigurați-vă că ați citit indicațiile de mai sus. Putem utiliza același procedeu și pentru vehicule.
 
 ```js
 const currentVehicles = [...alt.Vehicle.all];

@@ -88,7 +88,7 @@ alt.everyTick(() => {
 
 ### Eventy ?
 
-Eventy prichádzajú vo všetkých tvaroch a veľkostiach. Pozrite si [API: Sekcia eventy.](../api/events)
+Eventy prichádzajú vo všetkých tvaroch a veľkostiach. Pozrite si [API: Sekcia eventy.](../api/1_events)
 
 ### Natives ?
 
@@ -108,7 +108,7 @@ Tu je niekoľko kľúčových rozdielov medzi alt:V a RAGE:MP.
 
 ### Miestny hráč ?
 
-Na získanie miestneho hráča alt:V nepoužíva `local playerPed = PlayerPedId()`.
+Na získanie miestneho hráča alt:V nepoužíva `const localPlayer = mp.players.local;`.
 
 Namiesto toho sa používa `alt.Player.local.scriptID`.
 
@@ -137,7 +137,7 @@ alt.everyTick(() => {
 
 ### mp.events.add & mp.events.call
 
-Eventy prichádzajú vo všetkých tvaroch a veľkostiach. Pozrite si [API: Sekcia eventy.](../api/events)
+Eventy prichádzajú vo všetkých tvaroch a veľkostiach. Pozrite si [API: Sekcia eventy.](../api/1_events)
 
 alt:V ponúka oveľa lepšiu kontrolu nad eventmi.
 

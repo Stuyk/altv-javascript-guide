@@ -59,7 +59,7 @@ Poďme sa rozprávať o tom, čo ktorý z nich znamená a ako vyzerajú v kóde.
 
 Funkcie vždy fungujú ako funkcie a API má pre ne zvyčajne sekciu.
 
-![](./img/functions.png)
+![](../../img/functions.png)
 
 Tu je príklad toho, ako môže vyzerať použitie jednej z vyššie uvedených funkcií.
 
@@ -75,7 +75,7 @@ Triedy fungujú ako bežné triedy JavaScriptu. Závisí to len od toho, ako imp
 
 Predpokladajme, že máte *prefix* `alt` pre všetko.
 
-![](./img/classes.png)
+![](../../img/classes.png)
 
 Pamätajte, že nie všetky triedy/klasy (classes) sú prístupné alebo sa dajú vytvoriť.
 

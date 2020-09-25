@@ -41,7 +41,7 @@ alt.log('Player talking volume: ' + localPlayer.micLevel);
 
 `isPlayerInChannel(player: alt.Player)` function - checks if the player is already in the specific channel
 
-`isPlayerMuted(player: alt.Player)` function - checks if player is muted the specific channel
+`isPlayerMuted(player: alt.Player)` function - checks if the player is muted in the specific channel
 
 ```js
 let testChannel = new VoiceChannel(true, 20);

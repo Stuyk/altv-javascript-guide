@@ -1,6 +1,6 @@
 # Das Verstehen der ScriptID
 
-Diese Nummer gibt uns die Möglichkeit andere Spieler oder uns Selber in unserem lokal geöffneten Spiel zu identifizieren.
+Diese Nummer gibt uns die Möglichkeit andere Spieler oder uns selber in unserem lokal geöffneten Spiel zu identifizieren.
 
 Generelle Übersicht
 
@@ -8,7 +8,7 @@ Generelle Übersicht
 -   Die scriptID gibt uns die Möglichkeit, dass native Verhalten des Spielers zu beeinflussen.
 -   Diese Nummer wird überwiegend für GTA originale Funktionen benutzt. (`handle` Parameter bei natives)
 -   Diese Nummern sind einzigartig und unterschiedlich auf jedem Client für jeden Spieler.
-    -   Versuche die scriptID nicht mit anderen Spielern zu teilen, also an dere Spielclients zu senden. Es wird nicht funktioneren.
+    -   Versuche die scriptID nicht mit anderen Spielern zu teilen, also an deren Spielclients zu senden. Es wird nicht funktionieren.
 
 ## Wie du auf sie zugreifen kannst.
 

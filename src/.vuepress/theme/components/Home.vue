@@ -1,18 +1,14 @@
 <template>
     <main class="home" :aria-labelledby="data.heroText !== null ? 'main-title' : null">
         <header class="hero">
-            <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt" />
-
             <h1 v-if="data.heroText !== null" id="main-title">
                 {{ $title }}
             </h1>
 
-            <p v-if="data.tagline !== null" class="description">
-                {{ data.tagline }}
+            <p v-if="tagline !== null" class="description" ref="tagline">
+                {{ tagline }}
             </p>
         </header>
-
-        <Content class="theme-default-content custom singleline" style="text-align: center !important" />
 
         <p v-if="data.actionText && data.actionLink" class="action-holder">
             <NavLink class="action-button" :item="actionLink" />
@@ -40,12 +36,17 @@ import NavLink from '@theme/components/NavLink.vue';
 
 export default {
     name: 'Home',
+
     components: { NavLink },
+    data() {
+        return {
+            tagline: 'Documentation for writing your own custom GTA:V Server on alt:V',
+        };
+    },
     computed: {
         data() {
             return this.$page.frontmatter;
         },
-
         actionLink() {
             return {
                 link: this.data.actionLink,
@@ -61,7 +62,10 @@ export default {
   padding: $navbarHeight 2rem 0;
   max-width: $homePageWidth;
   margin: 0px auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 95vh - $navbarHeight - 2rem;
+  justify-content: center;
 
   .hero {
     text-align: center;
@@ -73,7 +77,7 @@ export default {
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     h1, .description, .action {
@@ -84,8 +88,9 @@ export default {
       max-width: 50rem;
       font-size: 1.3rem;
       line-height: 1.3;
-      color: lighten($textColor, 20%);
+      color: lighten($altvColor, 5%);
       text-align: center;
+      transition: 2s;
     }
 
     .singleline {
@@ -151,7 +156,6 @@ export default {
   }
 
   .footer {
-    // padding: 2.5rem;
     margin-top: 2.5rem;
     border-top: 0px solid $borderColor;
     text-align: center;
@@ -170,6 +174,11 @@ export default {
 
       img {
         opacity: 0.4;
+        transition: 0.5s;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
 
@@ -179,7 +188,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: $mobileResponsive) {
   .home {
     .features {
       flex-direction: column;
@@ -188,14 +197,6 @@ export default {
     .feature {
       max-width: 100%;
       padding: 0 2.5rem;
-    }
-
-    .footer {
-      .footerSponsors {
-        a {
-          margin-top: 2.5rem;
-        }
-      }
     }
   }
 }

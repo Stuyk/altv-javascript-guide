@@ -1,32 +1,32 @@
 # Rezumat
 
-alt:V este o modificare alternativa GTA:V multiplayer care permite dezvoltatorilor și jucătorilor să joace pe servere cu moduri de joc personalizate. Aceste servere pot utiliza limbaje precum C#, JavaScript si Lua.
+alt:V este o platformă alternativa al GTA:Online-ului care permite dezvoltatorilor și jucătorilor să joace pe servere cu moduri de joc personalizate. Aceste servere pot utiliza limbaje precum C#, JavaScript si Lua.
 
 Acest website vă va învăța cum să lucrați cu alt:V în JavaScript ținându-vă de mână, cum să configurați corect un proiect și cum să vă construiți propriul mod de joc.
 
-✔️ Gratis
+✔️ Utilizare gratuită
 
-✔️ Limita de sloturi bazată pe hardware
+✔️ Limita de jucători bazată strict pe hardware-ul folosit de către server
 
-✔️ Joacă cu prietenii
+✔️ Posibilitate de joc împreună cu orice prieten
 
-✔️ Server Browser
+✔️ Listă cu toate serverele disponibile
 
-✔️ Fără injecții de tip ScriptHookV sau .asi
+✔️ Protecție împotriva ScriptHookV sau fișiere .asi
 
-✔️ Limitat la server și client-side
+✔️ Server-side și Client-side distincte
 
-✔️ Codul client-ului criptat
+✔️ Codul sursă Client-side criptat
 
-✔️ Serviciu vocal încorporat până la 400 de utilizatori
+✔️ Suport pentru voice-chat ( momentan testat și funcțional cu cel puțin 400 de jucători )
 
-✔️ Asistență Mod
+✔️ Suport pentru Mod-uri ( vehicule,obiecte,ped-uri,haine,texturi, ADDON cât și REPLACE )
 
-✔️ Asistență Map
+✔️ Suport pentru Hărți ( YMAP )
 
-✔️ Asistență MLO
+✔️ Suport pentru MLO-uri
 
-Înainte de a incepe să scriptați, țineți cont de următoarele puncte.
+Înainte de a incepe să dezvoltați un server, țineți cont de următoarele idei.
 
 -   Dezvoltarea trebuie făcută în întregime în limba **ENGLEZĂ**.
 -   Traducerea acestei pagini poate duce la nume greșite de funcții, evenimente, etc.

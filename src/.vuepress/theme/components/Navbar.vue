@@ -127,13 +127,20 @@ $navbar-horizontal-padding = 1.5rem;
       vertical-align: top;
 
       input {
-        border-radius 6px
+        border-radius 1.5rem
+        color #323232
+
+        &:focus {
+          color $textColor
+          background-color #323232;
+          border 2px solid rgba(255,255,255,0.1)
+        }
       }
     }
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: $mobileResponsive) {
   .navbar {
     padding-left: 4rem;
 

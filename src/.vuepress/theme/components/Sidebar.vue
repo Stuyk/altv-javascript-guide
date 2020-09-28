@@ -70,7 +70,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: $mobileResponsive) {
   .sidebar {
     background: #1f1f1f
 

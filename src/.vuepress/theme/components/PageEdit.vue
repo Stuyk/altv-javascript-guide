@@ -117,7 +117,7 @@ export default {
       font-weight 400
       color #767676
 
-@media (max-width: $MQMobile)
+@media (max-width: $mobileResponsive)
   .page-edit
     .edit-link
       margin-bottom 0.5rem

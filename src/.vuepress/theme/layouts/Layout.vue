@@ -4,25 +4,28 @@
 
         <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
-        <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-            <template #top>
-                <slot name="sidebar-top" />
-            </template>
-            <template #bottom>
-                <slot name="sidebar-bottom" />
-            </template>
-        </Sidebar>
+        <transition mode="out-in">
+            <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+                <template #top>
+                    <slot name="sidebar-top" />
+                </template>
+                <template #bottom>
+                    <slot name="sidebar-bottom" />
+                </template>
+            </Sidebar>
+        </transition>
 
-        <Home v-if="$page.frontmatter.home" />
-
-        <Page v-else :sidebar-items="sidebarItems">
-            <template #top>
-                <slot name="page-top" />
-            </template>
-            <template #bottom>
-                <slot name="page-bottom" />
-            </template>
-        </Page>
+        <transition mode="out-in">
+            <Home v-if="$page.frontmatter.home" />
+            <Page v-else :sidebar-items="sidebarItems">
+                <template #top>
+                    <slot name="page-top" />
+                </template>
+                <template #bottom>
+                    <slot name="page-bottom" />
+                </template>
+            </Page>
+        </transition>
     </div>
 </template>
 
@@ -40,12 +43,12 @@ export default {
         Home,
         Page,
         Sidebar,
-        Navbar
+        Navbar,
     },
 
     data() {
         return {
-            isSidebarOpen: false
+            isSidebarOpen: false,
         };
     },
 
@@ -76,11 +79,11 @@ export default {
                 {
                     'no-navbar': !this.shouldShowNavbar,
                     'sidebar-open': this.isSidebarOpen,
-                    'no-sidebar': !this.shouldShowSidebar
+                    'no-sidebar': !this.shouldShowSidebar,
                 },
-                userPageClass
+                userPageClass,
             ];
-        }
+        },
     },
 
     mounted() {
@@ -99,7 +102,7 @@ export default {
         onTouchStart(e) {
             this.touchStart = {
                 x: e.changedTouches[0].clientX,
-                y: e.changedTouches[0].clientY
+                y: e.changedTouches[0].clientY,
             };
         },
 
@@ -113,7 +116,7 @@ export default {
                     this.toggleSidebar(false);
                 }
             }
-        }
-    }
+        },
+    },
 };
 </script>

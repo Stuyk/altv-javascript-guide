@@ -15,7 +15,7 @@ import PageNav from '@theme/components/PageNav.vue';
 
 export default {
     components: { PageEdit, PageNav },
-    props: ['sidebarItems']
+    props: ['sidebarItems'],
 };
 </script>
 
@@ -27,12 +27,12 @@ export default {
   display: block;
 
   h1, h2, h3, h4 {
-      font-weight bold
-      letter-spacing 0.02em
+    font-weight: bold;
+    letter-spacing: 0.02em;
   }
 
   img {
-      max-height 400px !important;
+    max-height: 400px !important;
   }
 }
 </style>

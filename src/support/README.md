@@ -62,4 +62,5 @@ We need Polish Translators.
 
 ## Turkish Translators
 
-We need Turkish Translators.
+- [kf](https://github.com/KadirFiratFTW)
+- [Amper](https://github.com/lilAmper)

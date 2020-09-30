@@ -8,7 +8,7 @@ Haydi mevcut eventlere göz atalım.
 
 ## Sunucu Taraflı Eventler
 
-| Event Name               | Description                                                                      |
+| Event Adı                | Açıklama                                                                         |
 | ------------------------ | -------------------------------------------------------------------------------- |
 | playerConnect            | Bir kullanıcı sunucuya bağlandığında tetiklenir.                                 |
 | playerDisconnect         | Bir kullanıcının sunucu ile olan bağlantısı kesildiğinde tetiklenir.             |
@@ -36,7 +36,7 @@ Haydi mevcut eventlere göz atalım.
 
 ## İstemci Taraflı Eventler
 
-| Event Name             | Description                                                                      |
+| Event Adı              | Açıklama                                                                         |
 | ---------------------- | -------------------------------------------------------------------------------- |
 | connectionComplete     | Bir kullanıcı istemci tarafında sunucuya tam olarak bağlandığında tetiklenir.    |
 | disconnect             | Bir oyuncu ile sunucu tarafının bağlantısı kesildiğinde tetiklenir.              |

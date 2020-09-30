@@ -1,4 +1,4 @@
-# Event Usage Guide
+# Event Kullanımı
 
 Eventlerin başlıklarını ve ne işe yaradıklarını gördünüz. Şimdiyse API'ı nasıl okuyacağınızı gösterelim.
 

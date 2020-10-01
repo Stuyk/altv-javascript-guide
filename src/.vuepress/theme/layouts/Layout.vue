@@ -4,25 +4,28 @@
 
         <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
-        <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-            <template #top>
-                <slot name="sidebar-top" />
-            </template>
-            <template #bottom>
-                <slot name="sidebar-bottom" />
-            </template>
-        </Sidebar>
+        <transition mode="out-in">
+            <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+                <template #top>
+                    <slot name="sidebar-top" />
+                </template>
+                <template #bottom>
+                    <slot name="sidebar-bottom" />
+                </template>
+            </Sidebar>
+        </transition>
 
-        <Home v-if="$page.frontmatter.home" />
-
-        <Page v-else :sidebar-items="sidebarItems">
-            <template #top>
-                <slot name="page-top" />
-            </template>
-            <template #bottom>
-                <slot name="page-bottom" />
-            </template>
-        </Page>
+        <transition mode="out-in">
+            <Home v-if="$page.frontmatter.home" />
+            <Page v-else :sidebar-items="sidebarItems">
+                <template #top>
+                    <slot name="page-top" />
+                </template>
+                <template #bottom>
+                    <slot name="page-bottom" />
+                </template>
+            </Page>
+        </transition>
     </div>
 </template>
 

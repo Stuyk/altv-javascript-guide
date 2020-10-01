@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 510 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-145,-40)">
+        <path d="M240,400L400,493.661L560,400M400,520L600,400L200,400L400,520ZM240,300L200,300L400,40L600,300L560,300L400,91.737L240,300Z" style="fill:white;"/>
+        <g transform="matrix(3.30705,0,0,3.78053,-609.158,-936.506)">
+            <text x="228.046px" y="344.216px" style="font-family:'Consolas', monospace;font-size:12.282px;fill:white;">YOUR LOGO AND LINK HERE</text>
+        </g>
+    </g>
+</svg>

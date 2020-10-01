@@ -3,10 +3,7 @@
  *
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
-
-.home .hero img
-  max-width 150px!important
-
+ 
 table, th, td {
   border: 1px solid rgba(0, 0, 0, 0.75);
 }
@@ -28,20 +25,21 @@ tr {
 .suggestions {
   background-color #1f1f1f !important;
 
-  li {
-    &:hover {
-      background-color rgba(255, 255, 255, 0.1) !important;
-    }
-
-    &:first-child {
-      background-color transparent !important;
-
-      &:hover {
-        background-color rgba(255, 255, 255, 0.1) !important;
-      }
-    }
+  .focused {
+    background-color rgba(255, 255, 255, 0.1) !important
   }
 }
+
+@media (max-width $mobileResponsive)
+  .search-box
+    .suggestions
+      right 0rem !important
+
+@media (max-width: 959px) and (min-width: 719px)
+  .search-box
+    .suggestions
+      left: auto !important;
+
 
 *::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
@@ -54,4 +52,23 @@ tr {
 *::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.4);
   border: 0px solid rgba(0, 0, 0, 0.75);
+}
+
+.v-leave {
+    opacity: 1;
+}
+.v-leave-active {
+    transition: opacity 0.5s;
+}
+.v-leave-to {
+    opacity: 0;
+}
+.v-enter {
+    opacity: 0;
+}
+.v-enter-active {
+    transition: opacity 0.5s;
+}
+.v-enter-to {
+    opacity: 1;
 }

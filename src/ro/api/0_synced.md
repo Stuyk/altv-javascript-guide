@@ -1,30 +1,31 @@
-# Ce este sincronizarea?
+# Ce este sincronizat în mod automat?
 
 alt:V are o mulțime de lucuri care sunt sincronizate automat.
 
-Acesta face ca dezvoltarea unui server să fie mult mai ușoară când lucrurile funcționează deja la parametrii normali.
+Acest lucru face ca dezvoltarea unui server să fie mult mai ușoară când lucrurile sunt sincronizate fără nevoia de a le sincroniza manual.
 
-Iată o listă neoficială de lucuri care pot fi sincronizate.
+Iată o listă neoficială de lucuri care sunt sincronizate.
 
--   Player/Ped Clothing
--   Player/Ped Appearance
--   Player/Ped Animations
--   Player/Ped Tasks
--   Player/Ped Driving Tasks
--   Players on Ladders
--   Players Shooting
--   Players Fist Fighting
--   Players Rolling
--   Players Crouching (Have to change stance.)
--   Players Crawling (Have to change stance.)
--   Vehicle Damage
--   Vehicle Mods
--   Vehicle Colors
--   Vehicle Movement
--   Vehicle Crashing
--   Objects from Tasks
--   Swimming
--   Diving
--   Waves (Weather Dependent)
+În cadrul listei de mai jos Jucătorul poate fi luat și drept PED!
 
-Această sincronizare poate fi confirmată cu peste 600+ de jucători.
+-   Îmbrăcămintea Jucătorului
+-   Aspectul Jucătorului
+-   Animațiile Jucătorului
+-   Sarcinile Jucătorului
+-   Sarcinile de condus ale Jucătorului/Ped
+-   Jucătorii de pe scări
+-   Jucătorii care trag (shooting)
+-   Jucătorii care se luptă cu pumnii
+-   Ghemuirea Jucătorilor
+-   Târârea Jucătorilor
+-   Loviturile vehiculelor
+-   Modificările vehiculelor
+-   Culorile vehiculelor
+-   Mișcarea vehiculelor
+-   Accidentele vehiculelor
+-   Obiectele din cadrul sarcinilor ( spre exemplu camera foto în cadrul animației paparazzi )
+-   Înotul
+-   Căderea liberă
+-   Valurile (În funcție de vreme)
+
+Această sincronizare poate fi confirmată în urma testelor în cadrul cărora au participat peste 600 de jucători ( aici sunt incluse și serverele care funcționează deja ). 

@@ -28,19 +28,19 @@ export default {
         'items',
         'depth', // depth of current sidebar links
         'sidebarDepth', // depth of headers to be extracted
-        'initialOpenGroupIndex',
+        'initialOpenGroupIndex'
     ],
 
     data() {
         return {
-            openGroupIndex: this.initialOpenGroupIndex || 0,
+            openGroupIndex: this.initialOpenGroupIndex || 0
         };
     },
 
     watch: {
         $route() {
             this.refreshIndex();
-        },
+        }
     },
 
     created() {
@@ -61,8 +61,8 @@ export default {
 
         isActive(page) {
             return isActive(this.$route, page.regularPath);
-        },
-    },
+        }
+    }
 };
 
 function resolveOpenGroupIndex(route, items) {
@@ -77,7 +77,7 @@ function resolveOpenGroupIndex(route, items) {
 
 function descendantIsActive(route, item) {
     if (item.type === 'group') {
-        return item.children.some((child) => {
+        return item.children.some(child => {
             if (child.type === 'group') {
                 return descendantIsActive(route, child);
             } else {

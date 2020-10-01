@@ -20,8 +20,8 @@ const oyuncuListesi = [...alt.Player.all];
 const oyuncuListesi = [...alt.Player.all];
 
 // oyuncuListesi'ni döngüye al
-for (let i = 0; i < currentPlayers.length; i++) {
-    const Oyuncu = currentPlayers[i];
+for (let i = 0; i < oyuncuListesi.length; i++) {
+    const Oyuncu = oyuncuListesi[i];
 
     // `Oyuncu.valid` ile Oyuncunun doğruluğunu kontrol ediyoruz.
     if (!Oyuncu || !Oyuncu.valid) {
@@ -32,7 +32,7 @@ for (let i = 0; i < currentPlayers.length; i++) {
 }
 
 // oyuncuListesi'ni döngüye almanın bir farklı yolu
-currentPlayers.forEach((player, index) => {
+oyuncuListesi.forEach((player, index) => {
     // Tekrar doğruluğu kontrol ediyoruz
     if (!player || !player.valid) {
         return;
@@ -50,8 +50,8 @@ currentPlayers.forEach((player, index) => {
 const mevcutAraclar = [...alt.Vehicle.all];
 
 // mevcutAraclar'ı döngüye alıyoruz.
-for (let i = 0; i < currentVehicles.length; i++) {
-    const Arac = currentVehicles[i];
+for (let i = 0; i < mevcutAraclar.length; i++) {
+    const Arac = mevcutAraclar[i];
 
     // `Arac.valid` ile aracın doğruluğunu kontrol ediyoruz.
     if (!Arac || !Arac.valid) {
@@ -62,7 +62,7 @@ for (let i = 0; i < currentVehicles.length; i++) {
 }
 
 // mevcutAraclar'ı döngüye almanın bir farklı yolu
-currentVehicles.forEach((vehicle, index) => {
+mevcutAraclar.forEach((vehicle, index) => {
     // Tekrar doğruluğu kontrol ediyoruz
     if (!vehicle || !vehicle.valid) {
         return;

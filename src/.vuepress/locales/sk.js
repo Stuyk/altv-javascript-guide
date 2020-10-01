@@ -42,6 +42,11 @@ const sidebar = [
                 children: buildSidebar(`/${language}/player/`)
             },
             {
+                title: `🚙 Vozidlo`,
+                collapsable: false,
+                children: buildSidebar(`/${language}/vehicle/`)
+            },
+            {
                 title: `📊 Databázy`,
                 collapsable: false,
                 children: buildSidebar(`/${language}/databases/`)
@@ -51,7 +56,6 @@ const sidebar = [
                 collapsable: false,
                 children: buildSidebar(`/${language}/cookbook/`)
             },
-            // Static Categories
             {
                 title: `📖 Data Tables`,
                 collapsable: false,
@@ -61,7 +65,6 @@ const sidebar = [
     }
 ];
 
-// change this to first two letters + menus. ie. trMenus
 const skMenus = {
     [`/${language}/`]: {
         label: languageName,

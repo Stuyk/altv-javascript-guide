@@ -133,7 +133,7 @@ if (player.health > 200) {
 }
 
 // Kill the player.
-player.health = 100;
+player.health = 0;
 ```
 
 ## player.hwidExHash

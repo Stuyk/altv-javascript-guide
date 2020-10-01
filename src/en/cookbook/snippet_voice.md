@@ -170,7 +170,7 @@ class AltvVoiceServerModule {
      * @returns {null}
      */
     changeVoiceRange(player) {
-        if (!player?.voiceRange) {
+        if (!player.voiceRange) {
             player.voiceRange = 0;
         }
         switch (player.voiceRange) {
@@ -232,7 +232,7 @@ class AltvVoiceClientModule {
         alt.on('keydown', key => {
             if (key == 107) {
                 //Press Num+ to change the range in which you get heard by other players
-                alt.emit('server:ChangeVoiceRange');
+                alt.emitServer('server:ChangeVoiceRange');
             }
         });
 

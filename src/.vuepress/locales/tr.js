@@ -13,7 +13,7 @@ const trLocale = {
 
 const sidebar = [
     {
-        title: 'Guide',
+        title: 'Kılavuz',
         collapsable: false,
         children: [
             {

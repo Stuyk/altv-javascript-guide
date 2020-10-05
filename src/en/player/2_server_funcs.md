@@ -246,7 +246,7 @@ Used to remove a weapon component from a player's weapon.
 
 ```js
 // weaponHash, componentHash
-player.addWeaponComponent(0xDFE37640, 0x5B3E7DB6)
+player.removeWeaponComponent(0xDFE37640, 0x5B3E7DB6)
 ```
 
 ## resetNetOwner

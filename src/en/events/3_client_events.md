@@ -347,7 +347,7 @@ alt.on('playerConnect', player => {
 **Client Side**
 
 ```js
-alt.on('setStreamedSyncedMetaChange', handleEvent);
+alt.onServer('streamSyncedMetaChange', handleEvent);
 
 function handleEvent(entity, key, value, oldValue) {
     // Filter out non-player types.

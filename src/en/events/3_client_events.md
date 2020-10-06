@@ -347,14 +347,12 @@ alt.on('playerConnect', player => {
 **Client Side**
 
 ```js
-alt.on('setStreamedSyncedMetaChange', handleEvent);
+alt.on('streamedSyncedMetaChange', handleEvent);
 
 function handleEvent(entity, key, value, oldValue) {
     // Filter out non-player types.
-    if (typeof entity !== alt.Player) {
-        return;
-    }
-
+    if(!(entity instanceof alt.Player)) return;
+    
     // Compare the key if it's what we are looking for.
     if (key !== 'connected') {
         return;

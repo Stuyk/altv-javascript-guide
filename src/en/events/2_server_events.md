@@ -402,7 +402,7 @@ Keep in mind that **syncedMeta** can be **accessed from server and client side.*
 
 ```js
 alt.on('playerConnect', player => {
-    player.setSyncedMeta('Connected', true);
+    player.setSyncedMeta('connected', true);
 });
 
 alt.on('syncedMetaChange', handleEvent);
@@ -439,7 +439,7 @@ alt.on('playerConnect', player => {
     player.setStreamedSyncedMeta('Connected', true);
 });
 
-alt.on('setStreamedSyncedMeta', handleEvent);
+alt.on('streamSyncedMetaChange', handleEvent);
 
 function handleEvent(entity, key, value, oldValue) {
     // Filter out non-player types.
@@ -479,7 +479,7 @@ function handleEvent(vehicle) {
     const newPosition = { ...vehicle.pos };
     const newModel = vehicle.currentModel;
 
-    if (vehicle.valid && vehicle.destroy) {
+    if (vehicle.valid && vehicle.destroyed) {
         vehicle.destroy();
     }
 

@@ -121,7 +121,7 @@ export function getClosestVectorFromGroup(pos, arrayOfPositions) {
  * @returns {Array<alt.Player>}
  */
 export function getClosestPlayer(player) {
-    return getClosestVector(player.pos, [...alt.Player.all]);
+    return getClosestVectorFromGroup(player.pos, [...alt.Player.all]);
 }
 
 /**
@@ -130,7 +130,7 @@ export function getClosestPlayer(player) {
  * @returns {Array<alt.Vehicle>}
  */
 export function getClosestVehicle(player) {
-    return getClosestVehicle(player.pos, [...alt.Vehicle.all]);
+    return getClosestVectorFromGroup(player.pos, [...alt.Vehicle.all]);
 }
 ```
 

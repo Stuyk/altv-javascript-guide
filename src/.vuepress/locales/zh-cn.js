@@ -13,7 +13,7 @@ const zhcnLocale = {
 
 const sidebar = [
     {
-        title: '指南 ',
+        title: '指南',
         collapsable: false,
         children: [
             {

@@ -45,7 +45,7 @@ You can also support by getting the [Brave Browser](https://brave.com/stu161) wh
 
 ## Chinese Translators
 
-We need Chinese Translators.
+- [Combat116](https://github.com/Combat116)
 
 ## French Translators
 

@@ -3,8 +3,9 @@ const defaultNavbar = [
         text: 'Languages',
         ariaLabel: 'Language Menu',
         items: [
-            { text: 'Deutsch', link: '/de/introduction/' },
             { text: 'English', link: '/en/introduction/' },
+            { text: 'Chinese', link: '/zh/introduction/' },
+            { text: 'Deutsch', link: '/de/introduction/' },
             { text: 'Română', link: '/ro/introduction/' },
             { text: 'Slovenský', link: '/sk/introduction/' },
             { text: 'Türk', link: '/tr/introduction/' }
@@ -17,10 +18,6 @@ const defaultNavbar = [
     {
         text: 'alt:V Hub',
         link: 'https://hub.altv.mp'
-    },
-    {
-        text: 'Unofficial Docs Discord',
-        link: 'https://discord.gg/UubceKy'
     }
 ];
 

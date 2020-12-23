@@ -18,6 +18,8 @@ Check out [the support section](./support/) to learn how to contribute.
 
 Keep in mind that these are community maintained and may not be up to date.
 
+[Chinese](/zh/introduction)
+
 [Deutsch](/de/introduction)
 
 [Română](/ro/introduction)

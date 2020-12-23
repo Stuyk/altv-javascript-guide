@@ -1,7 +1,7 @@
 const { defaultNavbar } = require('../defaults/navbar');
 const { buildSidebar } = require('../utility/sidebarHelper');
-const language = 'zh-cn'; // zh-cn
-const languageUpper = 'ZH-CN';
+const language = 'zh'; // zh
+const languageUpper = 'ZH';
 const languageName = '中文简体'; // Simplified Chinese
 
 const zhcnLocale = {
@@ -80,5 +80,5 @@ const zhcnMenus = {
 
 module.exports = {
     zhcnLocale,
-    zhcnenMenus
+    zhcnMenus
 };

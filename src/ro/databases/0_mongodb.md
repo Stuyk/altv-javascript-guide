@@ -187,7 +187,7 @@ player.data.money += 500;
 player.data.bank -= 500;
 
 player.setSyncedMeta('money', player.data.money);
-player.setSyncedMeta('bnak', player.data.bank);
+player.setSyncedMeta('bank', player.data.bank);
 
 // Actualizați banii și datele bancare.
 await db.updatePartialData(player.data._id, { money: player.data.money, bank: player.data.bank }, 'accounts');

@@ -16,6 +16,10 @@ const defaultNavbar = [
         link: '/support/'
     },
     {
+        text: 'Athena Framework',
+        link: 'https://athena.stuyk.com'
+    },
+    {
         text: 'alt:V Hub',
         link: 'https://hub.altv.mp'
     }
